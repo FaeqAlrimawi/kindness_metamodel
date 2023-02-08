@@ -184,7 +184,7 @@ public class FactorsPackageImpl extends EPackageImpl implements FactorsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getAbsSocialFactors_Relatedness() {
+	public EReference getAbsSocialFactors_Actor() {
 		return (EReference) absSocialFactorsEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -193,44 +193,8 @@ public class FactorsPackageImpl extends EPackageImpl implements FactorsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getAbsSocialFactors_Reciprocity() {
+	public EReference getAbsSocialFactors_Socialfactor() {
 		return (EReference) absSocialFactorsEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getAbsSocialFactors_Levelofneed() {
-		return (EReference) absSocialFactorsEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getAbsSocialFactors_Actor() {
-		return (EReference) absSocialFactorsEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getAbsSocialFactors_Opportunitytoconnect() {
-		return (EReference) absSocialFactorsEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getAbsSocialFactors_Trust() {
-		return (EReference) absSocialFactorsEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -335,12 +299,8 @@ public class FactorsPackageImpl extends EPackageImpl implements FactorsPackage {
 
 		// Create classes and their features
 		absSocialFactorsEClass = createEClass(ABS_SOCIAL_FACTORS);
-		createEReference(absSocialFactorsEClass, ABS_SOCIAL_FACTORS__RELATEDNESS);
-		createEReference(absSocialFactorsEClass, ABS_SOCIAL_FACTORS__RECIPROCITY);
-		createEReference(absSocialFactorsEClass, ABS_SOCIAL_FACTORS__LEVELOFNEED);
 		createEReference(absSocialFactorsEClass, ABS_SOCIAL_FACTORS__ACTOR);
-		createEReference(absSocialFactorsEClass, ABS_SOCIAL_FACTORS__OPPORTUNITYTOCONNECT);
-		createEReference(absSocialFactorsEClass, ABS_SOCIAL_FACTORS__TRUST);
+		createEReference(absSocialFactorsEClass, ABS_SOCIAL_FACTORS__SOCIALFACTOR);
 
 		absKindnessEntityEClass = createEClass(ABS_KINDNESS_ENTITY);
 
@@ -396,24 +356,12 @@ public class FactorsPackageImpl extends EPackageImpl implements FactorsPackage {
 		// Initialize classes, features, and operations; add parameters
 		initEClass(absSocialFactorsEClass, AbsSocialFactors.class, "AbsSocialFactors", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getAbsSocialFactors_Relatedness(), theNewPackage1Package.getRelatedness(), null, "relatedness",
-				null, 0, -1, AbsSocialFactors.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
-				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getAbsSocialFactors_Reciprocity(), theNewPackage1Package.getReciprocity(), null, "reciprocity",
-				null, 0, -1, AbsSocialFactors.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
-				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getAbsSocialFactors_Levelofneed(), theNewPackage1Package.getLevelOfNeed(), null, "levelofneed",
-				null, 0, -1, AbsSocialFactors.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
-				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getAbsSocialFactors_Actor(), this.getAbsKindnessEntity(), null, "actor", null, 0, 1,
 				AbsSocialFactors.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getAbsSocialFactors_Opportunitytoconnect(), theNewPackage1Package.getOpportunityToConnect(),
-				null, "opportunitytoconnect", null, 0, -1, AbsSocialFactors.class, !IS_TRANSIENT, !IS_VOLATILE,
-				IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getAbsSocialFactors_Trust(), theNewPackage1Package.getTrust(), null, "trust", null, 0, -1,
-				AbsSocialFactors.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAbsSocialFactors_Socialfactor(), theNewPackage1Package.getSocialFactor(), null,
+				"socialfactor", null, 0, -1, AbsSocialFactors.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+				IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(absKindnessEntityEClass, AbsKindnessEntity.class, "AbsKindnessEntity", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);

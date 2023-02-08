@@ -1218,33 +1218,6 @@ public interface KindnessPackage extends EPackage {
 	int SOCIAL_FACTORS = 14;
 
 	/**
-	 * The feature id for the '<em><b>Relatedness</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOCIAL_FACTORS__RELATEDNESS = FactorsPackage.ABS_SOCIAL_FACTORS__RELATEDNESS;
-
-	/**
-	 * The feature id for the '<em><b>Reciprocity</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOCIAL_FACTORS__RECIPROCITY = FactorsPackage.ABS_SOCIAL_FACTORS__RECIPROCITY;
-
-	/**
-	 * The feature id for the '<em><b>Levelofneed</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOCIAL_FACTORS__LEVELOFNEED = FactorsPackage.ABS_SOCIAL_FACTORS__LEVELOFNEED;
-
-	/**
 	 * The feature id for the '<em><b>Actor</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1254,22 +1227,13 @@ public interface KindnessPackage extends EPackage {
 	int SOCIAL_FACTORS__ACTOR = FactorsPackage.ABS_SOCIAL_FACTORS__ACTOR;
 
 	/**
-	 * The feature id for the '<em><b>Opportunitytoconnect</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Socialfactor</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SOCIAL_FACTORS__OPPORTUNITYTOCONNECT = FactorsPackage.ABS_SOCIAL_FACTORS__OPPORTUNITYTOCONNECT;
-
-	/**
-	 * The feature id for the '<em><b>Trust</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOCIAL_FACTORS__TRUST = FactorsPackage.ABS_SOCIAL_FACTORS__TRUST;
+	int SOCIAL_FACTORS__SOCIALFACTOR = FactorsPackage.ABS_SOCIAL_FACTORS__SOCIALFACTOR;
 
 	/**
 	 * The number of structural features of the '<em>Social Factors</em>' class.

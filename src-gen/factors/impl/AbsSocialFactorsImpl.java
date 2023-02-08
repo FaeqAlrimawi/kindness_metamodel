@@ -6,11 +6,7 @@ import factors.AbsKindnessEntity;
 import factors.AbsSocialFactors;
 import factors.FactorsPackage;
 
-import factors.Social.LevelOfNeed;
-import factors.Social.OpportunityToConnect;
-import factors.Social.Reciprocity;
-import factors.Social.Relatedness;
-import factors.Social.Trust;
+import factors.Social.SocialFactor;
 
 import java.util.Collection;
 
@@ -36,47 +32,13 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link factors.impl.AbsSocialFactorsImpl#getRelatedness <em>Relatedness</em>}</li>
- *   <li>{@link factors.impl.AbsSocialFactorsImpl#getReciprocity <em>Reciprocity</em>}</li>
- *   <li>{@link factors.impl.AbsSocialFactorsImpl#getLevelofneed <em>Levelofneed</em>}</li>
  *   <li>{@link factors.impl.AbsSocialFactorsImpl#getActor <em>Actor</em>}</li>
- *   <li>{@link factors.impl.AbsSocialFactorsImpl#getOpportunitytoconnect <em>Opportunitytoconnect</em>}</li>
- *   <li>{@link factors.impl.AbsSocialFactorsImpl#getTrust <em>Trust</em>}</li>
+ *   <li>{@link factors.impl.AbsSocialFactorsImpl#getSocialfactor <em>Socialfactor</em>}</li>
  * </ul>
  *
  * @generated
  */
 public abstract class AbsSocialFactorsImpl extends MinimalEObjectImpl.Container implements AbsSocialFactors {
-	/**
-	 * The cached value of the '{@link #getRelatedness() <em>Relatedness</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getRelatedness()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Relatedness> relatedness;
-
-	/**
-	 * The cached value of the '{@link #getReciprocity() <em>Reciprocity</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getReciprocity()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Reciprocity> reciprocity;
-
-	/**
-	 * The cached value of the '{@link #getLevelofneed() <em>Levelofneed</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getLevelofneed()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<LevelOfNeed> levelofneed;
-
 	/**
 	 * The cached value of the '{@link #getActor() <em>Actor</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -88,24 +50,14 @@ public abstract class AbsSocialFactorsImpl extends MinimalEObjectImpl.Container 
 	protected AbsKindnessEntity actor;
 
 	/**
-	 * The cached value of the '{@link #getOpportunitytoconnect() <em>Opportunitytoconnect</em>}' containment reference list.
+	 * The cached value of the '{@link #getSocialfactor() <em>Socialfactor</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getOpportunitytoconnect()
+	 * @see #getSocialfactor()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<OpportunityToConnect> opportunitytoconnect;
-
-	/**
-	 * The cached value of the '{@link #getTrust() <em>Trust</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTrust()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Trust> trust;
+	protected EList<SocialFactor> socialfactor;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -124,45 +76,6 @@ public abstract class AbsSocialFactorsImpl extends MinimalEObjectImpl.Container 
 	@Override
 	protected EClass eStaticClass() {
 		return FactorsPackage.Literals.ABS_SOCIAL_FACTORS;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<Relatedness> getRelatedness() {
-		if (relatedness == null) {
-			relatedness = new EObjectContainmentEList<Relatedness>(Relatedness.class, this,
-					FactorsPackage.ABS_SOCIAL_FACTORS__RELATEDNESS);
-		}
-		return relatedness;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<Reciprocity> getReciprocity() {
-		if (reciprocity == null) {
-			reciprocity = new EObjectContainmentEList<Reciprocity>(Reciprocity.class, this,
-					FactorsPackage.ABS_SOCIAL_FACTORS__RECIPROCITY);
-		}
-		return reciprocity;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<LevelOfNeed> getLevelofneed() {
-		if (levelofneed == null) {
-			levelofneed = new EObjectContainmentEList<LevelOfNeed>(LevelOfNeed.class, this,
-					FactorsPackage.ABS_SOCIAL_FACTORS__LEVELOFNEED);
-		}
-		return levelofneed;
 	}
 
 	/**
@@ -210,24 +123,12 @@ public abstract class AbsSocialFactorsImpl extends MinimalEObjectImpl.Container 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<OpportunityToConnect> getOpportunitytoconnect() {
-		if (opportunitytoconnect == null) {
-			opportunitytoconnect = new EObjectContainmentEList<OpportunityToConnect>(OpportunityToConnect.class, this,
-					FactorsPackage.ABS_SOCIAL_FACTORS__OPPORTUNITYTOCONNECT);
+	public EList<SocialFactor> getSocialfactor() {
+		if (socialfactor == null) {
+			socialfactor = new EObjectContainmentEList<SocialFactor>(SocialFactor.class, this,
+					FactorsPackage.ABS_SOCIAL_FACTORS__SOCIALFACTOR);
 		}
-		return opportunitytoconnect;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<Trust> getTrust() {
-		if (trust == null) {
-			trust = new EObjectContainmentEList<Trust>(Trust.class, this, FactorsPackage.ABS_SOCIAL_FACTORS__TRUST);
-		}
-		return trust;
+		return socialfactor;
 	}
 
 	/**
@@ -238,16 +139,8 @@ public abstract class AbsSocialFactorsImpl extends MinimalEObjectImpl.Container 
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case FactorsPackage.ABS_SOCIAL_FACTORS__RELATEDNESS:
-			return ((InternalEList<?>) getRelatedness()).basicRemove(otherEnd, msgs);
-		case FactorsPackage.ABS_SOCIAL_FACTORS__RECIPROCITY:
-			return ((InternalEList<?>) getReciprocity()).basicRemove(otherEnd, msgs);
-		case FactorsPackage.ABS_SOCIAL_FACTORS__LEVELOFNEED:
-			return ((InternalEList<?>) getLevelofneed()).basicRemove(otherEnd, msgs);
-		case FactorsPackage.ABS_SOCIAL_FACTORS__OPPORTUNITYTOCONNECT:
-			return ((InternalEList<?>) getOpportunitytoconnect()).basicRemove(otherEnd, msgs);
-		case FactorsPackage.ABS_SOCIAL_FACTORS__TRUST:
-			return ((InternalEList<?>) getTrust()).basicRemove(otherEnd, msgs);
+		case FactorsPackage.ABS_SOCIAL_FACTORS__SOCIALFACTOR:
+			return ((InternalEList<?>) getSocialfactor()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -260,20 +153,12 @@ public abstract class AbsSocialFactorsImpl extends MinimalEObjectImpl.Container 
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case FactorsPackage.ABS_SOCIAL_FACTORS__RELATEDNESS:
-			return getRelatedness();
-		case FactorsPackage.ABS_SOCIAL_FACTORS__RECIPROCITY:
-			return getReciprocity();
-		case FactorsPackage.ABS_SOCIAL_FACTORS__LEVELOFNEED:
-			return getLevelofneed();
 		case FactorsPackage.ABS_SOCIAL_FACTORS__ACTOR:
 			if (resolve)
 				return getActor();
 			return basicGetActor();
-		case FactorsPackage.ABS_SOCIAL_FACTORS__OPPORTUNITYTOCONNECT:
-			return getOpportunitytoconnect();
-		case FactorsPackage.ABS_SOCIAL_FACTORS__TRUST:
-			return getTrust();
+		case FactorsPackage.ABS_SOCIAL_FACTORS__SOCIALFACTOR:
+			return getSocialfactor();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -287,28 +172,12 @@ public abstract class AbsSocialFactorsImpl extends MinimalEObjectImpl.Container 
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case FactorsPackage.ABS_SOCIAL_FACTORS__RELATEDNESS:
-			getRelatedness().clear();
-			getRelatedness().addAll((Collection<? extends Relatedness>) newValue);
-			return;
-		case FactorsPackage.ABS_SOCIAL_FACTORS__RECIPROCITY:
-			getReciprocity().clear();
-			getReciprocity().addAll((Collection<? extends Reciprocity>) newValue);
-			return;
-		case FactorsPackage.ABS_SOCIAL_FACTORS__LEVELOFNEED:
-			getLevelofneed().clear();
-			getLevelofneed().addAll((Collection<? extends LevelOfNeed>) newValue);
-			return;
 		case FactorsPackage.ABS_SOCIAL_FACTORS__ACTOR:
 			setActor((AbsKindnessEntity) newValue);
 			return;
-		case FactorsPackage.ABS_SOCIAL_FACTORS__OPPORTUNITYTOCONNECT:
-			getOpportunitytoconnect().clear();
-			getOpportunitytoconnect().addAll((Collection<? extends OpportunityToConnect>) newValue);
-			return;
-		case FactorsPackage.ABS_SOCIAL_FACTORS__TRUST:
-			getTrust().clear();
-			getTrust().addAll((Collection<? extends Trust>) newValue);
+		case FactorsPackage.ABS_SOCIAL_FACTORS__SOCIALFACTOR:
+			getSocialfactor().clear();
+			getSocialfactor().addAll((Collection<? extends SocialFactor>) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -322,23 +191,11 @@ public abstract class AbsSocialFactorsImpl extends MinimalEObjectImpl.Container 
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case FactorsPackage.ABS_SOCIAL_FACTORS__RELATEDNESS:
-			getRelatedness().clear();
-			return;
-		case FactorsPackage.ABS_SOCIAL_FACTORS__RECIPROCITY:
-			getReciprocity().clear();
-			return;
-		case FactorsPackage.ABS_SOCIAL_FACTORS__LEVELOFNEED:
-			getLevelofneed().clear();
-			return;
 		case FactorsPackage.ABS_SOCIAL_FACTORS__ACTOR:
 			setActor((AbsKindnessEntity) null);
 			return;
-		case FactorsPackage.ABS_SOCIAL_FACTORS__OPPORTUNITYTOCONNECT:
-			getOpportunitytoconnect().clear();
-			return;
-		case FactorsPackage.ABS_SOCIAL_FACTORS__TRUST:
-			getTrust().clear();
+		case FactorsPackage.ABS_SOCIAL_FACTORS__SOCIALFACTOR:
+			getSocialfactor().clear();
 			return;
 		}
 		super.eUnset(featureID);
@@ -352,18 +209,10 @@ public abstract class AbsSocialFactorsImpl extends MinimalEObjectImpl.Container 
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case FactorsPackage.ABS_SOCIAL_FACTORS__RELATEDNESS:
-			return relatedness != null && !relatedness.isEmpty();
-		case FactorsPackage.ABS_SOCIAL_FACTORS__RECIPROCITY:
-			return reciprocity != null && !reciprocity.isEmpty();
-		case FactorsPackage.ABS_SOCIAL_FACTORS__LEVELOFNEED:
-			return levelofneed != null && !levelofneed.isEmpty();
 		case FactorsPackage.ABS_SOCIAL_FACTORS__ACTOR:
 			return actor != null;
-		case FactorsPackage.ABS_SOCIAL_FACTORS__OPPORTUNITYTOCONNECT:
-			return opportunitytoconnect != null && !opportunitytoconnect.isEmpty();
-		case FactorsPackage.ABS_SOCIAL_FACTORS__TRUST:
-			return trust != null && !trust.isEmpty();
+		case FactorsPackage.ABS_SOCIAL_FACTORS__SOCIALFACTOR:
+			return socialfactor != null && !socialfactor.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

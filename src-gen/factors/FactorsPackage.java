@@ -68,58 +68,22 @@ public interface FactorsPackage extends EPackage {
 	int ABS_SOCIAL_FACTORS = 0;
 
 	/**
-	 * The feature id for the '<em><b>Relatedness</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ABS_SOCIAL_FACTORS__RELATEDNESS = 0;
-
-	/**
-	 * The feature id for the '<em><b>Reciprocity</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ABS_SOCIAL_FACTORS__RECIPROCITY = 1;
-
-	/**
-	 * The feature id for the '<em><b>Levelofneed</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ABS_SOCIAL_FACTORS__LEVELOFNEED = 2;
-
-	/**
 	 * The feature id for the '<em><b>Actor</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ABS_SOCIAL_FACTORS__ACTOR = 3;
+	int ABS_SOCIAL_FACTORS__ACTOR = 0;
 
 	/**
-	 * The feature id for the '<em><b>Opportunitytoconnect</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Socialfactor</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ABS_SOCIAL_FACTORS__OPPORTUNITYTOCONNECT = 4;
-
-	/**
-	 * The feature id for the '<em><b>Trust</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ABS_SOCIAL_FACTORS__TRUST = 5;
+	int ABS_SOCIAL_FACTORS__SOCIALFACTOR = 1;
 
 	/**
 	 * The number of structural features of the '<em>Abs Social Factors</em>' class.
@@ -128,7 +92,7 @@ public interface FactorsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ABS_SOCIAL_FACTORS_FEATURE_COUNT = 6;
+	int ABS_SOCIAL_FACTORS_FEATURE_COUNT = 2;
 
 	/**
 	 * The number of operations of the '<em>Abs Social Factors</em>' class.
@@ -283,39 +247,6 @@ public interface FactorsPackage extends EPackage {
 	EClass getAbsSocialFactors();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link factors.AbsSocialFactors#getRelatedness <em>Relatedness</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Relatedness</em>'.
-	 * @see factors.AbsSocialFactors#getRelatedness()
-	 * @see #getAbsSocialFactors()
-	 * @generated
-	 */
-	EReference getAbsSocialFactors_Relatedness();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link factors.AbsSocialFactors#getReciprocity <em>Reciprocity</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Reciprocity</em>'.
-	 * @see factors.AbsSocialFactors#getReciprocity()
-	 * @see #getAbsSocialFactors()
-	 * @generated
-	 */
-	EReference getAbsSocialFactors_Reciprocity();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link factors.AbsSocialFactors#getLevelofneed <em>Levelofneed</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Levelofneed</em>'.
-	 * @see factors.AbsSocialFactors#getLevelofneed()
-	 * @see #getAbsSocialFactors()
-	 * @generated
-	 */
-	EReference getAbsSocialFactors_Levelofneed();
-
-	/**
 	 * Returns the meta object for the reference '{@link factors.AbsSocialFactors#getActor <em>Actor</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -327,26 +258,15 @@ public interface FactorsPackage extends EPackage {
 	EReference getAbsSocialFactors_Actor();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link factors.AbsSocialFactors#getOpportunitytoconnect <em>Opportunitytoconnect</em>}'.
+	 * Returns the meta object for the containment reference list '{@link factors.AbsSocialFactors#getSocialfactor <em>Socialfactor</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Opportunitytoconnect</em>'.
-	 * @see factors.AbsSocialFactors#getOpportunitytoconnect()
+	 * @return the meta object for the containment reference list '<em>Socialfactor</em>'.
+	 * @see factors.AbsSocialFactors#getSocialfactor()
 	 * @see #getAbsSocialFactors()
 	 * @generated
 	 */
-	EReference getAbsSocialFactors_Opportunitytoconnect();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link factors.AbsSocialFactors#getTrust <em>Trust</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Trust</em>'.
-	 * @see factors.AbsSocialFactors#getTrust()
-	 * @see #getAbsSocialFactors()
-	 * @generated
-	 */
-	EReference getAbsSocialFactors_Trust();
+	EReference getAbsSocialFactors_Socialfactor();
 
 	/**
 	 * Returns the meta object for class '{@link factors.AbsKindnessEntity <em>Abs Kindness Entity</em>}'.
@@ -463,30 +383,6 @@ public interface FactorsPackage extends EPackage {
 		EClass ABS_SOCIAL_FACTORS = eINSTANCE.getAbsSocialFactors();
 
 		/**
-		 * The meta object literal for the '<em><b>Relatedness</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ABS_SOCIAL_FACTORS__RELATEDNESS = eINSTANCE.getAbsSocialFactors_Relatedness();
-
-		/**
-		 * The meta object literal for the '<em><b>Reciprocity</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ABS_SOCIAL_FACTORS__RECIPROCITY = eINSTANCE.getAbsSocialFactors_Reciprocity();
-
-		/**
-		 * The meta object literal for the '<em><b>Levelofneed</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ABS_SOCIAL_FACTORS__LEVELOFNEED = eINSTANCE.getAbsSocialFactors_Levelofneed();
-
-		/**
 		 * The meta object literal for the '<em><b>Actor</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -495,20 +391,12 @@ public interface FactorsPackage extends EPackage {
 		EReference ABS_SOCIAL_FACTORS__ACTOR = eINSTANCE.getAbsSocialFactors_Actor();
 
 		/**
-		 * The meta object literal for the '<em><b>Opportunitytoconnect</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Socialfactor</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference ABS_SOCIAL_FACTORS__OPPORTUNITYTOCONNECT = eINSTANCE.getAbsSocialFactors_Opportunitytoconnect();
-
-		/**
-		 * The meta object literal for the '<em><b>Trust</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ABS_SOCIAL_FACTORS__TRUST = eINSTANCE.getAbsSocialFactors_Trust();
+		EReference ABS_SOCIAL_FACTORS__SOCIALFACTOR = eINSTANCE.getAbsSocialFactors_Socialfactor();
 
 		/**
 		 * The meta object literal for the '{@link factors.impl.AbsKindnessEntityImpl <em>Abs Kindness Entity</em>}' class.

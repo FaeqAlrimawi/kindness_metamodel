@@ -103,19 +103,25 @@
       <genEnumLiterals ecoreEnumLiteral="Factors.ecore#//Level/MEDIUM"/>
       <genEnumLiterals ecoreEnumLiteral="Factors.ecore#//Level/LOW"/>
     </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Factors.ecore#//FactorImpact">
+      <genEnumLiterals ecoreEnumLiteral="Factors.ecore#//FactorImpact/POSITIVE"/>
+      <genEnumLiterals ecoreEnumLiteral="Factors.ecore#//FactorImpact/NEGATIVE"/>
+      <genEnumLiterals ecoreEnumLiteral="Factors.ecore#//FactorImpact/NONE"/>
+      <genEnumLiterals ecoreEnumLiteral="Factors.ecore#//FactorImpact/UNKNOWN"/>
+    </genEnums>
     <genClasses ecoreClass="Factors.ecore#//AbsSocialFactors">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Factors.ecore#//AbsSocialFactors/relatedness"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Factors.ecore#//AbsSocialFactors/reciprocity"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Factors.ecore#//AbsSocialFactors/levelofneed"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Factors.ecore#//AbsSocialFactors/actor"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Factors.ecore#//AbsSocialFactors/opportunitytoconnect"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Factors.ecore#//AbsSocialFactors/trust"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Factors.ecore#//AbsSocialFactors/socialfactor"/>
     </genClasses>
     <genClasses image="false" ecoreClass="Factors.ecore#//AbsKindnessEntity"/>
     <genClasses ecoreClass="Factors.ecore#//Factor">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Factors.ecore#//Factor/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Factors.ecore#//Factor/impactedfactors"/>
     </genClasses>
     <genClasses image="false" ecoreClass="Factors.ecore#//AbsPsychologicalFactors"/>
+    <genClasses image="false" ecoreClass="Factors.ecore#//ImpactedFactor">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Factors.ecore#//ImpactedFactor/IMPACT"/>
+    </genClasses>
     <nestedGenPackages prefix="NewPackage1" disposableProviderFactory="true" ecorePackage="Factors.ecore#//Social">
       <genClasses ecoreClass="Factors.ecore#//Social/LevelOfNeed">
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Factors.ecore#//Social/LevelOfNeed/need"/>

@@ -3,21 +3,15 @@
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="factors" nsURI="http://www.example.org/kindness_metamodel_factors"
     nsPrefix="kindness_metamodel">
   <eClassifiers xsi:type="ecore:EClass" name="AbsSocialFactors" abstract="true">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="relatedness" upperBound="-1"
-        eType="#//Social/Relatedness" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="reciprocity" upperBound="-1"
-        eType="#//Social/Reciprocity" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="levelofneed" upperBound="-1"
-        eType="#//Social/LevelOfNeed" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="actor" eType="#//AbsKindnessEntity"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="opportunitytoconnect" upperBound="-1"
-        eType="#//Social/OpportunityToConnect" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="trust" upperBound="-1"
-        eType="#//Social/Trust" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="socialfactor" upperBound="-1"
+        eType="#//Social/SocialFactor" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AbsKindnessEntity" abstract="true"/>
   <eClassifiers xsi:type="ecore:EClass" name="Factor" abstract="true" interface="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="impactedfactors" upperBound="-1"
+        eType="#//ImpactedFactor"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="DegreeOfRelatedness">
     <eLiterals name="FAMILY"/>
@@ -43,6 +37,15 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AbsPsychologicalFactors" abstract="true"
       interface="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ImpactedFactor" abstract="true" eSuperTypes="#//Factor">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="IMPACT" eType="#//FactorImpact"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="FactorImpact">
+    <eLiterals name="POSITIVE"/>
+    <eLiterals name="NEGATIVE" value="1"/>
+    <eLiterals name="NONE" value="2"/>
+    <eLiterals name="UNKNOWN" value="3"/>
+  </eClassifiers>
   <eSubpackages name="Social" nsURI="http://www.example.org/kindness_metamodel_factors_social"
       nsPrefix="package_socialfactors">
     <eClassifiers xsi:type="ecore:EClass" name="LevelOfNeed" eSuperTypes="#//Social/SocialFactor">
