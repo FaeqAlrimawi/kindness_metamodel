@@ -57,6 +57,8 @@ public class FactorsFactoryImpl extends EFactoryImpl implements FactorsFactory {
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
+		case FactorsPackage.IMPACTED_FACTOR:
+			return createImpactedFactor();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -78,6 +80,8 @@ public class FactorsFactoryImpl extends EFactoryImpl implements FactorsFactory {
 			return createOpportunityFromString(eDataType, initialValue);
 		case FactorsPackage.LEVEL:
 			return createLevelFromString(eDataType, initialValue);
+		case FactorsPackage.FACTOR_IMPACT:
+			return createFactorImpactFromString(eDataType, initialValue);
 		default:
 			throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -99,9 +103,21 @@ public class FactorsFactoryImpl extends EFactoryImpl implements FactorsFactory {
 			return convertOpportunityToString(eDataType, instanceValue);
 		case FactorsPackage.LEVEL:
 			return convertLevelToString(eDataType, instanceValue);
+		case FactorsPackage.FACTOR_IMPACT:
+			return convertFactorImpactToString(eDataType, instanceValue);
 		default:
 			throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ImpactedFactor createImpactedFactor() {
+		ImpactedFactorImpl impactedFactor = new ImpactedFactorImpl();
+		return impactedFactor;
 	}
 
 	/**
@@ -189,6 +205,28 @@ public class FactorsFactoryImpl extends EFactoryImpl implements FactorsFactory {
 	 * @generated
 	 */
 	public String convertLevelToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public FactorImpact createFactorImpactFromString(EDataType eDataType, String initialValue) {
+		FactorImpact result = FactorImpact.get(initialValue);
+		if (result == null)
+			throw new IllegalArgumentException(
+					"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertFactorImpactToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 

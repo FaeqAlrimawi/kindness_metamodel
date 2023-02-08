@@ -2,6 +2,8 @@
  */
 package factors;
 
+import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -14,6 +16,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link factors.Factor#getName <em>Name</em>}</li>
+ *   <li>{@link factors.Factor#getImpactedfactors <em>Impactedfactors</em>}</li>
  * </ul>
  *
  * @see factors.FactorsPackage#getFactor()
@@ -42,5 +45,17 @@ public interface Factor extends EObject {
 	 * @generated
 	 */
 	void setName(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Impactedfactors</b></em>' reference list.
+	 * The list contents are of type {@link factors.ImpactedFactor}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Impactedfactors</em>' reference list.
+	 * @see factors.FactorsPackage#getFactor_Impactedfactors()
+	 * @model
+	 * @generated
+	 */
+	EList<ImpactedFactor> getImpactedfactors();
 
 } // Factor

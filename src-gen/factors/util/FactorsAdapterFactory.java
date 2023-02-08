@@ -87,6 +87,11 @@ public class FactorsAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
+		public Adapter caseImpactedFactor(ImpactedFactor object) {
+			return createImpactedFactorAdapter();
+		}
+
+		@Override
 		public Adapter defaultCase(EObject object) {
 			return createEObjectAdapter();
 		}
@@ -158,6 +163,20 @@ public class FactorsAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createAbsPsychologicalFactorsAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link factors.ImpactedFactor <em>Impacted Factor</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see factors.ImpactedFactor
+	 * @generated
+	 */
+	public Adapter createImpactedFactorAdapter() {
 		return null;
 	}
 

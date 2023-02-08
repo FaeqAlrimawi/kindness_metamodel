@@ -22,6 +22,15 @@ public interface FactorsFactory extends EFactory {
 	FactorsFactory eINSTANCE = factors.impl.FactorsFactoryImpl.init();
 
 	/**
+	 * Returns a new object of class '<em>Impacted Factor</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Impacted Factor</em>'.
+	 * @generated
+	 */
+	ImpactedFactor createImpactedFactor();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

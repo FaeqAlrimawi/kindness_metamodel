@@ -7,8 +7,10 @@ import factors.AbsPsychologicalFactors;
 import factors.AbsSocialFactors;
 import factors.DegreeOfRelatedness;
 import factors.Factor;
+import factors.FactorImpact;
 import factors.FactorsFactory;
 import factors.FactorsPackage;
+import factors.ImpactedFactor;
 import factors.Level;
 import factors.Need;
 import factors.Opportunity;
@@ -69,6 +71,13 @@ public class FactorsPackageImpl extends EPackageImpl implements FactorsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass impactedFactorEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EEnum degreeOfRelatednessEEnum = null;
 
 	/**
@@ -91,6 +100,13 @@ public class FactorsPackageImpl extends EPackageImpl implements FactorsPackage {
 	 * @generated
 	 */
 	private EEnum levelEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum factorImpactEEnum = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -229,8 +245,44 @@ public class FactorsPackageImpl extends EPackageImpl implements FactorsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getFactor_Impactedfactors() {
+		return (EReference) factorEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getAbsPsychologicalFactors() {
 		return absPsychologicalFactorsEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getImpactedFactor() {
+		return impactedFactorEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getImpactedFactor_Impact() {
+		return (EAttribute) impactedFactorEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getImpactedFactor_Factors() {
+		return (EReference) impactedFactorEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -274,6 +326,15 @@ public class FactorsPackageImpl extends EPackageImpl implements FactorsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EEnum getFactorImpact() {
+		return factorImpactEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public FactorsFactory getFactorsFactory() {
 		return (FactorsFactory) getEFactoryInstance();
 	}
@@ -306,14 +367,20 @@ public class FactorsPackageImpl extends EPackageImpl implements FactorsPackage {
 
 		factorEClass = createEClass(FACTOR);
 		createEAttribute(factorEClass, FACTOR__NAME);
+		createEReference(factorEClass, FACTOR__IMPACTEDFACTORS);
 
 		absPsychologicalFactorsEClass = createEClass(ABS_PSYCHOLOGICAL_FACTORS);
+
+		impactedFactorEClass = createEClass(IMPACTED_FACTOR);
+		createEAttribute(impactedFactorEClass, IMPACTED_FACTOR__IMPACT);
+		createEReference(impactedFactorEClass, IMPACTED_FACTOR__FACTORS);
 
 		// Create enums
 		degreeOfRelatednessEEnum = createEEnum(DEGREE_OF_RELATEDNESS);
 		needEEnum = createEEnum(NEED);
 		opportunityEEnum = createEEnum(OPPORTUNITY);
 		levelEEnum = createEEnum(LEVEL);
+		factorImpactEEnum = createEEnum(FACTOR_IMPACT);
 	}
 
 	/**
@@ -352,6 +419,7 @@ public class FactorsPackageImpl extends EPackageImpl implements FactorsPackage {
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
+		impactedFactorEClass.getESuperTypes().add(this.getFactor());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(absSocialFactorsEClass, AbsSocialFactors.class, "AbsSocialFactors", IS_ABSTRACT, !IS_INTERFACE,
@@ -369,9 +437,21 @@ public class FactorsPackageImpl extends EPackageImpl implements FactorsPackage {
 		initEClass(factorEClass, Factor.class, "Factor", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getFactor_Name(), ecorePackage.getEString(), "name", null, 0, 1, Factor.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getFactor_Impactedfactors(), this.getImpactedFactor(), null, "impactedfactors", null, 0, -1,
+				Factor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(absPsychologicalFactorsEClass, AbsPsychologicalFactors.class, "AbsPsychologicalFactors", IS_ABSTRACT,
 				IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(impactedFactorEClass, ImpactedFactor.class, "ImpactedFactor", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getImpactedFactor_Impact(), this.getFactorImpact(), "impact", "POSITIVE", 0, 1,
+				ImpactedFactor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEReference(getImpactedFactor_Factors(), this.getFactor(), null, "factors", null, 1, -1,
+				ImpactedFactor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(degreeOfRelatednessEEnum, DegreeOfRelatedness.class, "DegreeOfRelatedness");
@@ -395,6 +475,12 @@ public class FactorsPackageImpl extends EPackageImpl implements FactorsPackage {
 		addEEnumLiteral(levelEEnum, Level.HIGH);
 		addEEnumLiteral(levelEEnum, Level.MEDIUM);
 		addEEnumLiteral(levelEEnum, Level.LOW);
+
+		initEEnum(factorImpactEEnum, FactorImpact.class, "FactorImpact");
+		addEEnumLiteral(factorImpactEEnum, FactorImpact.POSITIVE);
+		addEEnumLiteral(factorImpactEEnum, FactorImpact.NEGATIVE);
+		addEEnumLiteral(factorImpactEEnum, FactorImpact.NONE);
+		addEEnumLiteral(factorImpactEEnum, FactorImpact.UNKNOWN);
 
 		// Create resource
 		createResource(eNS_URI);

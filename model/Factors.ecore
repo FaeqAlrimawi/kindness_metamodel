@@ -37,8 +37,11 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AbsPsychologicalFactors" abstract="true"
       interface="true"/>
-  <eClassifiers xsi:type="ecore:EClass" name="ImpactedFactor" abstract="true" eSuperTypes="#//Factor">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="IMPACT" eType="#//FactorImpact"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ImpactedFactor" eSuperTypes="#//Factor">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="impact" eType="#//FactorImpact"
+        defaultValueLiteral="POSITIVE"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="factors" lowerBound="1"
+        upperBound="-1" eType="#//Factor"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="FactorImpact">
     <eLiterals name="POSITIVE"/>

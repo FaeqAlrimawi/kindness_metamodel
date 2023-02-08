@@ -78,6 +78,15 @@ public interface NewPackage1Package extends EPackage {
 	int SOCIAL_FACTOR__NAME = FactorsPackage.FACTOR__NAME;
 
 	/**
+	 * The feature id for the '<em><b>Impactedfactors</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOCIAL_FACTOR__IMPACTEDFACTORS = FactorsPackage.FACTOR__IMPACTEDFACTORS;
+
+	/**
 	 * The feature id for the '<em><b>Actor</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -122,6 +131,15 @@ public interface NewPackage1Package extends EPackage {
 	 * @ordered
 	 */
 	int LEVEL_OF_NEED__NAME = SOCIAL_FACTOR__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Impactedfactors</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LEVEL_OF_NEED__IMPACTEDFACTORS = SOCIAL_FACTOR__IMPACTEDFACTORS;
 
 	/**
 	 * The feature id for the '<em><b>Actor</b></em>' reference.
@@ -188,6 +206,15 @@ public interface NewPackage1Package extends EPackage {
 	int RELATEDNESS__NAME = SOCIAL_FACTOR__NAME;
 
 	/**
+	 * The feature id for the '<em><b>Impactedfactors</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RELATEDNESS__IMPACTEDFACTORS = SOCIAL_FACTOR__IMPACTEDFACTORS;
+
+	/**
 	 * The feature id for the '<em><b>Actor</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -252,6 +279,15 @@ public interface NewPackage1Package extends EPackage {
 	int RECIPROCITY__NAME = SOCIAL_FACTOR__NAME;
 
 	/**
+	 * The feature id for the '<em><b>Impactedfactors</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RECIPROCITY__IMPACTEDFACTORS = SOCIAL_FACTOR__IMPACTEDFACTORS;
+
+	/**
 	 * The feature id for the '<em><b>Actor</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -307,6 +343,15 @@ public interface NewPackage1Package extends EPackage {
 	int OPPORTUNITY_TO_CONNECT__NAME = SOCIAL_FACTOR__NAME;
 
 	/**
+	 * The feature id for the '<em><b>Impactedfactors</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OPPORTUNITY_TO_CONNECT__IMPACTEDFACTORS = SOCIAL_FACTOR__IMPACTEDFACTORS;
+
+	/**
 	 * The feature id for the '<em><b>Actor</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -360,6 +405,15 @@ public interface NewPackage1Package extends EPackage {
 	 * @ordered
 	 */
 	int TRUST__NAME = SOCIAL_FACTOR__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Impactedfactors</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRUST__IMPACTEDFACTORS = SOCIAL_FACTOR__IMPACTEDFACTORS;
 
 	/**
 	 * The feature id for the '<em><b>Actor</b></em>' reference.
