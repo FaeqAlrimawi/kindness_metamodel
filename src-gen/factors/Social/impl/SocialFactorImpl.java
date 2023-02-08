@@ -3,24 +3,23 @@
 package factors.Social.impl;
 
 import factors.AbsKindnessEntity;
-import factors.ImpactedFactor;
 
+import factors.AffectedFactor;
 import factors.Social.NewPackage1Package;
 import factors.Social.SocialFactor;
 
 import java.util.Collection;
-
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -31,7 +30,7 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  * </p>
  * <ul>
  *   <li>{@link factors.Social.impl.SocialFactorImpl#getName <em>Name</em>}</li>
- *   <li>{@link factors.Social.impl.SocialFactorImpl#getImpactedfactors <em>Impactedfactors</em>}</li>
+ *   <li>{@link factors.Social.impl.SocialFactorImpl#getAffectedfactor <em>Affectedfactor</em>}</li>
  *   <li>{@link factors.Social.impl.SocialFactorImpl#getActor <em>Actor</em>}</li>
  * </ul>
  *
@@ -59,14 +58,14 @@ public abstract class SocialFactorImpl extends MinimalEObjectImpl.Container impl
 	protected String name = NAME_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getImpactedfactors() <em>Impactedfactors</em>}' reference list.
+	 * The cached value of the '{@link #getAffectedfactor() <em>Affectedfactor</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getImpactedfactors()
+	 * @see #getAffectedfactor()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<ImpactedFactor> impactedfactors;
+	protected EList<AffectedFactor> affectedfactor;
 
 	/**
 	 * The cached value of the '{@link #getActor() <em>Actor</em>}' reference.
@@ -124,12 +123,12 @@ public abstract class SocialFactorImpl extends MinimalEObjectImpl.Container impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<ImpactedFactor> getImpactedfactors() {
-		if (impactedfactors == null) {
-			impactedfactors = new EObjectResolvingEList<ImpactedFactor>(ImpactedFactor.class, this,
-					NewPackage1Package.SOCIAL_FACTOR__IMPACTEDFACTORS);
+	public EList<AffectedFactor> getAffectedfactor() {
+		if (affectedfactor == null) {
+			affectedfactor = new EObjectContainmentEList<AffectedFactor>(AffectedFactor.class, this,
+					NewPackage1Package.SOCIAL_FACTOR__AFFECTEDFACTOR);
 		}
-		return impactedfactors;
+		return affectedfactor;
 	}
 
 	/**
@@ -178,12 +177,26 @@ public abstract class SocialFactorImpl extends MinimalEObjectImpl.Container impl
 	 * @generated
 	 */
 	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+		case NewPackage1Package.SOCIAL_FACTOR__AFFECTEDFACTOR:
+			return ((InternalEList<?>) getAffectedfactor()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 		case NewPackage1Package.SOCIAL_FACTOR__NAME:
 			return getName();
-		case NewPackage1Package.SOCIAL_FACTOR__IMPACTEDFACTORS:
-			return getImpactedfactors();
+		case NewPackage1Package.SOCIAL_FACTOR__AFFECTEDFACTOR:
+			return getAffectedfactor();
 		case NewPackage1Package.SOCIAL_FACTOR__ACTOR:
 			if (resolve)
 				return getActor();
@@ -204,9 +217,9 @@ public abstract class SocialFactorImpl extends MinimalEObjectImpl.Container impl
 		case NewPackage1Package.SOCIAL_FACTOR__NAME:
 			setName((String) newValue);
 			return;
-		case NewPackage1Package.SOCIAL_FACTOR__IMPACTEDFACTORS:
-			getImpactedfactors().clear();
-			getImpactedfactors().addAll((Collection<? extends ImpactedFactor>) newValue);
+		case NewPackage1Package.SOCIAL_FACTOR__AFFECTEDFACTOR:
+			getAffectedfactor().clear();
+			getAffectedfactor().addAll((Collection<? extends AffectedFactor>) newValue);
 			return;
 		case NewPackage1Package.SOCIAL_FACTOR__ACTOR:
 			setActor((AbsKindnessEntity) newValue);
@@ -226,8 +239,8 @@ public abstract class SocialFactorImpl extends MinimalEObjectImpl.Container impl
 		case NewPackage1Package.SOCIAL_FACTOR__NAME:
 			setName(NAME_EDEFAULT);
 			return;
-		case NewPackage1Package.SOCIAL_FACTOR__IMPACTEDFACTORS:
-			getImpactedfactors().clear();
+		case NewPackage1Package.SOCIAL_FACTOR__AFFECTEDFACTOR:
+			getAffectedfactor().clear();
 			return;
 		case NewPackage1Package.SOCIAL_FACTOR__ACTOR:
 			setActor((AbsKindnessEntity) null);
@@ -246,8 +259,8 @@ public abstract class SocialFactorImpl extends MinimalEObjectImpl.Container impl
 		switch (featureID) {
 		case NewPackage1Package.SOCIAL_FACTOR__NAME:
 			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-		case NewPackage1Package.SOCIAL_FACTOR__IMPACTEDFACTORS:
-			return impactedfactors != null && !impactedfactors.isEmpty();
+		case NewPackage1Package.SOCIAL_FACTOR__AFFECTEDFACTOR:
+			return affectedfactor != null && !affectedfactor.isEmpty();
 		case NewPackage1Package.SOCIAL_FACTOR__ACTOR:
 			return actor != null;
 		}

@@ -57,8 +57,8 @@ public class FactorsFactoryImpl extends EFactoryImpl implements FactorsFactory {
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-		case FactorsPackage.IMPACTED_FACTOR:
-			return createImpactedFactor();
+		case FactorsPackage.AFFECTED_FACTOR:
+			return createAffectedFactor();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -115,9 +115,9 @@ public class FactorsFactoryImpl extends EFactoryImpl implements FactorsFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ImpactedFactor createImpactedFactor() {
-		ImpactedFactorImpl impactedFactor = new ImpactedFactorImpl();
-		return impactedFactor;
+	public AffectedFactor createAffectedFactor() {
+		AffectedFactorImpl affectedFactor = new AffectedFactorImpl();
+		return affectedFactor;
 	}
 
 	/**

@@ -151,13 +151,13 @@ public interface FactorsPackage extends EPackage {
 	int FACTOR__NAME = 0;
 
 	/**
-	 * The feature id for the '<em><b>Impactedfactors</b></em>' reference list.
+	 * The feature id for the '<em><b>Affectedfactor</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FACTOR__IMPACTEDFACTORS = 1;
+	int FACTOR__AFFECTEDFACTOR = 1;
 
 	/**
 	 * The number of structural features of the '<em>Factor</em>' class.
@@ -206,32 +206,23 @@ public interface FactorsPackage extends EPackage {
 	int ABS_PSYCHOLOGICAL_FACTORS_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link factors.impl.ImpactedFactorImpl <em>Impacted Factor</em>}' class.
+	 * The meta object id for the '{@link factors.impl.AffectedFactorImpl <em>Affected Factor</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see factors.impl.ImpactedFactorImpl
-	 * @see factors.impl.FactorsPackageImpl#getImpactedFactor()
+	 * @see factors.impl.AffectedFactorImpl
+	 * @see factors.impl.FactorsPackageImpl#getAffectedFactor()
 	 * @generated
 	 */
-	int IMPACTED_FACTOR = 4;
+	int AFFECTED_FACTOR = 4;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * The feature id for the '<em><b>Factor</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IMPACTED_FACTOR__NAME = FACTOR__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Impactedfactors</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMPACTED_FACTOR__IMPACTEDFACTORS = FACTOR__IMPACTEDFACTORS;
+	int AFFECTED_FACTOR__FACTOR = 0;
 
 	/**
 	 * The feature id for the '<em><b>Impact</b></em>' attribute.
@@ -240,34 +231,25 @@ public interface FactorsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMPACTED_FACTOR__IMPACT = FACTOR_FEATURE_COUNT + 0;
+	int AFFECTED_FACTOR__IMPACT = 1;
 
 	/**
-	 * The feature id for the '<em><b>Factors</b></em>' reference list.
+	 * The number of structural features of the '<em>Affected Factor</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IMPACTED_FACTOR__FACTORS = FACTOR_FEATURE_COUNT + 1;
+	int AFFECTED_FACTOR_FEATURE_COUNT = 2;
 
 	/**
-	 * The number of structural features of the '<em>Impacted Factor</em>' class.
+	 * The number of operations of the '<em>Affected Factor</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IMPACTED_FACTOR_FEATURE_COUNT = FACTOR_FEATURE_COUNT + 2;
-
-	/**
-	 * The number of operations of the '<em>Impacted Factor</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMPACTED_FACTOR_OPERATION_COUNT = FACTOR_OPERATION_COUNT + 0;
+	int AFFECTED_FACTOR_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link factors.DegreeOfRelatedness <em>Degree Of Relatedness</em>}' enum.
@@ -383,15 +365,15 @@ public interface FactorsPackage extends EPackage {
 	EAttribute getFactor_Name();
 
 	/**
-	 * Returns the meta object for the reference list '{@link factors.Factor#getImpactedfactors <em>Impactedfactors</em>}'.
+	 * Returns the meta object for the containment reference list '{@link factors.Factor#getAffectedfactor <em>Affectedfactor</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Impactedfactors</em>'.
-	 * @see factors.Factor#getImpactedfactors()
+	 * @return the meta object for the containment reference list '<em>Affectedfactor</em>'.
+	 * @see factors.Factor#getAffectedfactor()
 	 * @see #getFactor()
 	 * @generated
 	 */
-	EReference getFactor_Impactedfactors();
+	EReference getFactor_Affectedfactor();
 
 	/**
 	 * Returns the meta object for class '{@link factors.AbsPsychologicalFactors <em>Abs Psychological Factors</em>}'.
@@ -404,36 +386,36 @@ public interface FactorsPackage extends EPackage {
 	EClass getAbsPsychologicalFactors();
 
 	/**
-	 * Returns the meta object for class '{@link factors.ImpactedFactor <em>Impacted Factor</em>}'.
+	 * Returns the meta object for class '{@link factors.AffectedFactor <em>Affected Factor</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Impacted Factor</em>'.
-	 * @see factors.ImpactedFactor
+	 * @return the meta object for class '<em>Affected Factor</em>'.
+	 * @see factors.AffectedFactor
 	 * @generated
 	 */
-	EClass getImpactedFactor();
+	EClass getAffectedFactor();
 
 	/**
-	 * Returns the meta object for the attribute '{@link factors.ImpactedFactor#getImpact <em>Impact</em>}'.
+	 * Returns the meta object for the reference '{@link factors.AffectedFactor#getFactor <em>Factor</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Factor</em>'.
+	 * @see factors.AffectedFactor#getFactor()
+	 * @see #getAffectedFactor()
+	 * @generated
+	 */
+	EReference getAffectedFactor_Factor();
+
+	/**
+	 * Returns the meta object for the attribute '{@link factors.AffectedFactor#getImpact <em>Impact</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Impact</em>'.
-	 * @see factors.ImpactedFactor#getImpact()
-	 * @see #getImpactedFactor()
+	 * @see factors.AffectedFactor#getImpact()
+	 * @see #getAffectedFactor()
 	 * @generated
 	 */
-	EAttribute getImpactedFactor_Impact();
-
-	/**
-	 * Returns the meta object for the reference list '{@link factors.ImpactedFactor#getFactors <em>Factors</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Factors</em>'.
-	 * @see factors.ImpactedFactor#getFactors()
-	 * @see #getImpactedFactor()
-	 * @generated
-	 */
-	EReference getImpactedFactor_Factors();
+	EAttribute getAffectedFactor_Impact();
 
 	/**
 	 * Returns the meta object for enum '{@link factors.DegreeOfRelatedness <em>Degree Of Relatedness</em>}'.
@@ -563,12 +545,12 @@ public interface FactorsPackage extends EPackage {
 		EAttribute FACTOR__NAME = eINSTANCE.getFactor_Name();
 
 		/**
-		 * The meta object literal for the '<em><b>Impactedfactors</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Affectedfactor</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference FACTOR__IMPACTEDFACTORS = eINSTANCE.getFactor_Impactedfactors();
+		EReference FACTOR__AFFECTEDFACTOR = eINSTANCE.getFactor_Affectedfactor();
 
 		/**
 		 * The meta object literal for the '{@link factors.AbsPsychologicalFactors <em>Abs Psychological Factors</em>}' class.
@@ -581,14 +563,22 @@ public interface FactorsPackage extends EPackage {
 		EClass ABS_PSYCHOLOGICAL_FACTORS = eINSTANCE.getAbsPsychologicalFactors();
 
 		/**
-		 * The meta object literal for the '{@link factors.impl.ImpactedFactorImpl <em>Impacted Factor</em>}' class.
+		 * The meta object literal for the '{@link factors.impl.AffectedFactorImpl <em>Affected Factor</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see factors.impl.ImpactedFactorImpl
-		 * @see factors.impl.FactorsPackageImpl#getImpactedFactor()
+		 * @see factors.impl.AffectedFactorImpl
+		 * @see factors.impl.FactorsPackageImpl#getAffectedFactor()
 		 * @generated
 		 */
-		EClass IMPACTED_FACTOR = eINSTANCE.getImpactedFactor();
+		EClass AFFECTED_FACTOR = eINSTANCE.getAffectedFactor();
+
+		/**
+		 * The meta object literal for the '<em><b>Factor</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference AFFECTED_FACTOR__FACTOR = eINSTANCE.getAffectedFactor_Factor();
 
 		/**
 		 * The meta object literal for the '<em><b>Impact</b></em>' attribute feature.
@@ -596,15 +586,7 @@ public interface FactorsPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute IMPACTED_FACTOR__IMPACT = eINSTANCE.getImpactedFactor_Impact();
-
-		/**
-		 * The meta object literal for the '<em><b>Factors</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference IMPACTED_FACTOR__FACTORS = eINSTANCE.getImpactedFactor_Factors();
+		EAttribute AFFECTED_FACTOR__IMPACT = eINSTANCE.getAffectedFactor_Impact();
 
 		/**
 		 * The meta object literal for the '{@link factors.DegreeOfRelatedness <em>Degree Of Relatedness</em>}' enum.

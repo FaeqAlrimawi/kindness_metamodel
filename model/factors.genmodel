@@ -41,12 +41,12 @@
     <genClasses image="false" ecoreClass="Factors.ecore#//AbsKindnessEntity"/>
     <genClasses ecoreClass="Factors.ecore#//Factor">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Factors.ecore#//Factor/name"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Factors.ecore#//Factor/impactedfactors"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Factors.ecore#//Factor/affectedfactor"/>
     </genClasses>
     <genClasses image="false" ecoreClass="Factors.ecore#//AbsPsychologicalFactors"/>
-    <genClasses image="false" ecoreClass="Factors.ecore#//ImpactedFactor">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Factors.ecore#//ImpactedFactor/impact"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Factors.ecore#//ImpactedFactor/factors"/>
+    <genClasses ecoreClass="Factors.ecore#//AffectedFactor">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Factors.ecore#//AffectedFactor/factor"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Factors.ecore#//AffectedFactor/impact"/>
     </genClasses>
     <nestedGenPackages prefix="NewPackage1" disposableProviderFactory="true" ecorePackage="Factors.ecore#//Social">
       <genClasses ecoreClass="Factors.ecore#//Social/LevelOfNeed">

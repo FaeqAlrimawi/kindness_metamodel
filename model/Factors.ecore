@@ -10,8 +10,8 @@
   <eClassifiers xsi:type="ecore:EClass" name="AbsKindnessEntity" abstract="true"/>
   <eClassifiers xsi:type="ecore:EClass" name="Factor" abstract="true" interface="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="impactedfactors" upperBound="-1"
-        eType="#//ImpactedFactor"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="affectedfactor" upperBound="-1"
+        eType="#//AffectedFactor" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="DegreeOfRelatedness">
     <eLiterals name="FAMILY"/>
@@ -37,17 +37,15 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AbsPsychologicalFactors" abstract="true"
       interface="true"/>
-  <eClassifiers xsi:type="ecore:EClass" name="ImpactedFactor" eSuperTypes="#//Factor">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="impact" eType="#//FactorImpact"
-        defaultValueLiteral="POSITIVE"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="factors" lowerBound="1"
-        upperBound="-1" eType="#//Factor"/>
-  </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="FactorImpact">
     <eLiterals name="POSITIVE"/>
     <eLiterals name="NEGATIVE" value="1"/>
     <eLiterals name="NONE" value="2"/>
     <eLiterals name="UNKNOWN" value="3"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AffectedFactor">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="factor" eType="#//Factor"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="impact" eType="#//FactorImpact"/>
   </eClassifiers>
   <eSubpackages name="Social" nsURI="http://www.example.org/kindness_metamodel_factors_social"
       nsPrefix="package_socialfactors">
