@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="kindness_metamodel" nsURI="http://www.example.org/kindness_metamodel"
+    nsPrefix="kindness_metamodel">
+  <eClassifiers xsi:type="ecore:EClass" name="Property">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="KindnessOpportunity">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="properties" upperBound="-1"
+        eType="#//Property" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="act" lowerBound="1" upperBound="-1"
+        eType="#//Act" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Act">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//ActType"
+        defaultValueLiteral="KINDNESS"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="precondition" lowerBound="1"
+        eType="#//Condition" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="postcondition" lowerBound="1"
+        eType="#//Condition" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="giver" lowerBound="1" eType="#//Giver"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="receiver" lowerBound="1"
+        eType="#//Receiver" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="observant" upperBound="-1"
+        eType="#//Observant" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="mediator" eType="#//Mediator"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="next" eType="#//Act"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="items" lowerBound="1" upperBound="-1"
+        eType="#//Item" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="ActType">
+    <eLiterals name="MOTIVATION"/>
+    <eLiterals name="ABILITY" value="1"/>
+    <eLiterals name="PROMPT" value="2"/>
+    <eLiterals name="KINDNESS" value="3"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Condition">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="refKindnessEntities" lowerBound="1"
+        upperBound="-1" eType="#//KindnessEntity"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="KindnessEntity" eSuperTypes="Factors.ecore#//AbsKindnessEntity">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="connections" upperBound="-1"
+        eType="#//Connection"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="containerEntity" eType="#//KindnessEntity"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="containedEntities" upperBound="-1"
+        eType="#//KindnessEntity"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="properties" upperBound="-1"
+        eType="#//Property" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Connection">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="bidirectional" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        defaultValueLiteral="True"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="entity1" lowerBound="1"
+        eType="#//KindnessEntity"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="entity2" lowerBound="1"
+        eType="#//KindnessEntity"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Location" eSuperTypes="#//KindnessEntity"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Time" eSuperTypes="#//KindnessEntity"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Actor" eSuperTypes="#//KindnessEntity">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="social_factors" eType="#//Social_Factors"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="psychological_factors"
+        eType="#//Psychological_Factors" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Giver" eSuperTypes="#//Actor">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="motivations" upperBound="-1"
+        eType="#//Motivation"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Receiver" eSuperTypes="#//Actor"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Observant" eSuperTypes="#//Actor"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Mediator" eSuperTypes="#//Actor"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Motivation">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//MotivationType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="level" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="towards" eType="#//Receiver"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="MotivationType">
+    <eLiterals name="OTHER_BETTERMENT"/>
+    <eLiterals name="SELF_BETTERMENT" value="1"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Social_Factors" eSuperTypes="Factors.ecore#//AbsSocialFactors"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Psychological_Factors" eSuperTypes="Factors.ecore#//AbsPsychologicalFactors"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Item" eSuperTypes="#//KindnessEntity"/>
+</ecore:EPackage>

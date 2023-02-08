@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/kindness_metamodel/src" modelPluginID="kindness_metamodel"
+    modelName="Factors" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>Factors.ecore</foreignModel>
+  <genPackages prefix="Factors" disposableProviderFactory="true" ecorePackage="Factors.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Factors.ecore#//DegreeOfRelatedness">
+      <genEnumLiterals ecoreEnumLiteral="Factors.ecore#//DegreeOfRelatedness/FAMILY"/>
+      <genEnumLiterals ecoreEnumLiteral="Factors.ecore#//DegreeOfRelatedness/FRIEND"/>
+      <genEnumLiterals ecoreEnumLiteral="Factors.ecore#//DegreeOfRelatedness/COLLEAGUE"/>
+      <genEnumLiterals ecoreEnumLiteral="Factors.ecore#//DegreeOfRelatedness/ACQUAINTANCE"/>
+      <genEnumLiterals ecoreEnumLiteral="Factors.ecore#//DegreeOfRelatedness/STRANGER"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Factors.ecore#//Need">
+      <genEnumLiterals ecoreEnumLiteral="Factors.ecore#//Need/EMOTIONAL"/>
+      <genEnumLiterals ecoreEnumLiteral="Factors.ecore#//Need/INSTRUMENTAL"/>
+      <genEnumLiterals ecoreEnumLiteral="Factors.ecore#//Need/HEALTH_RELATED"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Factors.ecore#//Opportunity">
+      <genEnumLiterals ecoreEnumLiteral="Factors.ecore#//Opportunity/MAKE_NEW_FRIEND"/>
+      <genEnumLiterals ecoreEnumLiteral="Factors.ecore#//Opportunity/KEEP_OLD_FRIEND"/>
+      <genEnumLiterals ecoreEnumLiteral="Factors.ecore#//Opportunity/STRENGTHEN_FAMILY_TIES"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Factors.ecore#//Level">
+      <genEnumLiterals ecoreEnumLiteral="Factors.ecore#//Level/HIGH"/>
+      <genEnumLiterals ecoreEnumLiteral="Factors.ecore#//Level/MEDIUM"/>
+      <genEnumLiterals ecoreEnumLiteral="Factors.ecore#//Level/LOW"/>
+    </genEnums>
+    <genClasses ecoreClass="Factors.ecore#//AbsSocialFactors">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Factors.ecore#//AbsSocialFactors/relatedness"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Factors.ecore#//AbsSocialFactors/reciprocity"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Factors.ecore#//AbsSocialFactors/levelofneed"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Factors.ecore#//AbsSocialFactors/actor"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Factors.ecore#//AbsSocialFactors/opportunitytoconnect"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Factors.ecore#//AbsSocialFactors/trust"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="Factors.ecore#//AbsKindnessEntity"/>
+    <genClasses ecoreClass="Factors.ecore#//Factor">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Factors.ecore#//Factor/name"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="Factors.ecore#//AbsPsychologicalFactors"/>
+    <nestedGenPackages prefix="NewPackage1" disposableProviderFactory="true" ecorePackage="Factors.ecore#//Social">
+      <genClasses ecoreClass="Factors.ecore#//Social/LevelOfNeed">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Factors.ecore#//Social/LevelOfNeed/need"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Factors.ecore#//Social/LevelOfNeed/level"/>
+      </genClasses>
+      <genClasses ecoreClass="Factors.ecore#//Social/Relatedness">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Factors.ecore#//Social/Relatedness/level"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Factors.ecore#//Social/Relatedness/degree"/>
+      </genClasses>
+      <genClasses ecoreClass="Factors.ecore#//Social/Reciprocity">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Factors.ecore#//Social/Reciprocity/isReciprocal"/>
+      </genClasses>
+      <genClasses image="false" ecoreClass="Factors.ecore#//Social/SocialFactor">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference Factors.ecore#//Social/SocialFactor/actor"/>
+      </genClasses>
+      <genClasses ecoreClass="Factors.ecore#//Social/OpportunityToConnect">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Factors.ecore#//Social/OpportunityToConnect/opportunity"/>
+      </genClasses>
+      <genClasses ecoreClass="Factors.ecore#//Social/Trust">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Factors.ecore#//Social/Trust/level"/>
+      </genClasses>
+    </nestedGenPackages>
+  </genPackages>
+  <genPackages prefix="Kindness_metamodel" ecorePackage="kindness_metamodel.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="kindness_metamodel.ecore#//ActType">
+      <genEnumLiterals ecoreEnumLiteral="kindness_metamodel.ecore#//ActType/MOTIVATION"/>
+      <genEnumLiterals ecoreEnumLiteral="kindness_metamodel.ecore#//ActType/ABILITY"/>
+      <genEnumLiterals ecoreEnumLiteral="kindness_metamodel.ecore#//ActType/PROMPT"/>
+      <genEnumLiterals ecoreEnumLiteral="kindness_metamodel.ecore#//ActType/KINDNESS"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="kindness_metamodel.ecore#//MotivationType">
+      <genEnumLiterals ecoreEnumLiteral="kindness_metamodel.ecore#//MotivationType/OTHER_BETTERMENT"/>
+      <genEnumLiterals ecoreEnumLiteral="kindness_metamodel.ecore#//MotivationType/SELF_BETTERMENT"/>
+    </genEnums>
+    <genClasses ecoreClass="kindness_metamodel.ecore#//Property">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute kindness_metamodel.ecore#//Property/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute kindness_metamodel.ecore#//Property/value"/>
+    </genClasses>
+    <genClasses ecoreClass="kindness_metamodel.ecore#//KindnessOpportunity">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute kindness_metamodel.ecore#//KindnessOpportunity/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference kindness_metamodel.ecore#//KindnessOpportunity/properties"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference kindness_metamodel.ecore#//KindnessOpportunity/act"/>
+    </genClasses>
+    <genClasses ecoreClass="kindness_metamodel.ecore#//Act">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute kindness_metamodel.ecore#//Act/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute kindness_metamodel.ecore#//Act/type"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference kindness_metamodel.ecore#//Act/precondition"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference kindness_metamodel.ecore#//Act/postcondition"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference kindness_metamodel.ecore#//Act/giver"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference kindness_metamodel.ecore#//Act/receiver"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference kindness_metamodel.ecore#//Act/observant"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference kindness_metamodel.ecore#//Act/mediator"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference kindness_metamodel.ecore#//Act/next"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference kindness_metamodel.ecore#//Act/items"/>
+    </genClasses>
+    <genClasses ecoreClass="kindness_metamodel.ecore#//Condition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute kindness_metamodel.ecore#//Condition/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference kindness_metamodel.ecore#//Condition/refKindnessEntities"/>
+    </genClasses>
+    <genClasses ecoreClass="kindness_metamodel.ecore#//KindnessEntity">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute kindness_metamodel.ecore#//KindnessEntity/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute kindness_metamodel.ecore#//KindnessEntity/type"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference kindness_metamodel.ecore#//KindnessEntity/connections"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference kindness_metamodel.ecore#//KindnessEntity/containerEntity"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference kindness_metamodel.ecore#//KindnessEntity/containedEntities"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference kindness_metamodel.ecore#//KindnessEntity/properties"/>
+    </genClasses>
+    <genClasses ecoreClass="kindness_metamodel.ecore#//Connection">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute kindness_metamodel.ecore#//Connection/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute kindness_metamodel.ecore#//Connection/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute kindness_metamodel.ecore#//Connection/bidirectional"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference kindness_metamodel.ecore#//Connection/entity1"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference kindness_metamodel.ecore#//Connection/entity2"/>
+    </genClasses>
+    <genClasses ecoreClass="kindness_metamodel.ecore#//Location"/>
+    <genClasses ecoreClass="kindness_metamodel.ecore#//Time"/>
+    <genClasses ecoreClass="kindness_metamodel.ecore#//Actor">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference kindness_metamodel.ecore#//Actor/social_factors"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference kindness_metamodel.ecore#//Actor/psychological_factors"/>
+    </genClasses>
+    <genClasses ecoreClass="kindness_metamodel.ecore#//Giver">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference kindness_metamodel.ecore#//Giver/motivations"/>
+    </genClasses>
+    <genClasses ecoreClass="kindness_metamodel.ecore#//Receiver"/>
+    <genClasses ecoreClass="kindness_metamodel.ecore#//Observant"/>
+    <genClasses ecoreClass="kindness_metamodel.ecore#//Mediator"/>
+    <genClasses ecoreClass="kindness_metamodel.ecore#//Motivation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute kindness_metamodel.ecore#//Motivation/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute kindness_metamodel.ecore#//Motivation/level"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference kindness_metamodel.ecore#//Motivation/towards"/>
+    </genClasses>
+    <genClasses ecoreClass="kindness_metamodel.ecore#//Social_Factors"/>
+    <genClasses ecoreClass="kindness_metamodel.ecore#//Psychological_Factors"/>
+    <genClasses ecoreClass="kindness_metamodel.ecore#//Item"/>
+  </genPackages>
+</genmodel:GenModel>
