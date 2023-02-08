@@ -11,7 +11,7 @@
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
         <target xmi:type="ecore:EPackage" href="kindness_metamodel.ecore#/"/>
       </ownedRepresentationDescriptors>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_8Bs3kKe4Ee26bdY7ZY7Qgg" name="factors class diagram" repPath="#_8BpNMKe4Ee26bdY7ZY7Qgg" changeId="3b6ae111-85f2-4142-a6f6-0565db7b3d5f">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_8Bs3kKe4Ee26bdY7ZY7Qgg" name="factors class diagram" repPath="#_8BpNMKe4Ee26bdY7ZY7Qgg" changeId="6fc7ab1e-c80e-488f-ad7e-d0cd2d5b3bed">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
         <target xmi:type="ecore:EPackage" href="Factors.ecore#/"/>
       </ownedRepresentationDescriptors>
@@ -1853,7 +1853,7 @@
           <styles xmi:type="notation:TextStyle" xmi:id="_rbGk06fQEe28Droqk7t-2w" textAlignment="Center"/>
           <styles xmi:type="notation:LineTypeStyle" xmi:id="_rbGk1KfQEe28Droqk7t-2w"/>
           <element xsi:nil="true"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_rbGk1afQEe28Droqk7t-2w" x="1381" y="37"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_rbGk1afQEe28Droqk7t-2w" x="1405" y="65"/>
         </children>
         <styles xmi:type="notation:DiagramStyle" xmi:id="_8BxJAqe4Ee26bdY7ZY7Qgg"/>
         <edges xmi:type="notation:Connector" xmi:id="_W4ZWwKfFEe21SdnhSoOHDQ" type="NoteAttachment" source="_ShgPAKfFEe21SdnhSoOHDQ" target="_MUN_oKfAEe26bdY7ZY7Qgg" lineWidth="1">
