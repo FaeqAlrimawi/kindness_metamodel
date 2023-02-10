@@ -21,33 +21,12 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link factors.Social.impl.RelatednessImpl#getLevel <em>Level</em>}</li>
  *   <li>{@link factors.Social.impl.RelatednessImpl#getDegree <em>Degree</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class RelatednessImpl extends SocialFactorImpl implements Relatedness {
-	/**
-	 * The default value of the '{@link #getLevel() <em>Level</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getLevel()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final float LEVEL_EDEFAULT = 0.0F;
-
-	/**
-	 * The cached value of the '{@link #getLevel() <em>Level</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getLevel()
-	 * @generated
-	 * @ordered
-	 */
-	protected float level = LEVEL_EDEFAULT;
-
 	/**
 	 * The default value of the '{@link #getDegree() <em>Degree</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -92,28 +71,6 @@ public class RelatednessImpl extends SocialFactorImpl implements Relatedness {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public float getLevel() {
-		return level;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setLevel(float newLevel) {
-		float oldLevel = level;
-		level = newLevel;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, NewPackage1Package.RELATEDNESS__LEVEL, oldLevel,
-					level));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public DegreeOfRelatedness getDegree() {
 		return degree;
 	}
@@ -139,8 +96,6 @@ public class RelatednessImpl extends SocialFactorImpl implements Relatedness {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case NewPackage1Package.RELATEDNESS__LEVEL:
-			return getLevel();
 		case NewPackage1Package.RELATEDNESS__DEGREE:
 			return getDegree();
 		}
@@ -155,9 +110,6 @@ public class RelatednessImpl extends SocialFactorImpl implements Relatedness {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case NewPackage1Package.RELATEDNESS__LEVEL:
-			setLevel((Float) newValue);
-			return;
 		case NewPackage1Package.RELATEDNESS__DEGREE:
 			setDegree((DegreeOfRelatedness) newValue);
 			return;
@@ -173,9 +125,6 @@ public class RelatednessImpl extends SocialFactorImpl implements Relatedness {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case NewPackage1Package.RELATEDNESS__LEVEL:
-			setLevel(LEVEL_EDEFAULT);
-			return;
 		case NewPackage1Package.RELATEDNESS__DEGREE:
 			setDegree(DEGREE_EDEFAULT);
 			return;
@@ -191,8 +140,6 @@ public class RelatednessImpl extends SocialFactorImpl implements Relatedness {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case NewPackage1Package.RELATEDNESS__LEVEL:
-			return level != LEVEL_EDEFAULT;
 		case NewPackage1Package.RELATEDNESS__DEGREE:
 			return degree != DEGREE_EDEFAULT;
 		}
@@ -210,9 +157,7 @@ public class RelatednessImpl extends SocialFactorImpl implements Relatedness {
 			return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (level: ");
-		result.append(level);
-		result.append(", degree: ");
+		result.append(" (degree: ");
 		result.append(degree);
 		result.append(')');
 		return result.toString();

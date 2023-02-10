@@ -6,37 +6,36 @@ import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Affected Factor</b></em>'.
+ * A representation of the model object '<em><b>Affected Factors</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link factors.AffectedFactor#getFactor <em>Factor</em>}</li>
- *   <li>{@link factors.AffectedFactor#getImpact <em>Impact</em>}</li>
+ *   <li>{@link factors.AffectedFactors#getFactor <em>Factor</em>}</li>
+ *   <li>{@link factors.AffectedFactors#getImpact <em>Impact</em>}</li>
  * </ul>
  *
- * @see factors.FactorsPackage#getAffectedFactor()
+ * @see factors.FactorsPackage#getAffectedFactors()
  * @model
  * @generated
  */
-public interface AffectedFactor extends EObject {
-
+public interface AffectedFactors extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Factor</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Factor</em>' reference.
 	 * @see #setFactor(Factor)
-	 * @see factors.FactorsPackage#getAffectedFactor_Factor()
+	 * @see factors.FactorsPackage#getAffectedFactors_Factor()
 	 * @model
 	 * @generated
 	 */
 	Factor getFactor();
 
 	/**
-	 * Sets the value of the '{@link factors.AffectedFactor#getFactor <em>Factor</em>}' reference.
+	 * Sets the value of the '{@link factors.AffectedFactors#getFactor <em>Factor</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Factor</em>' reference.
@@ -47,20 +46,21 @@ public interface AffectedFactor extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Impact</b></em>' attribute.
+	 * The default value is <code>"POSITIVE"</code>.
 	 * The literals are from the enumeration {@link factors.FactorImpact}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Impact</em>' attribute.
 	 * @see factors.FactorImpact
 	 * @see #setImpact(FactorImpact)
-	 * @see factors.FactorsPackage#getAffectedFactor_Impact()
-	 * @model
+	 * @see factors.FactorsPackage#getAffectedFactors_Impact()
+	 * @model default="POSITIVE"
 	 * @generated
 	 */
 	FactorImpact getImpact();
 
 	/**
-	 * Sets the value of the '{@link factors.AffectedFactor#getImpact <em>Impact</em>}' attribute.
+	 * Sets the value of the '{@link factors.AffectedFactors#getImpact <em>Impact</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Impact</em>' attribute.
@@ -69,4 +69,5 @@ public interface AffectedFactor extends EObject {
 	 * @generated
 	 */
 	void setImpact(FactorImpact value);
-} // AffectedFactor
+
+} // AffectedFactors

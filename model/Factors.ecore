@@ -9,9 +9,16 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AbsKindnessEntity" abstract="true"/>
   <eClassifiers xsi:type="ecore:EClass" name="Factor" abstract="true" interface="true">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eOperations name="computeImpact">
+      <eParameters name="impact" eType="#//FactorImpact"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        iD="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="affectedfactor" upperBound="-1"
-        eType="#//AffectedFactor" containment="true"/>
+        eType="#//AffectedFactors" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="other" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="level" eType="#//Level"
+        defaultValueLiteral="MEDIUM"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="DegreeOfRelatedness">
     <eLiterals name="FAMILY"/>
@@ -19,44 +26,70 @@
     <eLiterals name="COLLEAGUE" value="2"/>
     <eLiterals name="ACQUAINTANCE" value="3"/>
     <eLiterals name="STRANGER" value="4"/>
+    <eLiterals name="OTHER" value="5"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="Need">
     <eLiterals name="EMOTIONAL"/>
     <eLiterals name="INSTRUMENTAL" value="1"/>
     <eLiterals name="HEALTH_RELATED" value="2"/>
+    <eLiterals name="OTHER" value="3"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="Opportunity">
     <eLiterals name="MAKE_NEW_FRIEND"/>
     <eLiterals name="KEEP_OLD_FRIEND" value="1"/>
     <eLiterals name="STRENGTHEN_FAMILY_TIES" value="2"/>
+    <eLiterals name="OTHER" value="3"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="Level">
     <eLiterals name="HIGH"/>
     <eLiterals name="MEDIUM" value="1"/>
     <eLiterals name="LOW" value="2"/>
+    <eLiterals name="IGNORE" value="3"/>
+    <eLiterals name="UNSPECIFIED" value="4"/>
+    <eLiterals name="EXTREME" value="5"/>
+    <eLiterals name="NONE" value="6"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AbsPsychologicalFactors" abstract="true"
-      interface="true"/>
+      interface="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="psychologicalfactor" upperBound="-1"
+        eType="#//Psychological/PsychologicalFactor" containment="true"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="FactorImpact">
     <eLiterals name="POSITIVE"/>
     <eLiterals name="NEGATIVE" value="1"/>
     <eLiterals name="NONE" value="2"/>
     <eLiterals name="UNKNOWN" value="3"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="AffectedFactor">
+  <eClassifiers xsi:type="ecore:EClass" name="AffectedFactors">
     <eStructuralFeatures xsi:type="ecore:EReference" name="factor" eType="#//Factor"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="impact" eType="#//FactorImpact"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="impact" eType="#//FactorImpact"
+        defaultValueLiteral="POSITIVE"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="EmotionType">
+    <eLiterals name="HAPPINESS"/>
+    <eLiterals name="SADNESS" value="1"/>
+    <eLiterals name="GUILT" value="2"/>
+    <eLiterals name="OTHER" value="3"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="TraitType">
+    <eLiterals name="OPENNESS"/>
+    <eLiterals name="AGREEABLENESS" value="1"/>
+    <eLiterals name="EXTRAVERSION" value="2"/>
+    <eLiterals name="OTHER" value="3"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="HumanValueType">
+    <eLiterals name="BENEVOLENCE"/>
+    <eLiterals name="UNIVERSALISM" value="1"/>
+    <eLiterals name="TRADITION" value="2"/>
+    <eLiterals name="OTHER" value="3"/>
   </eClassifiers>
   <eSubpackages name="Social" nsURI="http://www.example.org/kindness_metamodel_factors_social"
       nsPrefix="package_socialfactors">
     <eClassifiers xsi:type="ecore:EClass" name="LevelOfNeed" eSuperTypes="#//Social/SocialFactor">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="need" eType="#//Need"
           defaultValueLiteral="EMOTIONAL"/>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="level" eType="#//Level"
-          defaultValueLiteral="MEDIUM"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Relatedness" eSuperTypes="#//Social/SocialFactor">
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="level" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="degree" eType="#//DegreeOfRelatedness"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Reciprocity" eSuperTypes="#//Social/SocialFactor">
@@ -69,9 +102,23 @@
     <eClassifiers xsi:type="ecore:EClass" name="OpportunityToConnect" eSuperTypes="#//Social/SocialFactor">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="opportunity" eType="#//Opportunity"/>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="Trust" eSuperTypes="#//Social/SocialFactor">
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="level" eType="#//Level"
-          defaultValueLiteral="MEDIUM"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Trust" eSuperTypes="#//Social/SocialFactor"/>
+    <eClassifiers xsi:type="ecore:EClass" name="OtherSocialFactor" eSuperTypes="#//Social/SocialFactor"/>
+  </eSubpackages>
+  <eSubpackages name="Psychological" nsURI="http://www.example.org/kindness_metamodel_factors_psychological"
+      nsPrefix="package_psychologicalfactors">
+    <eClassifiers xsi:type="ecore:EClass" name="Emotion" eSuperTypes="#//Psychological/PsychologicalFactor">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//EmotionType"/>
     </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="SelfEfficacy" eSuperTypes="#//Psychological/PsychologicalFactor"/>
+    <eClassifiers xsi:type="ecore:EClass" name="CharacterTrait" eSuperTypes="#//Psychological/PsychologicalFactor">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="trait" eType="#//TraitType"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="HumanValue" eSuperTypes="#//Psychological/PsychologicalFactor">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="#//HumanValueType"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="PsychologicalFactor" abstract="true"
+        eSuperTypes="#//Factor"/>
+    <eClassifiers xsi:type="ecore:EClass" name="OtherPsychologicalFactor" eSuperTypes="#//Psychological/PsychologicalFactor"/>
   </eSubpackages>
 </ecore:EPackage>

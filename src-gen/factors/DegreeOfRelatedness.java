@@ -66,7 +66,17 @@ public enum DegreeOfRelatedness implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	STRANGER(4, "STRANGER", "STRANGER");
+	STRANGER(4, "STRANGER", "STRANGER"),
+
+	/**
+	 * The '<em><b>OTHER</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #OTHER_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	OTHER(5, "OTHER", "OTHER");
 
 	/**
 	 * The '<em><b>FAMILY</b></em>' literal value.
@@ -124,13 +134,24 @@ public enum DegreeOfRelatedness implements Enumerator {
 	public static final int STRANGER_VALUE = 4;
 
 	/**
+	 * The '<em><b>OTHER</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #OTHER
+	 * @model
+	 * @generated
+	 * @ordered
+	 */
+	public static final int OTHER_VALUE = 5;
+
+	/**
 	 * An array of all the '<em><b>Degree Of Relatedness</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private static final DegreeOfRelatedness[] VALUES_ARRAY = new DegreeOfRelatedness[] { FAMILY, FRIEND, COLLEAGUE,
-			ACQUAINTANCE, STRANGER, };
+			ACQUAINTANCE, STRANGER, OTHER, };
 
 	/**
 	 * A public read-only list of all the '<em><b>Degree Of Relatedness</b></em>' enumerators.
@@ -196,6 +217,8 @@ public enum DegreeOfRelatedness implements Enumerator {
 			return ACQUAINTANCE;
 		case STRANGER_VALUE:
 			return STRANGER;
+		case OTHER_VALUE:
+			return OTHER;
 		}
 		return null;
 	}

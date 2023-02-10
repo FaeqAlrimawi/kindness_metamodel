@@ -99,6 +99,11 @@ public class NewPackage1AdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
+		public Adapter caseOtherSocialFactor(OtherSocialFactor object) {
+			return createOtherSocialFactorAdapter();
+		}
+
+		@Override
 		public Adapter caseFactor(Factor object) {
 			return createFactorAdapter();
 		}
@@ -203,6 +208,20 @@ public class NewPackage1AdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createTrustAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link factors.Social.OtherSocialFactor <em>Other Social Factor</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see factors.Social.OtherSocialFactor
+	 * @generated
+	 */
+	public Adapter createOtherSocialFactorAdapter() {
 		return null;
 	}
 

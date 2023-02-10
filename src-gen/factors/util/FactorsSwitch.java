@@ -94,9 +94,9 @@ public class FactorsSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case FactorsPackage.AFFECTED_FACTOR: {
-			AffectedFactor affectedFactor = (AffectedFactor) theEObject;
-			T result = caseAffectedFactor(affectedFactor);
+		case FactorsPackage.AFFECTED_FACTORS: {
+			AffectedFactors affectedFactors = (AffectedFactors) theEObject;
+			T result = caseAffectedFactors(affectedFactors);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -167,17 +167,17 @@ public class FactorsSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Affected Factor</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Affected Factors</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Affected Factor</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Affected Factors</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseAffectedFactor(AffectedFactor object) {
+	public T caseAffectedFactors(AffectedFactors object) {
 		return null;
 	}
 

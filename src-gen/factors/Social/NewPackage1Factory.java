@@ -67,6 +67,15 @@ public interface NewPackage1Factory extends EFactory {
 	Trust createTrust();
 
 	/**
+	 * Returns a new object of class '<em>Other Social Factor</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Other Social Factor</em>'.
+	 * @generated
+	 */
+	OtherSocialFactor createOtherSocialFactor();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

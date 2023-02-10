@@ -4,10 +4,15 @@ package factors.Social.impl;
 
 import factors.FactorsPackage;
 
+import factors.Psychological.NewPackage2Package;
+
+import factors.Psychological.impl.NewPackage2PackageImpl;
+
 import factors.Social.LevelOfNeed;
 import factors.Social.NewPackage1Factory;
 import factors.Social.NewPackage1Package;
 import factors.Social.OpportunityToConnect;
+import factors.Social.OtherSocialFactor;
 import factors.Social.Reciprocity;
 import factors.Social.Relatedness;
 import factors.Social.SocialFactor;
@@ -76,6 +81,13 @@ public class NewPackage1PackageImpl extends EPackageImpl implements NewPackage1P
 	private EClass trustEClass = null;
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass otherSocialFactorEClass = null;
+
+	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
 	 * {@link org.eclipse.emf.ecore.EPackage.Registry EPackage.Registry} by the package
 	 * package URI value.
@@ -134,16 +146,22 @@ public class NewPackage1PackageImpl extends EPackageImpl implements NewPackage1P
 		FactorsPackageImpl theFactorsPackage = (FactorsPackageImpl) (registeredPackage instanceof FactorsPackageImpl
 				? registeredPackage
 				: FactorsPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(NewPackage2Package.eNS_URI);
+		NewPackage2PackageImpl theNewPackage2Package = (NewPackage2PackageImpl) (registeredPackage instanceof NewPackage2PackageImpl
+				? registeredPackage
+				: NewPackage2Package.eINSTANCE);
 
 		// Create package meta-data objects
 		theNewPackage1Package.createPackageContents();
 		theKindnessPackage.createPackageContents();
 		theFactorsPackage.createPackageContents();
+		theNewPackage2Package.createPackageContents();
 
 		// Initialize created meta-data
 		theNewPackage1Package.initializePackageContents();
 		theKindnessPackage.initializePackageContents();
 		theFactorsPackage.initializePackageContents();
+		theNewPackage2Package.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
 		theNewPackage1Package.freeze();
@@ -176,15 +194,6 @@ public class NewPackage1PackageImpl extends EPackageImpl implements NewPackage1P
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getLevelOfNeed_Level() {
-		return (EAttribute) levelOfNeedEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getRelatedness() {
 		return relatednessEClass;
 	}
@@ -194,17 +203,8 @@ public class NewPackage1PackageImpl extends EPackageImpl implements NewPackage1P
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getRelatedness_Level() {
-		return (EAttribute) relatednessEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EAttribute getRelatedness_Degree() {
-		return (EAttribute) relatednessEClass.getEStructuralFeatures().get(1);
+		return (EAttribute) relatednessEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -275,8 +275,8 @@ public class NewPackage1PackageImpl extends EPackageImpl implements NewPackage1P
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getTrust_Level() {
-		return (EAttribute) trustEClass.getEStructuralFeatures().get(0);
+	public EClass getOtherSocialFactor() {
+		return otherSocialFactorEClass;
 	}
 
 	/**
@@ -310,10 +310,8 @@ public class NewPackage1PackageImpl extends EPackageImpl implements NewPackage1P
 		// Create classes and their features
 		levelOfNeedEClass = createEClass(LEVEL_OF_NEED);
 		createEAttribute(levelOfNeedEClass, LEVEL_OF_NEED__NEED);
-		createEAttribute(levelOfNeedEClass, LEVEL_OF_NEED__LEVEL);
 
 		relatednessEClass = createEClass(RELATEDNESS);
-		createEAttribute(relatednessEClass, RELATEDNESS__LEVEL);
 		createEAttribute(relatednessEClass, RELATEDNESS__DEGREE);
 
 		reciprocityEClass = createEClass(RECIPROCITY);
@@ -326,7 +324,8 @@ public class NewPackage1PackageImpl extends EPackageImpl implements NewPackage1P
 		createEAttribute(opportunityToConnectEClass, OPPORTUNITY_TO_CONNECT__OPPORTUNITY);
 
 		trustEClass = createEClass(TRUST);
-		createEAttribute(trustEClass, TRUST__LEVEL);
+
+		otherSocialFactorEClass = createEClass(OTHER_SOCIAL_FACTOR);
 	}
 
 	/**
@@ -368,19 +367,16 @@ public class NewPackage1PackageImpl extends EPackageImpl implements NewPackage1P
 		socialFactorEClass.getESuperTypes().add(theFactorsPackage.getFactor());
 		opportunityToConnectEClass.getESuperTypes().add(this.getSocialFactor());
 		trustEClass.getESuperTypes().add(this.getSocialFactor());
+		otherSocialFactorEClass.getESuperTypes().add(this.getSocialFactor());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(levelOfNeedEClass, LevelOfNeed.class, "LevelOfNeed", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getLevelOfNeed_Need(), theFactorsPackage.getNeed(), "need", "EMOTIONAL", 0, 1, LevelOfNeed.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getLevelOfNeed_Level(), theFactorsPackage.getLevel(), "level", "MEDIUM", 0, 1, LevelOfNeed.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(relatednessEClass, Relatedness.class, "Relatedness", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getRelatedness_Level(), ecorePackage.getEFloat(), "level", null, 0, 1, Relatedness.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getRelatedness_Degree(), theFactorsPackage.getDegreeOfRelatedness(), "degree", null, 0, 1,
 				Relatedness.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
@@ -404,8 +400,9 @@ public class NewPackage1PackageImpl extends EPackageImpl implements NewPackage1P
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(trustEClass, Trust.class, "Trust", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getTrust_Level(), theFactorsPackage.getLevel(), "level", "MEDIUM", 0, 1, Trust.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(otherSocialFactorEClass, OtherSocialFactor.class, "OtherSocialFactor", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
 	}
 
 } //NewPackage1PackageImpl

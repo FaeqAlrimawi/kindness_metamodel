@@ -5,19 +5,27 @@ package factors.impl;
 import factors.AbsKindnessEntity;
 import factors.AbsPsychologicalFactors;
 import factors.AbsSocialFactors;
-import factors.AffectedFactor;
+import factors.AffectedFactors;
 import factors.DegreeOfRelatedness;
+import factors.EmotionType;
 import factors.Factor;
 import factors.FactorImpact;
 import factors.FactorsFactory;
 import factors.FactorsPackage;
+import factors.HumanValueType;
 import factors.Level;
 import factors.Need;
 import factors.Opportunity;
 
+import factors.Psychological.NewPackage2Package;
+
+import factors.Psychological.impl.NewPackage2PackageImpl;
+
 import factors.Social.NewPackage1Package;
 
 import factors.Social.impl.NewPackage1PackageImpl;
+
+import factors.TraitType;
 
 import kindness_metamodel.KindnessPackage;
 
@@ -26,6 +34,7 @@ import kindness_metamodel.impl.KindnessPackageImpl;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
+import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
@@ -71,7 +80,7 @@ public class FactorsPackageImpl extends EPackageImpl implements FactorsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass affectedFactorEClass = null;
+	private EClass affectedFactorsEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -107,6 +116,27 @@ public class FactorsPackageImpl extends EPackageImpl implements FactorsPackage {
 	 * @generated
 	 */
 	private EEnum factorImpactEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum emotionTypeEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum traitTypeEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum humanValueTypeEEnum = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -167,16 +197,22 @@ public class FactorsPackageImpl extends EPackageImpl implements FactorsPackage {
 		NewPackage1PackageImpl theNewPackage1Package = (NewPackage1PackageImpl) (registeredPackage instanceof NewPackage1PackageImpl
 				? registeredPackage
 				: NewPackage1Package.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(NewPackage2Package.eNS_URI);
+		NewPackage2PackageImpl theNewPackage2Package = (NewPackage2PackageImpl) (registeredPackage instanceof NewPackage2PackageImpl
+				? registeredPackage
+				: NewPackage2Package.eINSTANCE);
 
 		// Create package meta-data objects
 		theFactorsPackage.createPackageContents();
 		theKindnessPackage.createPackageContents();
 		theNewPackage1Package.createPackageContents();
+		theNewPackage2Package.createPackageContents();
 
 		// Initialize created meta-data
 		theFactorsPackage.initializePackageContents();
 		theKindnessPackage.initializePackageContents();
 		theNewPackage1Package.initializePackageContents();
+		theNewPackage2Package.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
 		theFactorsPackage.freeze();
@@ -254,6 +290,33 @@ public class FactorsPackageImpl extends EPackageImpl implements FactorsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getFactor_Other() {
+		return (EAttribute) factorEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getFactor_Level() {
+		return (EAttribute) factorEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getFactor__ComputeImpact__FactorImpact() {
+		return factorEClass.getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getAbsPsychologicalFactors() {
 		return absPsychologicalFactorsEClass;
 	}
@@ -263,8 +326,8 @@ public class FactorsPackageImpl extends EPackageImpl implements FactorsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getAffectedFactor() {
-		return affectedFactorEClass;
+	public EReference getAbsPsychologicalFactors_Psychologicalfactor() {
+		return (EReference) absPsychologicalFactorsEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -272,8 +335,8 @@ public class FactorsPackageImpl extends EPackageImpl implements FactorsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getAffectedFactor_Factor() {
-		return (EReference) affectedFactorEClass.getEStructuralFeatures().get(0);
+	public EClass getAffectedFactors() {
+		return affectedFactorsEClass;
 	}
 
 	/**
@@ -281,8 +344,17 @@ public class FactorsPackageImpl extends EPackageImpl implements FactorsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getAffectedFactor_Impact() {
-		return (EAttribute) affectedFactorEClass.getEStructuralFeatures().get(1);
+	public EReference getAffectedFactors_Factor() {
+		return (EReference) affectedFactorsEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getAffectedFactors_Impact() {
+		return (EAttribute) affectedFactorsEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -335,6 +407,33 @@ public class FactorsPackageImpl extends EPackageImpl implements FactorsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EEnum getEmotionType() {
+		return emotionTypeEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EEnum getTraitType() {
+		return traitTypeEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EEnum getHumanValueType() {
+		return humanValueTypeEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public FactorsFactory getFactorsFactory() {
 		return (FactorsFactory) getEFactoryInstance();
 	}
@@ -368,12 +467,16 @@ public class FactorsPackageImpl extends EPackageImpl implements FactorsPackage {
 		factorEClass = createEClass(FACTOR);
 		createEAttribute(factorEClass, FACTOR__NAME);
 		createEReference(factorEClass, FACTOR__AFFECTEDFACTOR);
+		createEAttribute(factorEClass, FACTOR__OTHER);
+		createEAttribute(factorEClass, FACTOR__LEVEL);
+		createEOperation(factorEClass, FACTOR___COMPUTE_IMPACT__FACTORIMPACT);
 
 		absPsychologicalFactorsEClass = createEClass(ABS_PSYCHOLOGICAL_FACTORS);
+		createEReference(absPsychologicalFactorsEClass, ABS_PSYCHOLOGICAL_FACTORS__PSYCHOLOGICALFACTOR);
 
-		affectedFactorEClass = createEClass(AFFECTED_FACTOR);
-		createEReference(affectedFactorEClass, AFFECTED_FACTOR__FACTOR);
-		createEAttribute(affectedFactorEClass, AFFECTED_FACTOR__IMPACT);
+		affectedFactorsEClass = createEClass(AFFECTED_FACTORS);
+		createEReference(affectedFactorsEClass, AFFECTED_FACTORS__FACTOR);
+		createEAttribute(affectedFactorsEClass, AFFECTED_FACTORS__IMPACT);
 
 		// Create enums
 		degreeOfRelatednessEEnum = createEEnum(DEGREE_OF_RELATEDNESS);
@@ -381,6 +484,9 @@ public class FactorsPackageImpl extends EPackageImpl implements FactorsPackage {
 		opportunityEEnum = createEEnum(OPPORTUNITY);
 		levelEEnum = createEEnum(LEVEL);
 		factorImpactEEnum = createEEnum(FACTOR_IMPACT);
+		emotionTypeEEnum = createEEnum(EMOTION_TYPE);
+		traitTypeEEnum = createEEnum(TRAIT_TYPE);
+		humanValueTypeEEnum = createEEnum(HUMAN_VALUE_TYPE);
 	}
 
 	/**
@@ -410,9 +516,12 @@ public class FactorsPackageImpl extends EPackageImpl implements FactorsPackage {
 		// Obtain other dependent packages
 		NewPackage1Package theNewPackage1Package = (NewPackage1Package) EPackage.Registry.INSTANCE
 				.getEPackage(NewPackage1Package.eNS_URI);
+		NewPackage2Package theNewPackage2Package = (NewPackage2Package) EPackage.Registry.INSTANCE
+				.getEPackage(NewPackage2Package.eNS_URI);
 
 		// Add subpackages
 		getESubpackages().add(theNewPackage1Package);
+		getESubpackages().add(theNewPackage2Package);
 
 		// Create type parameters
 
@@ -435,21 +544,33 @@ public class FactorsPackageImpl extends EPackageImpl implements FactorsPackage {
 
 		initEClass(factorEClass, Factor.class, "Factor", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getFactor_Name(), ecorePackage.getEString(), "name", null, 0, 1, Factor.class, !IS_TRANSIENT,
-				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getFactor_Affectedfactor(), this.getAffectedFactor(), null, "affectedfactor", null, 0, -1,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getFactor_Affectedfactor(), this.getAffectedFactors(), null, "affectedfactor", null, 0, -1,
 				Factor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getFactor_Other(), ecorePackage.getEString(), "other", null, 0, 1, Factor.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getFactor_Level(), this.getLevel(), "level", "MEDIUM", 0, 1, Factor.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		EOperation op = initEOperation(getFactor__ComputeImpact__FactorImpact(), null, "computeImpact", 0, 1, IS_UNIQUE,
+				IS_ORDERED);
+		addEParameter(op, this.getFactorImpact(), "impact", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(absPsychologicalFactorsEClass, AbsPsychologicalFactors.class, "AbsPsychologicalFactors", IS_ABSTRACT,
 				IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getAbsPsychologicalFactors_Psychologicalfactor(), theNewPackage2Package.getPsychologicalFactor(),
+				null, "psychologicalfactor", null, 0, -1, AbsPsychologicalFactors.class, !IS_TRANSIENT, !IS_VOLATILE,
+				IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(affectedFactorEClass, AffectedFactor.class, "AffectedFactor", !IS_ABSTRACT, !IS_INTERFACE,
+		initEClass(affectedFactorsEClass, AffectedFactors.class, "AffectedFactors", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getAffectedFactor_Factor(), this.getFactor(), null, "factor", null, 0, 1, AffectedFactor.class,
+		initEReference(getAffectedFactors_Factor(), this.getFactor(), null, "factor", null, 0, 1, AffectedFactors.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getAffectedFactor_Impact(), this.getFactorImpact(), "impact", null, 0, 1, AffectedFactor.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAffectedFactors_Impact(), this.getFactorImpact(), "impact", "POSITIVE", 0, 1,
+				AffectedFactors.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(degreeOfRelatednessEEnum, DegreeOfRelatedness.class, "DegreeOfRelatedness");
@@ -458,27 +579,52 @@ public class FactorsPackageImpl extends EPackageImpl implements FactorsPackage {
 		addEEnumLiteral(degreeOfRelatednessEEnum, DegreeOfRelatedness.COLLEAGUE);
 		addEEnumLiteral(degreeOfRelatednessEEnum, DegreeOfRelatedness.ACQUAINTANCE);
 		addEEnumLiteral(degreeOfRelatednessEEnum, DegreeOfRelatedness.STRANGER);
+		addEEnumLiteral(degreeOfRelatednessEEnum, DegreeOfRelatedness.OTHER);
 
 		initEEnum(needEEnum, Need.class, "Need");
 		addEEnumLiteral(needEEnum, Need.EMOTIONAL);
 		addEEnumLiteral(needEEnum, Need.INSTRUMENTAL);
 		addEEnumLiteral(needEEnum, Need.HEALTH_RELATED);
+		addEEnumLiteral(needEEnum, Need.OTHER);
 
 		initEEnum(opportunityEEnum, Opportunity.class, "Opportunity");
 		addEEnumLiteral(opportunityEEnum, Opportunity.MAKE_NEW_FRIEND);
 		addEEnumLiteral(opportunityEEnum, Opportunity.KEEP_OLD_FRIEND);
 		addEEnumLiteral(opportunityEEnum, Opportunity.STRENGTHEN_FAMILY_TIES);
+		addEEnumLiteral(opportunityEEnum, Opportunity.OTHER);
 
 		initEEnum(levelEEnum, Level.class, "Level");
 		addEEnumLiteral(levelEEnum, Level.HIGH);
 		addEEnumLiteral(levelEEnum, Level.MEDIUM);
 		addEEnumLiteral(levelEEnum, Level.LOW);
+		addEEnumLiteral(levelEEnum, Level.IGNORE);
+		addEEnumLiteral(levelEEnum, Level.UNSPECIFIED);
+		addEEnumLiteral(levelEEnum, Level.EXTREME);
+		addEEnumLiteral(levelEEnum, Level.NONE);
 
 		initEEnum(factorImpactEEnum, FactorImpact.class, "FactorImpact");
 		addEEnumLiteral(factorImpactEEnum, FactorImpact.POSITIVE);
 		addEEnumLiteral(factorImpactEEnum, FactorImpact.NEGATIVE);
 		addEEnumLiteral(factorImpactEEnum, FactorImpact.NONE);
 		addEEnumLiteral(factorImpactEEnum, FactorImpact.UNKNOWN);
+
+		initEEnum(emotionTypeEEnum, EmotionType.class, "EmotionType");
+		addEEnumLiteral(emotionTypeEEnum, EmotionType.HAPPINESS);
+		addEEnumLiteral(emotionTypeEEnum, EmotionType.SADNESS);
+		addEEnumLiteral(emotionTypeEEnum, EmotionType.GUILT);
+		addEEnumLiteral(emotionTypeEEnum, EmotionType.OTHER);
+
+		initEEnum(traitTypeEEnum, TraitType.class, "TraitType");
+		addEEnumLiteral(traitTypeEEnum, TraitType.OPENNESS);
+		addEEnumLiteral(traitTypeEEnum, TraitType.AGREEABLENESS);
+		addEEnumLiteral(traitTypeEEnum, TraitType.EXTRAVERSION);
+		addEEnumLiteral(traitTypeEEnum, TraitType.OTHER);
+
+		initEEnum(humanValueTypeEEnum, HumanValueType.class, "HumanValueType");
+		addEEnumLiteral(humanValueTypeEEnum, HumanValueType.BENEVOLENCE);
+		addEEnumLiteral(humanValueTypeEEnum, HumanValueType.UNIVERSALISM);
+		addEEnumLiteral(humanValueTypeEEnum, HumanValueType.TRADITION);
+		addEEnumLiteral(humanValueTypeEEnum, HumanValueType.OTHER);
 
 		// Create resource
 		createResource(eNS_URI);

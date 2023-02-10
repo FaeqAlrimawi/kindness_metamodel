@@ -1264,6 +1264,15 @@ public interface KindnessPackage extends EPackage {
 	int PSYCHOLOGICAL_FACTORS = 15;
 
 	/**
+	 * The feature id for the '<em><b>Psychologicalfactor</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PSYCHOLOGICAL_FACTORS__PSYCHOLOGICALFACTOR = FactorsPackage.ABS_PSYCHOLOGICAL_FACTORS__PSYCHOLOGICALFACTOR;
+
+	/**
 	 * The number of structural features of the '<em>Psychological Factors</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

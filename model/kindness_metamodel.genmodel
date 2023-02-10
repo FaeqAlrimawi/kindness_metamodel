@@ -87,27 +87,52 @@
       <genEnumLiterals ecoreEnumLiteral="Factors.ecore#//DegreeOfRelatedness/COLLEAGUE"/>
       <genEnumLiterals ecoreEnumLiteral="Factors.ecore#//DegreeOfRelatedness/ACQUAINTANCE"/>
       <genEnumLiterals ecoreEnumLiteral="Factors.ecore#//DegreeOfRelatedness/STRANGER"/>
+      <genEnumLiterals ecoreEnumLiteral="Factors.ecore#//DegreeOfRelatedness/OTHER"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="Factors.ecore#//Need">
       <genEnumLiterals ecoreEnumLiteral="Factors.ecore#//Need/EMOTIONAL"/>
       <genEnumLiterals ecoreEnumLiteral="Factors.ecore#//Need/INSTRUMENTAL"/>
       <genEnumLiterals ecoreEnumLiteral="Factors.ecore#//Need/HEALTH_RELATED"/>
+      <genEnumLiterals ecoreEnumLiteral="Factors.ecore#//Need/OTHER"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="Factors.ecore#//Opportunity">
       <genEnumLiterals ecoreEnumLiteral="Factors.ecore#//Opportunity/MAKE_NEW_FRIEND"/>
       <genEnumLiterals ecoreEnumLiteral="Factors.ecore#//Opportunity/KEEP_OLD_FRIEND"/>
       <genEnumLiterals ecoreEnumLiteral="Factors.ecore#//Opportunity/STRENGTHEN_FAMILY_TIES"/>
+      <genEnumLiterals ecoreEnumLiteral="Factors.ecore#//Opportunity/OTHER"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="Factors.ecore#//Level">
       <genEnumLiterals ecoreEnumLiteral="Factors.ecore#//Level/HIGH"/>
       <genEnumLiterals ecoreEnumLiteral="Factors.ecore#//Level/MEDIUM"/>
       <genEnumLiterals ecoreEnumLiteral="Factors.ecore#//Level/LOW"/>
+      <genEnumLiterals ecoreEnumLiteral="Factors.ecore#//Level/IGNORE"/>
+      <genEnumLiterals ecoreEnumLiteral="Factors.ecore#//Level/UNSPECIFIED"/>
+      <genEnumLiterals ecoreEnumLiteral="Factors.ecore#//Level/EXTREME"/>
+      <genEnumLiterals ecoreEnumLiteral="Factors.ecore#//Level/NONE"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="Factors.ecore#//FactorImpact">
       <genEnumLiterals ecoreEnumLiteral="Factors.ecore#//FactorImpact/POSITIVE"/>
       <genEnumLiterals ecoreEnumLiteral="Factors.ecore#//FactorImpact/NEGATIVE"/>
       <genEnumLiterals ecoreEnumLiteral="Factors.ecore#//FactorImpact/NONE"/>
       <genEnumLiterals ecoreEnumLiteral="Factors.ecore#//FactorImpact/UNKNOWN"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Factors.ecore#//EmotionType">
+      <genEnumLiterals ecoreEnumLiteral="Factors.ecore#//EmotionType/HAPPINESS"/>
+      <genEnumLiterals ecoreEnumLiteral="Factors.ecore#//EmotionType/SADNESS"/>
+      <genEnumLiterals ecoreEnumLiteral="Factors.ecore#//EmotionType/GUILT"/>
+      <genEnumLiterals ecoreEnumLiteral="Factors.ecore#//EmotionType/OTHER"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Factors.ecore#//TraitType">
+      <genEnumLiterals ecoreEnumLiteral="Factors.ecore#//TraitType/OPENNESS"/>
+      <genEnumLiterals ecoreEnumLiteral="Factors.ecore#//TraitType/AGREEABLENESS"/>
+      <genEnumLiterals ecoreEnumLiteral="Factors.ecore#//TraitType/EXTRAVERSION"/>
+      <genEnumLiterals ecoreEnumLiteral="Factors.ecore#//TraitType/OTHER"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Factors.ecore#//HumanValueType">
+      <genEnumLiterals ecoreEnumLiteral="Factors.ecore#//HumanValueType/BENEVOLENCE"/>
+      <genEnumLiterals ecoreEnumLiteral="Factors.ecore#//HumanValueType/UNIVERSALISM"/>
+      <genEnumLiterals ecoreEnumLiteral="Factors.ecore#//HumanValueType/TRADITION"/>
+      <genEnumLiterals ecoreEnumLiteral="Factors.ecore#//HumanValueType/OTHER"/>
     </genEnums>
     <genClasses ecoreClass="Factors.ecore#//AbsSocialFactors">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Factors.ecore#//AbsSocialFactors/actor"/>
@@ -117,19 +142,24 @@
     <genClasses ecoreClass="Factors.ecore#//Factor">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Factors.ecore#//Factor/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Factors.ecore#//Factor/affectedfactor"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Factors.ecore#//Factor/other"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Factors.ecore#//Factor/level"/>
+      <genOperations ecoreOperation="Factors.ecore#//Factor/computeImpact">
+        <genParameters ecoreParameter="Factors.ecore#//Factor/computeImpact/impact"/>
+      </genOperations>
     </genClasses>
-    <genClasses image="false" ecoreClass="Factors.ecore#//AbsPsychologicalFactors"/>
-    <genClasses ecoreClass="Factors.ecore#//AffectedFactor">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Factors.ecore#//AffectedFactor/factor"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Factors.ecore#//AffectedFactor/impact"/>
+    <genClasses image="false" ecoreClass="Factors.ecore#//AbsPsychologicalFactors">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Factors.ecore#//AbsPsychologicalFactors/psychologicalfactor"/>
+    </genClasses>
+    <genClasses ecoreClass="Factors.ecore#//AffectedFactors">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Factors.ecore#//AffectedFactors/factor"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Factors.ecore#//AffectedFactors/impact"/>
     </genClasses>
     <nestedGenPackages prefix="NewPackage1" disposableProviderFactory="true" ecorePackage="Factors.ecore#//Social">
       <genClasses ecoreClass="Factors.ecore#//Social/LevelOfNeed">
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Factors.ecore#//Social/LevelOfNeed/need"/>
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Factors.ecore#//Social/LevelOfNeed/level"/>
       </genClasses>
       <genClasses ecoreClass="Factors.ecore#//Social/Relatedness">
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Factors.ecore#//Social/Relatedness/level"/>
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Factors.ecore#//Social/Relatedness/degree"/>
       </genClasses>
       <genClasses ecoreClass="Factors.ecore#//Social/Reciprocity">
@@ -142,9 +172,22 @@
       <genClasses ecoreClass="Factors.ecore#//Social/OpportunityToConnect">
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Factors.ecore#//Social/OpportunityToConnect/opportunity"/>
       </genClasses>
-      <genClasses ecoreClass="Factors.ecore#//Social/Trust">
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Factors.ecore#//Social/Trust/level"/>
+      <genClasses ecoreClass="Factors.ecore#//Social/Trust"/>
+      <genClasses ecoreClass="Factors.ecore#//Social/OtherSocialFactor"/>
+    </nestedGenPackages>
+    <nestedGenPackages prefix="NewPackage2" disposableProviderFactory="true" ecorePackage="Factors.ecore#//Psychological">
+      <genClasses ecoreClass="Factors.ecore#//Psychological/Emotion">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Factors.ecore#//Psychological/Emotion/type"/>
       </genClasses>
+      <genClasses ecoreClass="Factors.ecore#//Psychological/SelfEfficacy"/>
+      <genClasses ecoreClass="Factors.ecore#//Psychological/CharacterTrait">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Factors.ecore#//Psychological/CharacterTrait/trait"/>
+      </genClasses>
+      <genClasses ecoreClass="Factors.ecore#//Psychological/HumanValue">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Factors.ecore#//Psychological/HumanValue/value"/>
+      </genClasses>
+      <genClasses image="false" ecoreClass="Factors.ecore#//Psychological/PsychologicalFactor"/>
+      <genClasses ecoreClass="Factors.ecore#//Psychological/OtherPsychologicalFactor"/>
     </nestedGenPackages>
   </genPackages>
 </genmodel:GenModel>

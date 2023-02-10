@@ -2,7 +2,6 @@
  */
 package factors.Social.impl;
 
-import factors.Level;
 import factors.Need;
 
 import factors.Social.LevelOfNeed;
@@ -23,7 +22,6 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * </p>
  * <ul>
  *   <li>{@link factors.Social.impl.LevelOfNeedImpl#getNeed <em>Need</em>}</li>
- *   <li>{@link factors.Social.impl.LevelOfNeedImpl#getLevel <em>Level</em>}</li>
  * </ul>
  *
  * @generated
@@ -48,26 +46,6 @@ public class LevelOfNeedImpl extends SocialFactorImpl implements LevelOfNeed {
 	 * @ordered
 	 */
 	protected Need need = NEED_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getLevel() <em>Level</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getLevel()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final Level LEVEL_EDEFAULT = Level.MEDIUM;
-
-	/**
-	 * The cached value of the '{@link #getLevel() <em>Level</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getLevel()
-	 * @generated
-	 * @ordered
-	 */
-	protected Level level = LEVEL_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -115,35 +93,11 @@ public class LevelOfNeedImpl extends SocialFactorImpl implements LevelOfNeed {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Level getLevel() {
-		return level;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setLevel(Level newLevel) {
-		Level oldLevel = level;
-		level = newLevel == null ? LEVEL_EDEFAULT : newLevel;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, NewPackage1Package.LEVEL_OF_NEED__LEVEL, oldLevel,
-					level));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 		case NewPackage1Package.LEVEL_OF_NEED__NEED:
 			return getNeed();
-		case NewPackage1Package.LEVEL_OF_NEED__LEVEL:
-			return getLevel();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -158,9 +112,6 @@ public class LevelOfNeedImpl extends SocialFactorImpl implements LevelOfNeed {
 		switch (featureID) {
 		case NewPackage1Package.LEVEL_OF_NEED__NEED:
 			setNeed((Need) newValue);
-			return;
-		case NewPackage1Package.LEVEL_OF_NEED__LEVEL:
-			setLevel((Level) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -177,9 +128,6 @@ public class LevelOfNeedImpl extends SocialFactorImpl implements LevelOfNeed {
 		case NewPackage1Package.LEVEL_OF_NEED__NEED:
 			setNeed(NEED_EDEFAULT);
 			return;
-		case NewPackage1Package.LEVEL_OF_NEED__LEVEL:
-			setLevel(LEVEL_EDEFAULT);
-			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -194,8 +142,6 @@ public class LevelOfNeedImpl extends SocialFactorImpl implements LevelOfNeed {
 		switch (featureID) {
 		case NewPackage1Package.LEVEL_OF_NEED__NEED:
 			return need != NEED_EDEFAULT;
-		case NewPackage1Package.LEVEL_OF_NEED__LEVEL:
-			return level != LEVEL_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -213,8 +159,6 @@ public class LevelOfNeedImpl extends SocialFactorImpl implements LevelOfNeed {
 		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (need: ");
 		result.append(need);
-		result.append(", level: ");
-		result.append(level);
 		result.append(')');
 		return result.toString();
 	}

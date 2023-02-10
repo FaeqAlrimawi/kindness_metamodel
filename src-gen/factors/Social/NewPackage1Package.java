@@ -87,6 +87,24 @@ public interface NewPackage1Package extends EPackage {
 	int SOCIAL_FACTOR__AFFECTEDFACTOR = FactorsPackage.FACTOR__AFFECTEDFACTOR;
 
 	/**
+	 * The feature id for the '<em><b>Other</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOCIAL_FACTOR__OTHER = FactorsPackage.FACTOR__OTHER;
+
+	/**
+	 * The feature id for the '<em><b>Level</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOCIAL_FACTOR__LEVEL = FactorsPackage.FACTOR__LEVEL;
+
+	/**
 	 * The feature id for the '<em><b>Actor</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -103,6 +121,15 @@ public interface NewPackage1Package extends EPackage {
 	 * @ordered
 	 */
 	int SOCIAL_FACTOR_FEATURE_COUNT = FactorsPackage.FACTOR_FEATURE_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Compute Impact</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOCIAL_FACTOR___COMPUTE_IMPACT__FACTORIMPACT = FactorsPackage.FACTOR___COMPUTE_IMPACT__FACTORIMPACT;
 
 	/**
 	 * The number of operations of the '<em>Social Factor</em>' class.
@@ -142,6 +169,24 @@ public interface NewPackage1Package extends EPackage {
 	int LEVEL_OF_NEED__AFFECTEDFACTOR = SOCIAL_FACTOR__AFFECTEDFACTOR;
 
 	/**
+	 * The feature id for the '<em><b>Other</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LEVEL_OF_NEED__OTHER = SOCIAL_FACTOR__OTHER;
+
+	/**
+	 * The feature id for the '<em><b>Level</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LEVEL_OF_NEED__LEVEL = SOCIAL_FACTOR__LEVEL;
+
+	/**
 	 * The feature id for the '<em><b>Actor</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -160,22 +205,22 @@ public interface NewPackage1Package extends EPackage {
 	int LEVEL_OF_NEED__NEED = SOCIAL_FACTOR_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Level</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LEVEL_OF_NEED__LEVEL = SOCIAL_FACTOR_FEATURE_COUNT + 1;
-
-	/**
 	 * The number of structural features of the '<em>Level Of Need</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LEVEL_OF_NEED_FEATURE_COUNT = SOCIAL_FACTOR_FEATURE_COUNT + 2;
+	int LEVEL_OF_NEED_FEATURE_COUNT = SOCIAL_FACTOR_FEATURE_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Compute Impact</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LEVEL_OF_NEED___COMPUTE_IMPACT__FACTORIMPACT = SOCIAL_FACTOR___COMPUTE_IMPACT__FACTORIMPACT;
 
 	/**
 	 * The number of operations of the '<em>Level Of Need</em>' class.
@@ -215,6 +260,24 @@ public interface NewPackage1Package extends EPackage {
 	int RELATEDNESS__AFFECTEDFACTOR = SOCIAL_FACTOR__AFFECTEDFACTOR;
 
 	/**
+	 * The feature id for the '<em><b>Other</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RELATEDNESS__OTHER = SOCIAL_FACTOR__OTHER;
+
+	/**
+	 * The feature id for the '<em><b>Level</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RELATEDNESS__LEVEL = SOCIAL_FACTOR__LEVEL;
+
+	/**
 	 * The feature id for the '<em><b>Actor</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -224,22 +287,13 @@ public interface NewPackage1Package extends EPackage {
 	int RELATEDNESS__ACTOR = SOCIAL_FACTOR__ACTOR;
 
 	/**
-	 * The feature id for the '<em><b>Level</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RELATEDNESS__LEVEL = SOCIAL_FACTOR_FEATURE_COUNT + 0;
-
-	/**
 	 * The feature id for the '<em><b>Degree</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RELATEDNESS__DEGREE = SOCIAL_FACTOR_FEATURE_COUNT + 1;
+	int RELATEDNESS__DEGREE = SOCIAL_FACTOR_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Relatedness</em>' class.
@@ -248,7 +302,16 @@ public interface NewPackage1Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATEDNESS_FEATURE_COUNT = SOCIAL_FACTOR_FEATURE_COUNT + 2;
+	int RELATEDNESS_FEATURE_COUNT = SOCIAL_FACTOR_FEATURE_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Compute Impact</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RELATEDNESS___COMPUTE_IMPACT__FACTORIMPACT = SOCIAL_FACTOR___COMPUTE_IMPACT__FACTORIMPACT;
 
 	/**
 	 * The number of operations of the '<em>Relatedness</em>' class.
@@ -288,6 +351,24 @@ public interface NewPackage1Package extends EPackage {
 	int RECIPROCITY__AFFECTEDFACTOR = SOCIAL_FACTOR__AFFECTEDFACTOR;
 
 	/**
+	 * The feature id for the '<em><b>Other</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RECIPROCITY__OTHER = SOCIAL_FACTOR__OTHER;
+
+	/**
+	 * The feature id for the '<em><b>Level</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RECIPROCITY__LEVEL = SOCIAL_FACTOR__LEVEL;
+
+	/**
 	 * The feature id for the '<em><b>Actor</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -313,6 +394,15 @@ public interface NewPackage1Package extends EPackage {
 	 * @ordered
 	 */
 	int RECIPROCITY_FEATURE_COUNT = SOCIAL_FACTOR_FEATURE_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Compute Impact</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RECIPROCITY___COMPUTE_IMPACT__FACTORIMPACT = SOCIAL_FACTOR___COMPUTE_IMPACT__FACTORIMPACT;
 
 	/**
 	 * The number of operations of the '<em>Reciprocity</em>' class.
@@ -352,6 +442,24 @@ public interface NewPackage1Package extends EPackage {
 	int OPPORTUNITY_TO_CONNECT__AFFECTEDFACTOR = SOCIAL_FACTOR__AFFECTEDFACTOR;
 
 	/**
+	 * The feature id for the '<em><b>Other</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OPPORTUNITY_TO_CONNECT__OTHER = SOCIAL_FACTOR__OTHER;
+
+	/**
+	 * The feature id for the '<em><b>Level</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OPPORTUNITY_TO_CONNECT__LEVEL = SOCIAL_FACTOR__LEVEL;
+
+	/**
 	 * The feature id for the '<em><b>Actor</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -377,6 +485,15 @@ public interface NewPackage1Package extends EPackage {
 	 * @ordered
 	 */
 	int OPPORTUNITY_TO_CONNECT_FEATURE_COUNT = SOCIAL_FACTOR_FEATURE_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Compute Impact</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OPPORTUNITY_TO_CONNECT___COMPUTE_IMPACT__FACTORIMPACT = SOCIAL_FACTOR___COMPUTE_IMPACT__FACTORIMPACT;
 
 	/**
 	 * The number of operations of the '<em>Opportunity To Connect</em>' class.
@@ -416,6 +533,24 @@ public interface NewPackage1Package extends EPackage {
 	int TRUST__AFFECTEDFACTOR = SOCIAL_FACTOR__AFFECTEDFACTOR;
 
 	/**
+	 * The feature id for the '<em><b>Other</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRUST__OTHER = SOCIAL_FACTOR__OTHER;
+
+	/**
+	 * The feature id for the '<em><b>Level</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRUST__LEVEL = SOCIAL_FACTOR__LEVEL;
+
+	/**
 	 * The feature id for the '<em><b>Actor</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -425,22 +560,22 @@ public interface NewPackage1Package extends EPackage {
 	int TRUST__ACTOR = SOCIAL_FACTOR__ACTOR;
 
 	/**
-	 * The feature id for the '<em><b>Level</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TRUST__LEVEL = SOCIAL_FACTOR_FEATURE_COUNT + 0;
-
-	/**
 	 * The number of structural features of the '<em>Trust</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TRUST_FEATURE_COUNT = SOCIAL_FACTOR_FEATURE_COUNT + 1;
+	int TRUST_FEATURE_COUNT = SOCIAL_FACTOR_FEATURE_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Compute Impact</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRUST___COMPUTE_IMPACT__FACTORIMPACT = SOCIAL_FACTOR___COMPUTE_IMPACT__FACTORIMPACT;
 
 	/**
 	 * The number of operations of the '<em>Trust</em>' class.
@@ -450,6 +585,88 @@ public interface NewPackage1Package extends EPackage {
 	 * @ordered
 	 */
 	int TRUST_OPERATION_COUNT = SOCIAL_FACTOR_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link factors.Social.impl.OtherSocialFactorImpl <em>Other Social Factor</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see factors.Social.impl.OtherSocialFactorImpl
+	 * @see factors.Social.impl.NewPackage1PackageImpl#getOtherSocialFactor()
+	 * @generated
+	 */
+	int OTHER_SOCIAL_FACTOR = 6;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OTHER_SOCIAL_FACTOR__NAME = SOCIAL_FACTOR__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Affectedfactor</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OTHER_SOCIAL_FACTOR__AFFECTEDFACTOR = SOCIAL_FACTOR__AFFECTEDFACTOR;
+
+	/**
+	 * The feature id for the '<em><b>Other</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OTHER_SOCIAL_FACTOR__OTHER = SOCIAL_FACTOR__OTHER;
+
+	/**
+	 * The feature id for the '<em><b>Level</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OTHER_SOCIAL_FACTOR__LEVEL = SOCIAL_FACTOR__LEVEL;
+
+	/**
+	 * The feature id for the '<em><b>Actor</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OTHER_SOCIAL_FACTOR__ACTOR = SOCIAL_FACTOR__ACTOR;
+
+	/**
+	 * The number of structural features of the '<em>Other Social Factor</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OTHER_SOCIAL_FACTOR_FEATURE_COUNT = SOCIAL_FACTOR_FEATURE_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Compute Impact</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OTHER_SOCIAL_FACTOR___COMPUTE_IMPACT__FACTORIMPACT = SOCIAL_FACTOR___COMPUTE_IMPACT__FACTORIMPACT;
+
+	/**
+	 * The number of operations of the '<em>Other Social Factor</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OTHER_SOCIAL_FACTOR_OPERATION_COUNT = SOCIAL_FACTOR_OPERATION_COUNT + 0;
 
 	/**
 	 * Returns the meta object for class '{@link factors.Social.LevelOfNeed <em>Level Of Need</em>}'.
@@ -473,17 +690,6 @@ public interface NewPackage1Package extends EPackage {
 	EAttribute getLevelOfNeed_Need();
 
 	/**
-	 * Returns the meta object for the attribute '{@link factors.Social.LevelOfNeed#getLevel <em>Level</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Level</em>'.
-	 * @see factors.Social.LevelOfNeed#getLevel()
-	 * @see #getLevelOfNeed()
-	 * @generated
-	 */
-	EAttribute getLevelOfNeed_Level();
-
-	/**
 	 * Returns the meta object for class '{@link factors.Social.Relatedness <em>Relatedness</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -492,17 +698,6 @@ public interface NewPackage1Package extends EPackage {
 	 * @generated
 	 */
 	EClass getRelatedness();
-
-	/**
-	 * Returns the meta object for the attribute '{@link factors.Social.Relatedness#getLevel <em>Level</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Level</em>'.
-	 * @see factors.Social.Relatedness#getLevel()
-	 * @see #getRelatedness()
-	 * @generated
-	 */
-	EAttribute getRelatedness_Level();
 
 	/**
 	 * Returns the meta object for the attribute '{@link factors.Social.Relatedness#getDegree <em>Degree</em>}'.
@@ -589,15 +784,14 @@ public interface NewPackage1Package extends EPackage {
 	EClass getTrust();
 
 	/**
-	 * Returns the meta object for the attribute '{@link factors.Social.Trust#getLevel <em>Level</em>}'.
+	 * Returns the meta object for class '{@link factors.Social.OtherSocialFactor <em>Other Social Factor</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Level</em>'.
-	 * @see factors.Social.Trust#getLevel()
-	 * @see #getTrust()
+	 * @return the meta object for class '<em>Other Social Factor</em>'.
+	 * @see factors.Social.OtherSocialFactor
 	 * @generated
 	 */
-	EAttribute getTrust_Level();
+	EClass getOtherSocialFactor();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -641,14 +835,6 @@ public interface NewPackage1Package extends EPackage {
 		EAttribute LEVEL_OF_NEED__NEED = eINSTANCE.getLevelOfNeed_Need();
 
 		/**
-		 * The meta object literal for the '<em><b>Level</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute LEVEL_OF_NEED__LEVEL = eINSTANCE.getLevelOfNeed_Level();
-
-		/**
 		 * The meta object literal for the '{@link factors.Social.impl.RelatednessImpl <em>Relatedness</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -657,14 +843,6 @@ public interface NewPackage1Package extends EPackage {
 		 * @generated
 		 */
 		EClass RELATEDNESS = eINSTANCE.getRelatedness();
-
-		/**
-		 * The meta object literal for the '<em><b>Level</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute RELATEDNESS__LEVEL = eINSTANCE.getRelatedness_Level();
 
 		/**
 		 * The meta object literal for the '<em><b>Degree</b></em>' attribute feature.
@@ -739,12 +917,14 @@ public interface NewPackage1Package extends EPackage {
 		EClass TRUST = eINSTANCE.getTrust();
 
 		/**
-		 * The meta object literal for the '<em><b>Level</b></em>' attribute feature.
+		 * The meta object literal for the '{@link factors.Social.impl.OtherSocialFactorImpl <em>Other Social Factor</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
+		 * @see factors.Social.impl.OtherSocialFactorImpl
+		 * @see factors.Social.impl.NewPackage1PackageImpl#getOtherSocialFactor()
 		 * @generated
 		 */
-		EAttribute TRUST__LEVEL = eINSTANCE.getTrust_Level();
+		EClass OTHER_SOCIAL_FACTOR = eINSTANCE.getOtherSocialFactor();
 
 	}
 

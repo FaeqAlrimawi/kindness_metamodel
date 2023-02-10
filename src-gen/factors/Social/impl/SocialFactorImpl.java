@@ -3,21 +3,28 @@
 package factors.Social.impl;
 
 import factors.AbsKindnessEntity;
+import factors.AffectedFactors;
+import factors.FactorImpact;
+import factors.Level;
 
-import factors.AffectedFactor;
 import factors.Social.NewPackage1Package;
 import factors.Social.SocialFactor;
 
-import java.util.Collection;
-import org.eclipse.emf.common.notify.Notification;
+import java.lang.reflect.InvocationTargetException;
 
+import java.util.Collection;
+
+import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -31,6 +38,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <ul>
  *   <li>{@link factors.Social.impl.SocialFactorImpl#getName <em>Name</em>}</li>
  *   <li>{@link factors.Social.impl.SocialFactorImpl#getAffectedfactor <em>Affectedfactor</em>}</li>
+ *   <li>{@link factors.Social.impl.SocialFactorImpl#getOther <em>Other</em>}</li>
+ *   <li>{@link factors.Social.impl.SocialFactorImpl#getLevel <em>Level</em>}</li>
  *   <li>{@link factors.Social.impl.SocialFactorImpl#getActor <em>Actor</em>}</li>
  * </ul>
  *
@@ -65,7 +74,47 @@ public abstract class SocialFactorImpl extends MinimalEObjectImpl.Container impl
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<AffectedFactor> affectedfactor;
+	protected EList<AffectedFactors> affectedfactor;
+
+	/**
+	 * The default value of the '{@link #getOther() <em>Other</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getOther()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String OTHER_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getOther() <em>Other</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getOther()
+	 * @generated
+	 * @ordered
+	 */
+	protected String other = OTHER_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getLevel() <em>Level</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLevel()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final Level LEVEL_EDEFAULT = Level.MEDIUM;
+
+	/**
+	 * The cached value of the '{@link #getLevel() <em>Level</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLevel()
+	 * @generated
+	 * @ordered
+	 */
+	protected Level level = LEVEL_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getActor() <em>Actor</em>}' reference.
@@ -123,12 +172,56 @@ public abstract class SocialFactorImpl extends MinimalEObjectImpl.Container impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<AffectedFactor> getAffectedfactor() {
+	public EList<AffectedFactors> getAffectedfactor() {
 		if (affectedfactor == null) {
-			affectedfactor = new EObjectContainmentEList<AffectedFactor>(AffectedFactor.class, this,
+			affectedfactor = new EObjectContainmentEList<AffectedFactors>(AffectedFactors.class, this,
 					NewPackage1Package.SOCIAL_FACTOR__AFFECTEDFACTOR);
 		}
 		return affectedfactor;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getOther() {
+		return other;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setOther(String newOther) {
+		String oldOther = other;
+		other = newOther;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, NewPackage1Package.SOCIAL_FACTOR__OTHER, oldOther,
+					other));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Level getLevel() {
+		return level;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setLevel(Level newLevel) {
+		Level oldLevel = level;
+		level = newLevel == null ? LEVEL_EDEFAULT : newLevel;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, NewPackage1Package.SOCIAL_FACTOR__LEVEL, oldLevel,
+					level));
 	}
 
 	/**
@@ -176,6 +269,17 @@ public abstract class SocialFactorImpl extends MinimalEObjectImpl.Container impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public void computeImpact(FactorImpact impact) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -197,6 +301,10 @@ public abstract class SocialFactorImpl extends MinimalEObjectImpl.Container impl
 			return getName();
 		case NewPackage1Package.SOCIAL_FACTOR__AFFECTEDFACTOR:
 			return getAffectedfactor();
+		case NewPackage1Package.SOCIAL_FACTOR__OTHER:
+			return getOther();
+		case NewPackage1Package.SOCIAL_FACTOR__LEVEL:
+			return getLevel();
 		case NewPackage1Package.SOCIAL_FACTOR__ACTOR:
 			if (resolve)
 				return getActor();
@@ -219,7 +327,13 @@ public abstract class SocialFactorImpl extends MinimalEObjectImpl.Container impl
 			return;
 		case NewPackage1Package.SOCIAL_FACTOR__AFFECTEDFACTOR:
 			getAffectedfactor().clear();
-			getAffectedfactor().addAll((Collection<? extends AffectedFactor>) newValue);
+			getAffectedfactor().addAll((Collection<? extends AffectedFactors>) newValue);
+			return;
+		case NewPackage1Package.SOCIAL_FACTOR__OTHER:
+			setOther((String) newValue);
+			return;
+		case NewPackage1Package.SOCIAL_FACTOR__LEVEL:
+			setLevel((Level) newValue);
 			return;
 		case NewPackage1Package.SOCIAL_FACTOR__ACTOR:
 			setActor((AbsKindnessEntity) newValue);
@@ -242,6 +356,12 @@ public abstract class SocialFactorImpl extends MinimalEObjectImpl.Container impl
 		case NewPackage1Package.SOCIAL_FACTOR__AFFECTEDFACTOR:
 			getAffectedfactor().clear();
 			return;
+		case NewPackage1Package.SOCIAL_FACTOR__OTHER:
+			setOther(OTHER_EDEFAULT);
+			return;
+		case NewPackage1Package.SOCIAL_FACTOR__LEVEL:
+			setLevel(LEVEL_EDEFAULT);
+			return;
 		case NewPackage1Package.SOCIAL_FACTOR__ACTOR:
 			setActor((AbsKindnessEntity) null);
 			return;
@@ -261,10 +381,29 @@ public abstract class SocialFactorImpl extends MinimalEObjectImpl.Container impl
 			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		case NewPackage1Package.SOCIAL_FACTOR__AFFECTEDFACTOR:
 			return affectedfactor != null && !affectedfactor.isEmpty();
+		case NewPackage1Package.SOCIAL_FACTOR__OTHER:
+			return OTHER_EDEFAULT == null ? other != null : !OTHER_EDEFAULT.equals(other);
+		case NewPackage1Package.SOCIAL_FACTOR__LEVEL:
+			return level != LEVEL_EDEFAULT;
 		case NewPackage1Package.SOCIAL_FACTOR__ACTOR:
 			return actor != null;
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
+		switch (operationID) {
+		case NewPackage1Package.SOCIAL_FACTOR___COMPUTE_IMPACT__FACTORIMPACT:
+			computeImpact((FactorImpact) arguments.get(0));
+			return null;
+		}
+		return super.eInvoke(operationID, arguments);
 	}
 
 	/**
@@ -280,6 +419,10 @@ public abstract class SocialFactorImpl extends MinimalEObjectImpl.Container impl
 		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (name: ");
 		result.append(name);
+		result.append(", other: ");
+		result.append(other);
+		result.append(", level: ");
+		result.append(level);
 		result.append(')');
 		return result.toString();
 	}

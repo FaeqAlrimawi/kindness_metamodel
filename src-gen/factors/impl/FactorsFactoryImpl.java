@@ -57,8 +57,8 @@ public class FactorsFactoryImpl extends EFactoryImpl implements FactorsFactory {
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-		case FactorsPackage.AFFECTED_FACTOR:
-			return createAffectedFactor();
+		case FactorsPackage.AFFECTED_FACTORS:
+			return createAffectedFactors();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -82,6 +82,12 @@ public class FactorsFactoryImpl extends EFactoryImpl implements FactorsFactory {
 			return createLevelFromString(eDataType, initialValue);
 		case FactorsPackage.FACTOR_IMPACT:
 			return createFactorImpactFromString(eDataType, initialValue);
+		case FactorsPackage.EMOTION_TYPE:
+			return createEmotionTypeFromString(eDataType, initialValue);
+		case FactorsPackage.TRAIT_TYPE:
+			return createTraitTypeFromString(eDataType, initialValue);
+		case FactorsPackage.HUMAN_VALUE_TYPE:
+			return createHumanValueTypeFromString(eDataType, initialValue);
 		default:
 			throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -105,6 +111,12 @@ public class FactorsFactoryImpl extends EFactoryImpl implements FactorsFactory {
 			return convertLevelToString(eDataType, instanceValue);
 		case FactorsPackage.FACTOR_IMPACT:
 			return convertFactorImpactToString(eDataType, instanceValue);
+		case FactorsPackage.EMOTION_TYPE:
+			return convertEmotionTypeToString(eDataType, instanceValue);
+		case FactorsPackage.TRAIT_TYPE:
+			return convertTraitTypeToString(eDataType, instanceValue);
+		case FactorsPackage.HUMAN_VALUE_TYPE:
+			return convertHumanValueTypeToString(eDataType, instanceValue);
 		default:
 			throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -115,9 +127,9 @@ public class FactorsFactoryImpl extends EFactoryImpl implements FactorsFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public AffectedFactor createAffectedFactor() {
-		AffectedFactorImpl affectedFactor = new AffectedFactorImpl();
-		return affectedFactor;
+	public AffectedFactors createAffectedFactors() {
+		AffectedFactorsImpl affectedFactors = new AffectedFactorsImpl();
+		return affectedFactors;
 	}
 
 	/**
@@ -227,6 +239,72 @@ public class FactorsFactoryImpl extends EFactoryImpl implements FactorsFactory {
 	 * @generated
 	 */
 	public String convertFactorImpactToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EmotionType createEmotionTypeFromString(EDataType eDataType, String initialValue) {
+		EmotionType result = EmotionType.get(initialValue);
+		if (result == null)
+			throw new IllegalArgumentException(
+					"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertEmotionTypeToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public TraitType createTraitTypeFromString(EDataType eDataType, String initialValue) {
+		TraitType result = TraitType.get(initialValue);
+		if (result == null)
+			throw new IllegalArgumentException(
+					"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertTraitTypeToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public HumanValueType createHumanValueTypeFromString(EDataType eDataType, String initialValue) {
+		HumanValueType result = HumanValueType.get(initialValue);
+		if (result == null)
+			throw new IllegalArgumentException(
+					"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertHumanValueTypeToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 

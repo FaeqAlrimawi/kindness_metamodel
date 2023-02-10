@@ -66,6 +66,8 @@ public class NewPackage1FactoryImpl extends EFactoryImpl implements NewPackage1F
 			return createOpportunityToConnect();
 		case NewPackage1Package.TRUST:
 			return createTrust();
+		case NewPackage1Package.OTHER_SOCIAL_FACTOR:
+			return createOtherSocialFactor();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -119,6 +121,16 @@ public class NewPackage1FactoryImpl extends EFactoryImpl implements NewPackage1F
 	public Trust createTrust() {
 		TrustImpl trust = new TrustImpl();
 		return trust;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public OtherSocialFactor createOtherSocialFactor() {
+		OtherSocialFactorImpl otherSocialFactor = new OtherSocialFactorImpl();
+		return otherSocialFactor;
 	}
 
 	/**

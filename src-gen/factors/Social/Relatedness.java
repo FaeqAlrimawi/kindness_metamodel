@@ -13,7 +13,6 @@ import factors.DegreeOfRelatedness;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link factors.Social.Relatedness#getLevel <em>Level</em>}</li>
  *   <li>{@link factors.Social.Relatedness#getDegree <em>Degree</em>}</li>
  * </ul>
  *
@@ -22,28 +21,6 @@ import factors.DegreeOfRelatedness;
  * @generated
  */
 public interface Relatedness extends SocialFactor {
-	/**
-	 * Returns the value of the '<em><b>Level</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Level</em>' attribute.
-	 * @see #setLevel(float)
-	 * @see factors.Social.NewPackage1Package#getRelatedness_Level()
-	 * @model
-	 * @generated
-	 */
-	float getLevel();
-
-	/**
-	 * Sets the value of the '{@link factors.Social.Relatedness#getLevel <em>Level</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Level</em>' attribute.
-	 * @see #getLevel()
-	 * @generated
-	 */
-	void setLevel(float value);
-
 	/**
 	 * Returns the value of the '<em><b>Degree</b></em>' attribute.
 	 * The literals are from the enumeration {@link factors.DegreeOfRelatedness}.

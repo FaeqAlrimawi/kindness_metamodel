@@ -46,7 +46,17 @@ public enum Need implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	HEALTH_RELATED(2, "HEALTH_RELATED", "HEALTH_RELATED");
+	HEALTH_RELATED(2, "HEALTH_RELATED", "HEALTH_RELATED"),
+
+	/**
+	 * The '<em><b>OTHER</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #OTHER_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	OTHER(3, "OTHER", "OTHER");
 
 	/**
 	 * The '<em><b>EMOTIONAL</b></em>' literal value.
@@ -82,12 +92,23 @@ public enum Need implements Enumerator {
 	public static final int HEALTH_RELATED_VALUE = 2;
 
 	/**
+	 * The '<em><b>OTHER</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #OTHER
+	 * @model
+	 * @generated
+	 * @ordered
+	 */
+	public static final int OTHER_VALUE = 3;
+
+	/**
 	 * An array of all the '<em><b>Need</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static final Need[] VALUES_ARRAY = new Need[] { EMOTIONAL, INSTRUMENTAL, HEALTH_RELATED, };
+	private static final Need[] VALUES_ARRAY = new Need[] { EMOTIONAL, INSTRUMENTAL, HEALTH_RELATED, OTHER, };
 
 	/**
 	 * A public read-only list of all the '<em><b>Need</b></em>' enumerators.
@@ -149,6 +170,8 @@ public enum Need implements Enumerator {
 			return INSTRUMENTAL;
 		case HEALTH_RELATED_VALUE:
 			return HEALTH_RELATED;
+		case OTHER_VALUE:
+			return OTHER;
 		}
 		return null;
 	}

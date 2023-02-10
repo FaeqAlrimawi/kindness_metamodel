@@ -46,7 +46,47 @@ public enum Level implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	LOW(2, "LOW", "LOW");
+	LOW(2, "LOW", "LOW"),
+
+	/**
+	 * The '<em><b>IGNORE</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #IGNORE_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	IGNORE(3, "IGNORE", "IGNORE"),
+
+	/**
+	 * The '<em><b>UNSPECIFIED</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #UNSPECIFIED_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	UNSPECIFIED(4, "UNSPECIFIED", "UNSPECIFIED"),
+
+	/**
+	 * The '<em><b>EXTREME</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #EXTREME_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	EXTREME(5, "EXTREME", "EXTREME"),
+
+	/**
+	 * The '<em><b>NONE</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #NONE_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	NONE(6, "NONE", "NONE");
 
 	/**
 	 * The '<em><b>HIGH</b></em>' literal value.
@@ -82,12 +122,56 @@ public enum Level implements Enumerator {
 	public static final int LOW_VALUE = 2;
 
 	/**
+	 * The '<em><b>IGNORE</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #IGNORE
+	 * @model
+	 * @generated
+	 * @ordered
+	 */
+	public static final int IGNORE_VALUE = 3;
+
+	/**
+	 * The '<em><b>UNSPECIFIED</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #UNSPECIFIED
+	 * @model
+	 * @generated
+	 * @ordered
+	 */
+	public static final int UNSPECIFIED_VALUE = 4;
+
+	/**
+	 * The '<em><b>EXTREME</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #EXTREME
+	 * @model
+	 * @generated
+	 * @ordered
+	 */
+	public static final int EXTREME_VALUE = 5;
+
+	/**
+	 * The '<em><b>NONE</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #NONE
+	 * @model
+	 * @generated
+	 * @ordered
+	 */
+	public static final int NONE_VALUE = 6;
+
+	/**
 	 * An array of all the '<em><b>Level</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static final Level[] VALUES_ARRAY = new Level[] { HIGH, MEDIUM, LOW, };
+	private static final Level[] VALUES_ARRAY = new Level[] { HIGH, MEDIUM, LOW, IGNORE, UNSPECIFIED, EXTREME, NONE, };
 
 	/**
 	 * A public read-only list of all the '<em><b>Level</b></em>' enumerators.
@@ -149,6 +233,14 @@ public enum Level implements Enumerator {
 			return MEDIUM;
 		case LOW_VALUE:
 			return LOW;
+		case IGNORE_VALUE:
+			return IGNORE;
+		case UNSPECIFIED_VALUE:
+			return UNSPECIFIED;
+		case EXTREME_VALUE:
+			return EXTREME;
+		case NONE_VALUE:
+			return NONE;
 		}
 		return null;
 	}

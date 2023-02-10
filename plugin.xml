@@ -30,4 +30,12 @@
             genModel="model/kindness_metamodel.genmodel"/>
    </extension>
 
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated kindness_metamodel -->
+      <package
+            uri="http://www.example.org/kindness_metamodel_factors_psychological"
+            class="factors.Psychological.NewPackage2Package"
+            genModel="model/kindness_metamodel.genmodel"/>
+   </extension>
+
 </plugin>

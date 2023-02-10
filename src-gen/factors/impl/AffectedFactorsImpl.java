@@ -2,33 +2,34 @@
  */
 package factors.impl;
 
-import factors.AffectedFactor;
+import factors.AffectedFactors;
 import factors.Factor;
 import factors.FactorImpact;
 import factors.FactorsPackage;
 
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Affected Factor</b></em>'.
+ * An implementation of the model object '<em><b>Affected Factors</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link factors.impl.AffectedFactorImpl#getFactor <em>Factor</em>}</li>
- *   <li>{@link factors.impl.AffectedFactorImpl#getImpact <em>Impact</em>}</li>
+ *   <li>{@link factors.impl.AffectedFactorsImpl#getFactor <em>Factor</em>}</li>
+ *   <li>{@link factors.impl.AffectedFactorsImpl#getImpact <em>Impact</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class AffectedFactorImpl extends MinimalEObjectImpl.Container implements AffectedFactor {
+public class AffectedFactorsImpl extends MinimalEObjectImpl.Container implements AffectedFactors {
 	/**
 	 * The cached value of the '{@link #getFactor() <em>Factor</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -48,6 +49,7 @@ public class AffectedFactorImpl extends MinimalEObjectImpl.Container implements 
 	 * @ordered
 	 */
 	protected static final FactorImpact IMPACT_EDEFAULT = FactorImpact.POSITIVE;
+
 	/**
 	 * The cached value of the '{@link #getImpact() <em>Impact</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -63,7 +65,7 @@ public class AffectedFactorImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected AffectedFactorImpl() {
+	protected AffectedFactorsImpl() {
 		super();
 	}
 
@@ -74,7 +76,7 @@ public class AffectedFactorImpl extends MinimalEObjectImpl.Container implements 
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return FactorsPackage.Literals.AFFECTED_FACTOR;
+		return FactorsPackage.Literals.AFFECTED_FACTORS;
 	}
 
 	/**
@@ -88,7 +90,7 @@ public class AffectedFactorImpl extends MinimalEObjectImpl.Container implements 
 			factor = (Factor) eResolveProxy(oldFactor);
 			if (factor != oldFactor) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, FactorsPackage.AFFECTED_FACTOR__FACTOR,
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, FactorsPackage.AFFECTED_FACTORS__FACTOR,
 							oldFactor, factor));
 			}
 		}
@@ -113,7 +115,7 @@ public class AffectedFactorImpl extends MinimalEObjectImpl.Container implements 
 		Factor oldFactor = factor;
 		factor = newFactor;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, FactorsPackage.AFFECTED_FACTOR__FACTOR, oldFactor,
+			eNotify(new ENotificationImpl(this, Notification.SET, FactorsPackage.AFFECTED_FACTORS__FACTOR, oldFactor,
 					factor));
 	}
 
@@ -135,7 +137,7 @@ public class AffectedFactorImpl extends MinimalEObjectImpl.Container implements 
 		FactorImpact oldImpact = impact;
 		impact = newImpact == null ? IMPACT_EDEFAULT : newImpact;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, FactorsPackage.AFFECTED_FACTOR__IMPACT, oldImpact,
+			eNotify(new ENotificationImpl(this, Notification.SET, FactorsPackage.AFFECTED_FACTORS__IMPACT, oldImpact,
 					impact));
 	}
 
@@ -147,11 +149,11 @@ public class AffectedFactorImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case FactorsPackage.AFFECTED_FACTOR__FACTOR:
+		case FactorsPackage.AFFECTED_FACTORS__FACTOR:
 			if (resolve)
 				return getFactor();
 			return basicGetFactor();
-		case FactorsPackage.AFFECTED_FACTOR__IMPACT:
+		case FactorsPackage.AFFECTED_FACTORS__IMPACT:
 			return getImpact();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -165,10 +167,10 @@ public class AffectedFactorImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case FactorsPackage.AFFECTED_FACTOR__FACTOR:
+		case FactorsPackage.AFFECTED_FACTORS__FACTOR:
 			setFactor((Factor) newValue);
 			return;
-		case FactorsPackage.AFFECTED_FACTOR__IMPACT:
+		case FactorsPackage.AFFECTED_FACTORS__IMPACT:
 			setImpact((FactorImpact) newValue);
 			return;
 		}
@@ -183,10 +185,10 @@ public class AffectedFactorImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case FactorsPackage.AFFECTED_FACTOR__FACTOR:
+		case FactorsPackage.AFFECTED_FACTORS__FACTOR:
 			setFactor((Factor) null);
 			return;
-		case FactorsPackage.AFFECTED_FACTOR__IMPACT:
+		case FactorsPackage.AFFECTED_FACTORS__IMPACT:
 			setImpact(IMPACT_EDEFAULT);
 			return;
 		}
@@ -201,9 +203,9 @@ public class AffectedFactorImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case FactorsPackage.AFFECTED_FACTOR__FACTOR:
+		case FactorsPackage.AFFECTED_FACTORS__FACTOR:
 			return factor != null;
-		case FactorsPackage.AFFECTED_FACTOR__IMPACT:
+		case FactorsPackage.AFFECTED_FACTORS__IMPACT:
 			return impact != IMPACT_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -226,4 +228,4 @@ public class AffectedFactorImpl extends MinimalEObjectImpl.Container implements 
 		return result.toString();
 	}
 
-} //AffectedFactorImpl
+} //AffectedFactorsImpl

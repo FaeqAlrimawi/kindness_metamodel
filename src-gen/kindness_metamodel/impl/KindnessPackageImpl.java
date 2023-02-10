@@ -4,6 +4,10 @@ package kindness_metamodel.impl;
 
 import factors.FactorsPackage;
 
+import factors.Psychological.NewPackage2Package;
+
+import factors.Psychological.impl.NewPackage2PackageImpl;
+
 import factors.Social.NewPackage1Package;
 
 import factors.Social.impl.NewPackage1PackageImpl;
@@ -239,16 +243,22 @@ public class KindnessPackageImpl extends EPackageImpl implements KindnessPackage
 		NewPackage1PackageImpl theNewPackage1Package = (NewPackage1PackageImpl) (registeredPackage instanceof NewPackage1PackageImpl
 				? registeredPackage
 				: NewPackage1Package.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(NewPackage2Package.eNS_URI);
+		NewPackage2PackageImpl theNewPackage2Package = (NewPackage2PackageImpl) (registeredPackage instanceof NewPackage2PackageImpl
+				? registeredPackage
+				: NewPackage2Package.eINSTANCE);
 
 		// Create package meta-data objects
 		theKindnessPackage.createPackageContents();
 		theFactorsPackage.createPackageContents();
 		theNewPackage1Package.createPackageContents();
+		theNewPackage2Package.createPackageContents();
 
 		// Initialize created meta-data
 		theKindnessPackage.initializePackageContents();
 		theFactorsPackage.initializePackageContents();
 		theNewPackage1Package.initializePackageContents();
+		theNewPackage2Package.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
 		theKindnessPackage.freeze();

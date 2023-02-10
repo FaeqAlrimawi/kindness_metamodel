@@ -46,7 +46,17 @@ public enum Opportunity implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	STRENGTHEN_FAMILY_TIES(2, "STRENGTHEN_FAMILY_TIES", "STRENGTHEN_FAMILY_TIES");
+	STRENGTHEN_FAMILY_TIES(2, "STRENGTHEN_FAMILY_TIES", "STRENGTHEN_FAMILY_TIES"),
+
+	/**
+	 * The '<em><b>OTHER</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #OTHER_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	OTHER(3, "OTHER", "OTHER");
 
 	/**
 	 * The '<em><b>MAKE NEW FRIEND</b></em>' literal value.
@@ -82,13 +92,24 @@ public enum Opportunity implements Enumerator {
 	public static final int STRENGTHEN_FAMILY_TIES_VALUE = 2;
 
 	/**
+	 * The '<em><b>OTHER</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #OTHER
+	 * @model
+	 * @generated
+	 * @ordered
+	 */
+	public static final int OTHER_VALUE = 3;
+
+	/**
 	 * An array of all the '<em><b>Opportunity</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private static final Opportunity[] VALUES_ARRAY = new Opportunity[] { MAKE_NEW_FRIEND, KEEP_OLD_FRIEND,
-			STRENGTHEN_FAMILY_TIES, };
+			STRENGTHEN_FAMILY_TIES, OTHER, };
 
 	/**
 	 * A public read-only list of all the '<em><b>Opportunity</b></em>' enumerators.
@@ -150,6 +171,8 @@ public enum Opportunity implements Enumerator {
 			return KEEP_OLD_FRIEND;
 		case STRENGTHEN_FAMILY_TIES_VALUE:
 			return STRENGTHEN_FAMILY_TIES;
+		case OTHER_VALUE:
+			return OTHER;
 		}
 		return null;
 	}
