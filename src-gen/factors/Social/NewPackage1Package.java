@@ -105,13 +105,13 @@ public interface NewPackage1Package extends EPackage {
 	int SOCIAL_FACTOR__LEVEL = FactorsPackage.FACTOR__LEVEL;
 
 	/**
-	 * The feature id for the '<em><b>Actor</b></em>' reference.
+	 * The feature id for the '<em><b>Connection</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SOCIAL_FACTOR__ACTOR = FactorsPackage.FACTOR_FEATURE_COUNT + 0;
+	int SOCIAL_FACTOR__CONNECTION = FactorsPackage.FACTOR_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Social Factor</em>' class.
@@ -187,13 +187,13 @@ public interface NewPackage1Package extends EPackage {
 	int LEVEL_OF_NEED__LEVEL = SOCIAL_FACTOR__LEVEL;
 
 	/**
-	 * The feature id for the '<em><b>Actor</b></em>' reference.
+	 * The feature id for the '<em><b>Connection</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LEVEL_OF_NEED__ACTOR = SOCIAL_FACTOR__ACTOR;
+	int LEVEL_OF_NEED__CONNECTION = SOCIAL_FACTOR__CONNECTION;
 
 	/**
 	 * The feature id for the '<em><b>Need</b></em>' attribute.
@@ -278,13 +278,13 @@ public interface NewPackage1Package extends EPackage {
 	int RELATEDNESS__LEVEL = SOCIAL_FACTOR__LEVEL;
 
 	/**
-	 * The feature id for the '<em><b>Actor</b></em>' reference.
+	 * The feature id for the '<em><b>Connection</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RELATEDNESS__ACTOR = SOCIAL_FACTOR__ACTOR;
+	int RELATEDNESS__CONNECTION = SOCIAL_FACTOR__CONNECTION;
 
 	/**
 	 * The feature id for the '<em><b>Degree</b></em>' attribute.
@@ -369,13 +369,13 @@ public interface NewPackage1Package extends EPackage {
 	int RECIPROCITY__LEVEL = SOCIAL_FACTOR__LEVEL;
 
 	/**
-	 * The feature id for the '<em><b>Actor</b></em>' reference.
+	 * The feature id for the '<em><b>Connection</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RECIPROCITY__ACTOR = SOCIAL_FACTOR__ACTOR;
+	int RECIPROCITY__CONNECTION = SOCIAL_FACTOR__CONNECTION;
 
 	/**
 	 * The feature id for the '<em><b>Is Reciprocal</b></em>' attribute.
@@ -460,13 +460,13 @@ public interface NewPackage1Package extends EPackage {
 	int OPPORTUNITY_TO_CONNECT__LEVEL = SOCIAL_FACTOR__LEVEL;
 
 	/**
-	 * The feature id for the '<em><b>Actor</b></em>' reference.
+	 * The feature id for the '<em><b>Connection</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int OPPORTUNITY_TO_CONNECT__ACTOR = SOCIAL_FACTOR__ACTOR;
+	int OPPORTUNITY_TO_CONNECT__CONNECTION = SOCIAL_FACTOR__CONNECTION;
 
 	/**
 	 * The feature id for the '<em><b>Opportunity</b></em>' attribute.
@@ -551,13 +551,13 @@ public interface NewPackage1Package extends EPackage {
 	int TRUST__LEVEL = SOCIAL_FACTOR__LEVEL;
 
 	/**
-	 * The feature id for the '<em><b>Actor</b></em>' reference.
+	 * The feature id for the '<em><b>Connection</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TRUST__ACTOR = SOCIAL_FACTOR__ACTOR;
+	int TRUST__CONNECTION = SOCIAL_FACTOR__CONNECTION;
 
 	/**
 	 * The number of structural features of the '<em>Trust</em>' class.
@@ -633,13 +633,13 @@ public interface NewPackage1Package extends EPackage {
 	int OTHER_SOCIAL_FACTOR__LEVEL = SOCIAL_FACTOR__LEVEL;
 
 	/**
-	 * The feature id for the '<em><b>Actor</b></em>' reference.
+	 * The feature id for the '<em><b>Connection</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int OTHER_SOCIAL_FACTOR__ACTOR = SOCIAL_FACTOR__ACTOR;
+	int OTHER_SOCIAL_FACTOR__CONNECTION = SOCIAL_FACTOR__CONNECTION;
 
 	/**
 	 * The number of structural features of the '<em>Other Social Factor</em>' class.
@@ -742,15 +742,15 @@ public interface NewPackage1Package extends EPackage {
 	EClass getSocialFactor();
 
 	/**
-	 * Returns the meta object for the reference '{@link factors.Social.SocialFactor#getActor <em>Actor</em>}'.
+	 * Returns the meta object for the reference '{@link factors.Social.SocialFactor#getConnection <em>Connection</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Actor</em>'.
-	 * @see factors.Social.SocialFactor#getActor()
+	 * @return the meta object for the reference '<em>Connection</em>'.
+	 * @see factors.Social.SocialFactor#getConnection()
 	 * @see #getSocialFactor()
 	 * @generated
 	 */
-	EReference getSocialFactor_Actor();
+	EReference getSocialFactor_Connection();
 
 	/**
 	 * Returns the meta object for class '{@link factors.Social.OpportunityToConnect <em>Opportunity To Connect</em>}'.
@@ -881,12 +881,12 @@ public interface NewPackage1Package extends EPackage {
 		EClass SOCIAL_FACTOR = eINSTANCE.getSocialFactor();
 
 		/**
-		 * The meta object literal for the '<em><b>Actor</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Connection</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference SOCIAL_FACTOR__ACTOR = eINSTANCE.getSocialFactor_Actor();
+		EReference SOCIAL_FACTOR__CONNECTION = eINSTANCE.getSocialFactor_Connection();
 
 		/**
 		 * The meta object literal for the '{@link factors.Social.impl.OpportunityToConnectImpl <em>Opportunity To Connect</em>}' class.

@@ -2,7 +2,7 @@
  */
 package factors.impl;
 
-import factors.AbsKindnessEntity;
+import factors.AbsConnection;
 import factors.AbsSocialFactors;
 import factors.FactorsPackage;
 
@@ -32,7 +32,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link factors.impl.AbsSocialFactorsImpl#getActor <em>Actor</em>}</li>
+ *   <li>{@link factors.impl.AbsSocialFactorsImpl#getConnection <em>Connection</em>}</li>
  *   <li>{@link factors.impl.AbsSocialFactorsImpl#getSocialfactor <em>Socialfactor</em>}</li>
  * </ul>
  *
@@ -40,14 +40,14 @@ import org.eclipse.emf.ecore.util.InternalEList;
  */
 public abstract class AbsSocialFactorsImpl extends MinimalEObjectImpl.Container implements AbsSocialFactors {
 	/**
-	 * The cached value of the '{@link #getActor() <em>Actor</em>}' reference.
+	 * The cached value of the '{@link #getConnection() <em>Connection</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getActor()
+	 * @see #getConnection()
 	 * @generated
 	 * @ordered
 	 */
-	protected AbsKindnessEntity actor;
+	protected AbsConnection connection;
 
 	/**
 	 * The cached value of the '{@link #getSocialfactor() <em>Socialfactor</em>}' containment reference list.
@@ -83,17 +83,17 @@ public abstract class AbsSocialFactorsImpl extends MinimalEObjectImpl.Container 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public AbsKindnessEntity getActor() {
-		if (actor != null && actor.eIsProxy()) {
-			InternalEObject oldActor = (InternalEObject) actor;
-			actor = (AbsKindnessEntity) eResolveProxy(oldActor);
-			if (actor != oldActor) {
+	public AbsConnection getConnection() {
+		if (connection != null && connection.eIsProxy()) {
+			InternalEObject oldConnection = (InternalEObject) connection;
+			connection = (AbsConnection) eResolveProxy(oldConnection);
+			if (connection != oldConnection) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, FactorsPackage.ABS_SOCIAL_FACTORS__ACTOR,
-							oldActor, actor));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
+							FactorsPackage.ABS_SOCIAL_FACTORS__CONNECTION, oldConnection, connection));
 			}
 		}
-		return actor;
+		return connection;
 	}
 
 	/**
@@ -101,8 +101,8 @@ public abstract class AbsSocialFactorsImpl extends MinimalEObjectImpl.Container 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public AbsKindnessEntity basicGetActor() {
-		return actor;
+	public AbsConnection basicGetConnection() {
+		return connection;
 	}
 
 	/**
@@ -110,12 +110,12 @@ public abstract class AbsSocialFactorsImpl extends MinimalEObjectImpl.Container 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setActor(AbsKindnessEntity newActor) {
-		AbsKindnessEntity oldActor = actor;
-		actor = newActor;
+	public void setConnection(AbsConnection newConnection) {
+		AbsConnection oldConnection = connection;
+		connection = newConnection;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, FactorsPackage.ABS_SOCIAL_FACTORS__ACTOR, oldActor,
-					actor));
+			eNotify(new ENotificationImpl(this, Notification.SET, FactorsPackage.ABS_SOCIAL_FACTORS__CONNECTION,
+					oldConnection, connection));
 	}
 
 	/**
@@ -153,10 +153,10 @@ public abstract class AbsSocialFactorsImpl extends MinimalEObjectImpl.Container 
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case FactorsPackage.ABS_SOCIAL_FACTORS__ACTOR:
+		case FactorsPackage.ABS_SOCIAL_FACTORS__CONNECTION:
 			if (resolve)
-				return getActor();
-			return basicGetActor();
+				return getConnection();
+			return basicGetConnection();
 		case FactorsPackage.ABS_SOCIAL_FACTORS__SOCIALFACTOR:
 			return getSocialfactor();
 		}
@@ -172,8 +172,8 @@ public abstract class AbsSocialFactorsImpl extends MinimalEObjectImpl.Container 
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case FactorsPackage.ABS_SOCIAL_FACTORS__ACTOR:
-			setActor((AbsKindnessEntity) newValue);
+		case FactorsPackage.ABS_SOCIAL_FACTORS__CONNECTION:
+			setConnection((AbsConnection) newValue);
 			return;
 		case FactorsPackage.ABS_SOCIAL_FACTORS__SOCIALFACTOR:
 			getSocialfactor().clear();
@@ -191,8 +191,8 @@ public abstract class AbsSocialFactorsImpl extends MinimalEObjectImpl.Container 
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case FactorsPackage.ABS_SOCIAL_FACTORS__ACTOR:
-			setActor((AbsKindnessEntity) null);
+		case FactorsPackage.ABS_SOCIAL_FACTORS__CONNECTION:
+			setConnection((AbsConnection) null);
 			return;
 		case FactorsPackage.ABS_SOCIAL_FACTORS__SOCIALFACTOR:
 			getSocialfactor().clear();
@@ -209,8 +209,8 @@ public abstract class AbsSocialFactorsImpl extends MinimalEObjectImpl.Container 
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case FactorsPackage.ABS_SOCIAL_FACTORS__ACTOR:
-			return actor != null;
+		case FactorsPackage.ABS_SOCIAL_FACTORS__CONNECTION:
+			return connection != null;
 		case FactorsPackage.ABS_SOCIAL_FACTORS__SOCIALFACTOR:
 			return socialfactor != null && !socialfactor.isEmpty();
 		}

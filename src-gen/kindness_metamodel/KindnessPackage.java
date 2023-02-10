@@ -341,7 +341,7 @@ public interface KindnessPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int KINDNESS_ENTITY__NAME = FactorsPackage.ABS_KINDNESS_ENTITY_FEATURE_COUNT + 0;
+	int KINDNESS_ENTITY__NAME = 0;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -350,7 +350,7 @@ public interface KindnessPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int KINDNESS_ENTITY__TYPE = FactorsPackage.ABS_KINDNESS_ENTITY_FEATURE_COUNT + 1;
+	int KINDNESS_ENTITY__TYPE = 1;
 
 	/**
 	 * The feature id for the '<em><b>Connections</b></em>' reference list.
@@ -359,7 +359,7 @@ public interface KindnessPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int KINDNESS_ENTITY__CONNECTIONS = FactorsPackage.ABS_KINDNESS_ENTITY_FEATURE_COUNT + 2;
+	int KINDNESS_ENTITY__CONNECTIONS = 2;
 
 	/**
 	 * The feature id for the '<em><b>Container Entity</b></em>' reference.
@@ -368,7 +368,7 @@ public interface KindnessPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int KINDNESS_ENTITY__CONTAINER_ENTITY = FactorsPackage.ABS_KINDNESS_ENTITY_FEATURE_COUNT + 3;
+	int KINDNESS_ENTITY__CONTAINER_ENTITY = 3;
 
 	/**
 	 * The feature id for the '<em><b>Contained Entities</b></em>' reference list.
@@ -377,7 +377,7 @@ public interface KindnessPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int KINDNESS_ENTITY__CONTAINED_ENTITIES = FactorsPackage.ABS_KINDNESS_ENTITY_FEATURE_COUNT + 4;
+	int KINDNESS_ENTITY__CONTAINED_ENTITIES = 4;
 
 	/**
 	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
@@ -386,7 +386,7 @@ public interface KindnessPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int KINDNESS_ENTITY__PROPERTIES = FactorsPackage.ABS_KINDNESS_ENTITY_FEATURE_COUNT + 5;
+	int KINDNESS_ENTITY__PROPERTIES = 5;
 
 	/**
 	 * The number of structural features of the '<em>Entity</em>' class.
@@ -395,7 +395,7 @@ public interface KindnessPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int KINDNESS_ENTITY_FEATURE_COUNT = FactorsPackage.ABS_KINDNESS_ENTITY_FEATURE_COUNT + 6;
+	int KINDNESS_ENTITY_FEATURE_COUNT = 6;
 
 	/**
 	 * The number of operations of the '<em>Entity</em>' class.
@@ -404,7 +404,7 @@ public interface KindnessPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int KINDNESS_ENTITY_OPERATION_COUNT = FactorsPackage.ABS_KINDNESS_ENTITY_OPERATION_COUNT + 0;
+	int KINDNESS_ENTITY_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link kindness_metamodel.impl.ConnectionImpl <em>Connection</em>}' class.
@@ -423,7 +423,7 @@ public interface KindnessPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTION__NAME = 0;
+	int CONNECTION__NAME = FactorsPackage.ABS_CONNECTION_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -432,7 +432,7 @@ public interface KindnessPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTION__TYPE = 1;
+	int CONNECTION__TYPE = FactorsPackage.ABS_CONNECTION_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Bidirectional</b></em>' attribute.
@@ -441,7 +441,7 @@ public interface KindnessPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTION__BIDIRECTIONAL = 2;
+	int CONNECTION__BIDIRECTIONAL = FactorsPackage.ABS_CONNECTION_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Entity1</b></em>' reference.
@@ -450,7 +450,7 @@ public interface KindnessPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTION__ENTITY1 = 3;
+	int CONNECTION__ENTITY1 = FactorsPackage.ABS_CONNECTION_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Entity2</b></em>' reference.
@@ -459,7 +459,7 @@ public interface KindnessPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTION__ENTITY2 = 4;
+	int CONNECTION__ENTITY2 = FactorsPackage.ABS_CONNECTION_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of structural features of the '<em>Connection</em>' class.
@@ -468,7 +468,7 @@ public interface KindnessPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTION_FEATURE_COUNT = 5;
+	int CONNECTION_FEATURE_COUNT = FactorsPackage.ABS_CONNECTION_FEATURE_COUNT + 5;
 
 	/**
 	 * The number of operations of the '<em>Connection</em>' class.
@@ -477,7 +477,7 @@ public interface KindnessPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTION_OPERATION_COUNT = 0;
+	int CONNECTION_OPERATION_COUNT = FactorsPackage.ABS_CONNECTION_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link kindness_metamodel.impl.LocationImpl <em>Location</em>}' class.
@@ -1218,13 +1218,13 @@ public interface KindnessPackage extends EPackage {
 	int SOCIAL_FACTORS = 14;
 
 	/**
-	 * The feature id for the '<em><b>Actor</b></em>' reference.
+	 * The feature id for the '<em><b>Connection</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SOCIAL_FACTORS__ACTOR = FactorsPackage.ABS_SOCIAL_FACTORS__ACTOR;
+	int SOCIAL_FACTORS__CONNECTION = FactorsPackage.ABS_SOCIAL_FACTORS__CONNECTION;
 
 	/**
 	 * The feature id for the '<em><b>Socialfactor</b></em>' containment reference list.

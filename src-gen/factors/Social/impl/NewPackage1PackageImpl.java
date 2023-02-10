@@ -239,7 +239,7 @@ public class NewPackage1PackageImpl extends EPackageImpl implements NewPackage1P
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getSocialFactor_Actor() {
+	public EReference getSocialFactor_Connection() {
 		return (EReference) socialFactorEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -318,7 +318,7 @@ public class NewPackage1PackageImpl extends EPackageImpl implements NewPackage1P
 		createEAttribute(reciprocityEClass, RECIPROCITY__IS_RECIPROCAL);
 
 		socialFactorEClass = createEClass(SOCIAL_FACTOR);
-		createEReference(socialFactorEClass, SOCIAL_FACTOR__ACTOR);
+		createEReference(socialFactorEClass, SOCIAL_FACTOR__CONNECTION);
 
 		opportunityToConnectEClass = createEClass(OPPORTUNITY_TO_CONNECT);
 		createEAttribute(opportunityToConnectEClass, OPPORTUNITY_TO_CONNECT__OPPORTUNITY);
@@ -389,8 +389,8 @@ public class NewPackage1PackageImpl extends EPackageImpl implements NewPackage1P
 
 		initEClass(socialFactorEClass, SocialFactor.class, "SocialFactor", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getSocialFactor_Actor(), theFactorsPackage.getAbsKindnessEntity(), null, "actor", null, 1, 1,
-				SocialFactor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+		initEReference(getSocialFactor_Connection(), theFactorsPackage.getAbsConnection(), null, "connection", null, 0,
+				1, SocialFactor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(opportunityToConnectEClass, OpportunityToConnect.class, "OpportunityToConnect", !IS_ABSTRACT,

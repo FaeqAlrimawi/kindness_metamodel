@@ -2,9 +2,9 @@
  */
 package kindness_metamodel;
 
-import factors.AbsKindnessEntity;
-
 import org.eclipse.emf.common.util.EList;
+
+import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -27,7 +27,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface KindnessEntity extends AbsKindnessEntity {
+public interface KindnessEntity extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->

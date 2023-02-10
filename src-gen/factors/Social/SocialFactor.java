@@ -2,7 +2,7 @@
  */
 package factors.Social;
 
-import factors.AbsKindnessEntity;
+import factors.AbsConnection;
 import factors.Factor;
 
 /**
@@ -14,7 +14,7 @@ import factors.Factor;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link factors.Social.SocialFactor#getActor <em>Actor</em>}</li>
+ *   <li>{@link factors.Social.SocialFactor#getConnection <em>Connection</em>}</li>
  * </ul>
  *
  * @see factors.Social.NewPackage1Package#getSocialFactor()
@@ -23,25 +23,25 @@ import factors.Factor;
  */
 public interface SocialFactor extends Factor {
 	/**
-	 * Returns the value of the '<em><b>Actor</b></em>' reference.
+	 * Returns the value of the '<em><b>Connection</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Actor</em>' reference.
-	 * @see #setActor(AbsKindnessEntity)
-	 * @see factors.Social.NewPackage1Package#getSocialFactor_Actor()
-	 * @model required="true"
+	 * @return the value of the '<em>Connection</em>' reference.
+	 * @see #setConnection(AbsConnection)
+	 * @see factors.Social.NewPackage1Package#getSocialFactor_Connection()
+	 * @model
 	 * @generated
 	 */
-	AbsKindnessEntity getActor();
+	AbsConnection getConnection();
 
 	/**
-	 * Sets the value of the '{@link factors.Social.SocialFactor#getActor <em>Actor</em>}' reference.
+	 * Sets the value of the '{@link factors.Social.SocialFactor#getConnection <em>Connection</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Actor</em>' reference.
-	 * @see #getActor()
+	 * @param value the new value of the '<em>Connection</em>' reference.
+	 * @see #getConnection()
 	 * @generated
 	 */
-	void setActor(AbsKindnessEntity value);
+	void setConnection(AbsConnection value);
 
 } // SocialFactor

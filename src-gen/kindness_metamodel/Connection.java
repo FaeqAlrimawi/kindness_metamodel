@@ -2,7 +2,7 @@
  */
 package kindness_metamodel;
 
-import org.eclipse.emf.ecore.EObject;
+import factors.AbsConnection;
 
 /**
  * <!-- begin-user-doc -->
@@ -24,7 +24,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface Connection extends EObject {
+public interface Connection extends AbsConnection {
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->

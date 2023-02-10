@@ -2,7 +2,7 @@
  */
 package factors.impl;
 
-import factors.AbsKindnessEntity;
+import factors.AbsConnection;
 import factors.AbsPsychologicalFactors;
 import factors.AbsSocialFactors;
 import factors.AffectedFactors;
@@ -59,7 +59,7 @@ public class FactorsPackageImpl extends EPackageImpl implements FactorsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass absKindnessEntityEClass = null;
+	private EClass absConnectionEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -236,7 +236,7 @@ public class FactorsPackageImpl extends EPackageImpl implements FactorsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getAbsSocialFactors_Actor() {
+	public EReference getAbsSocialFactors_Connection() {
 		return (EReference) absSocialFactorsEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -254,8 +254,8 @@ public class FactorsPackageImpl extends EPackageImpl implements FactorsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getAbsKindnessEntity() {
-		return absKindnessEntityEClass;
+	public EClass getAbsConnection() {
+		return absConnectionEClass;
 	}
 
 	/**
@@ -459,10 +459,10 @@ public class FactorsPackageImpl extends EPackageImpl implements FactorsPackage {
 
 		// Create classes and their features
 		absSocialFactorsEClass = createEClass(ABS_SOCIAL_FACTORS);
-		createEReference(absSocialFactorsEClass, ABS_SOCIAL_FACTORS__ACTOR);
+		createEReference(absSocialFactorsEClass, ABS_SOCIAL_FACTORS__CONNECTION);
 		createEReference(absSocialFactorsEClass, ABS_SOCIAL_FACTORS__SOCIALFACTOR);
 
-		absKindnessEntityEClass = createEClass(ABS_KINDNESS_ENTITY);
+		absConnectionEClass = createEClass(ABS_CONNECTION);
 
 		factorEClass = createEClass(FACTOR);
 		createEAttribute(factorEClass, FACTOR__NAME);
@@ -532,14 +532,14 @@ public class FactorsPackageImpl extends EPackageImpl implements FactorsPackage {
 		// Initialize classes, features, and operations; add parameters
 		initEClass(absSocialFactorsEClass, AbsSocialFactors.class, "AbsSocialFactors", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getAbsSocialFactors_Actor(), this.getAbsKindnessEntity(), null, "actor", null, 0, 1,
+		initEReference(getAbsSocialFactors_Connection(), this.getAbsConnection(), null, "connection", null, 0, 1,
 				AbsSocialFactors.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getAbsSocialFactors_Socialfactor(), theNewPackage1Package.getSocialFactor(), null,
 				"socialfactor", null, 0, -1, AbsSocialFactors.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
 				IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(absKindnessEntityEClass, AbsKindnessEntity.class, "AbsKindnessEntity", IS_ABSTRACT, !IS_INTERFACE,
+		initEClass(absConnectionEClass, AbsConnection.class, "AbsConnection", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(factorEClass, Factor.class, "Factor", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

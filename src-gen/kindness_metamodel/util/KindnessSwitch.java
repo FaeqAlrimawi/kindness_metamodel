@@ -2,7 +2,7 @@
  */
 package kindness_metamodel.util;
 
-import factors.AbsKindnessEntity;
+import factors.AbsConnection;
 import factors.AbsPsychologicalFactors;
 import factors.AbsSocialFactors;
 
@@ -102,14 +102,14 @@ public class KindnessSwitch<T> extends Switch<T> {
 			KindnessEntity kindnessEntity = (KindnessEntity) theEObject;
 			T result = caseKindnessEntity(kindnessEntity);
 			if (result == null)
-				result = caseAbsKindnessEntity(kindnessEntity);
-			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
 		case KindnessPackage.CONNECTION: {
 			Connection connection = (Connection) theEObject;
 			T result = caseConnection(connection);
+			if (result == null)
+				result = caseAbsConnection(connection);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -120,8 +120,6 @@ public class KindnessSwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseKindnessEntity(location);
 			if (result == null)
-				result = caseAbsKindnessEntity(location);
-			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
@@ -131,8 +129,6 @@ public class KindnessSwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseKindnessEntity(time);
 			if (result == null)
-				result = caseAbsKindnessEntity(time);
-			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
@@ -141,8 +137,6 @@ public class KindnessSwitch<T> extends Switch<T> {
 			T result = caseActor(actor);
 			if (result == null)
 				result = caseKindnessEntity(actor);
-			if (result == null)
-				result = caseAbsKindnessEntity(actor);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -155,8 +149,6 @@ public class KindnessSwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseKindnessEntity(giver);
 			if (result == null)
-				result = caseAbsKindnessEntity(giver);
-			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
@@ -167,8 +159,6 @@ public class KindnessSwitch<T> extends Switch<T> {
 				result = caseActor(receiver);
 			if (result == null)
 				result = caseKindnessEntity(receiver);
-			if (result == null)
-				result = caseAbsKindnessEntity(receiver);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -181,8 +171,6 @@ public class KindnessSwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseKindnessEntity(observant);
 			if (result == null)
-				result = caseAbsKindnessEntity(observant);
-			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
@@ -193,8 +181,6 @@ public class KindnessSwitch<T> extends Switch<T> {
 				result = caseActor(mediator);
 			if (result == null)
 				result = caseKindnessEntity(mediator);
-			if (result == null)
-				result = caseAbsKindnessEntity(mediator);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -229,8 +215,6 @@ public class KindnessSwitch<T> extends Switch<T> {
 			T result = caseItem(item);
 			if (result == null)
 				result = caseKindnessEntity(item);
-			if (result == null)
-				result = caseAbsKindnessEntity(item);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -496,17 +480,17 @@ public class KindnessSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Abs Kindness Entity</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Abs Connection</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Abs Kindness Entity</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Abs Connection</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseAbsKindnessEntity(AbsKindnessEntity object) {
+	public T caseAbsConnection(AbsConnection object) {
 		return null;
 	}
 

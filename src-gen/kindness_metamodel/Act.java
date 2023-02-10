@@ -231,7 +231,7 @@ public interface Act extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Items</em>' containment reference list.
 	 * @see kindness_metamodel.KindnessPackage#getAct_Items()
-	 * @model containment="true" required="true"
+	 * @model containment="true"
 	 * @generated
 	 */
 	EList<Item> getItems();

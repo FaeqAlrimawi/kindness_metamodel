@@ -135,10 +135,10 @@
       <genEnumLiterals ecoreEnumLiteral="Factors.ecore#//HumanValueType/OTHER"/>
     </genEnums>
     <genClasses ecoreClass="Factors.ecore#//AbsSocialFactors">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Factors.ecore#//AbsSocialFactors/actor"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Factors.ecore#//AbsSocialFactors/connection"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Factors.ecore#//AbsSocialFactors/socialfactor"/>
     </genClasses>
-    <genClasses image="false" ecoreClass="Factors.ecore#//AbsKindnessEntity"/>
+    <genClasses image="false" ecoreClass="Factors.ecore#//AbsConnection"/>
     <genClasses ecoreClass="Factors.ecore#//Factor">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Factors.ecore#//Factor/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Factors.ecore#//Factor/affectedfactor"/>
@@ -167,7 +167,7 @@
       </genClasses>
       <genClasses image="false" ecoreClass="Factors.ecore#//Social/SocialFactor">
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference Factors.ecore#//Social/SocialFactor/actor"/>
+            ecoreFeature="ecore:EReference Factors.ecore#//Social/SocialFactor/connection"/>
       </genClasses>
       <genClasses ecoreClass="Factors.ecore#//Social/OpportunityToConnect">
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Factors.ecore#//Social/OpportunityToConnect/opportunity"/>

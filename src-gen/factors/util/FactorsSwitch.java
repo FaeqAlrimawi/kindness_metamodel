@@ -73,9 +73,9 @@ public class FactorsSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case FactorsPackage.ABS_KINDNESS_ENTITY: {
-			AbsKindnessEntity absKindnessEntity = (AbsKindnessEntity) theEObject;
-			T result = caseAbsKindnessEntity(absKindnessEntity);
+		case FactorsPackage.ABS_CONNECTION: {
+			AbsConnection absConnection = (AbsConnection) theEObject;
+			T result = caseAbsConnection(absConnection);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -122,17 +122,17 @@ public class FactorsSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Abs Kindness Entity</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Abs Connection</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Abs Kindness Entity</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Abs Connection</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseAbsKindnessEntity(AbsKindnessEntity object) {
+	public T caseAbsConnection(AbsConnection object) {
 		return null;
 	}
 

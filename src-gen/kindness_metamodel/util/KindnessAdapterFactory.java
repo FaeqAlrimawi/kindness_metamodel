@@ -2,7 +2,7 @@
  */
 package kindness_metamodel.util;
 
-import factors.AbsKindnessEntity;
+import factors.AbsConnection;
 import factors.AbsPsychologicalFactors;
 import factors.AbsSocialFactors;
 
@@ -156,8 +156,8 @@ public class KindnessAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseAbsKindnessEntity(AbsKindnessEntity object) {
-			return createAbsKindnessEntityAdapter();
+		public Adapter caseAbsConnection(AbsConnection object) {
+			return createAbsConnectionAdapter();
 		}
 
 		@Override
@@ -428,16 +428,16 @@ public class KindnessAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link factors.AbsKindnessEntity <em>Abs Kindness Entity</em>}'.
+	 * Creates a new adapter for an object of class '{@link factors.AbsConnection <em>Abs Connection</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see factors.AbsKindnessEntity
+	 * @see factors.AbsConnection
 	 * @generated
 	 */
-	public Adapter createAbsKindnessEntityAdapter() {
+	public Adapter createAbsConnectionAdapter() {
 		return null;
 	}
 

@@ -30,7 +30,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="mediator" eType="#//Mediator"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="next" eType="#//Act"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="items" lowerBound="1" upperBound="-1"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="items" upperBound="-1"
         eType="#//Item" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="ActType">
@@ -44,7 +44,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="refKindnessEntities" lowerBound="1"
         upperBound="-1" eType="#//KindnessEntity"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="KindnessEntity" eSuperTypes="Factors.ecore#//AbsKindnessEntity">
+  <eClassifiers xsi:type="ecore:EClass" name="KindnessEntity">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="connections" upperBound="-1"
@@ -55,7 +55,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="properties" upperBound="-1"
         eType="#//Property" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Connection">
+  <eClassifiers xsi:type="ecore:EClass" name="Connection" eSuperTypes="Factors.ecore#//AbsConnection">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="bidirectional" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"

@@ -880,7 +880,7 @@ public class KindnessPackageImpl extends EPackageImpl implements KindnessPackage
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		kindnessEntityEClass.getESuperTypes().add(theFactorsPackage.getAbsKindnessEntity());
+		connectionEClass.getESuperTypes().add(theFactorsPackage.getAbsConnection());
 		locationEClass.getESuperTypes().add(this.getKindnessEntity());
 		timeEClass.getESuperTypes().add(this.getKindnessEntity());
 		actorEClass.getESuperTypes().add(this.getKindnessEntity());
@@ -937,7 +937,7 @@ public class KindnessPackageImpl extends EPackageImpl implements KindnessPackage
 				IS_ORDERED);
 		initEReference(getAct_Next(), this.getAct(), null, "next", null, 0, 1, Act.class, !IS_TRANSIENT, !IS_VOLATILE,
 				IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getAct_Items(), this.getItem(), null, "items", null, 1, -1, Act.class, !IS_TRANSIENT,
+		initEReference(getAct_Items(), this.getItem(), null, "items", null, 0, -1, Act.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
 				IS_ORDERED);
 

@@ -3,11 +3,11 @@
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="factors" nsURI="http://www.example.org/kindness_metamodel_factors"
     nsPrefix="kindness_metamodel">
   <eClassifiers xsi:type="ecore:EClass" name="AbsSocialFactors" abstract="true">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="actor" eType="#//AbsKindnessEntity"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="connection" eType="#//AbsConnection"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="socialfactor" upperBound="-1"
         eType="#//Social/SocialFactor" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="AbsKindnessEntity" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="AbsConnection" abstract="true"/>
   <eClassifiers xsi:type="ecore:EClass" name="Factor" abstract="true" interface="true">
     <eOperations name="computeImpact">
       <eParameters name="impact" eType="#//FactorImpact"/>
@@ -96,8 +96,7 @@
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="isReciprocal" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="SocialFactor" abstract="true" eSuperTypes="#//Factor">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="actor" lowerBound="1"
-          eType="#//AbsKindnessEntity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="connection" eType="#//AbsConnection"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="OpportunityToConnect" eSuperTypes="#//Social/SocialFactor">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="opportunity" eType="#//Opportunity"/>

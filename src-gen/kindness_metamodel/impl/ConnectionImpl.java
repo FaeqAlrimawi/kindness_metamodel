@@ -2,6 +2,8 @@
  */
 package kindness_metamodel.impl;
 
+import factors.impl.AbsConnectionImpl;
+
 import kindness_metamodel.Connection;
 import kindness_metamodel.KindnessEntity;
 import kindness_metamodel.KindnessPackage;
@@ -12,7 +14,6 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -31,7 +32,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *
  * @generated
  */
-public class ConnectionImpl extends MinimalEObjectImpl.Container implements Connection {
+public class ConnectionImpl extends AbsConnectionImpl implements Connection {
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->

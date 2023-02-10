@@ -17,7 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link factors.AbsSocialFactors#getActor <em>Actor</em>}</li>
+ *   <li>{@link factors.AbsSocialFactors#getConnection <em>Connection</em>}</li>
  *   <li>{@link factors.AbsSocialFactors#getSocialfactor <em>Socialfactor</em>}</li>
  * </ul>
  *
@@ -27,26 +27,26 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface AbsSocialFactors extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Actor</b></em>' reference.
+	 * Returns the value of the '<em><b>Connection</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Actor</em>' reference.
-	 * @see #setActor(AbsKindnessEntity)
-	 * @see factors.FactorsPackage#getAbsSocialFactors_Actor()
+	 * @return the value of the '<em>Connection</em>' reference.
+	 * @see #setConnection(AbsConnection)
+	 * @see factors.FactorsPackage#getAbsSocialFactors_Connection()
 	 * @model
 	 * @generated
 	 */
-	AbsKindnessEntity getActor();
+	AbsConnection getConnection();
 
 	/**
-	 * Sets the value of the '{@link factors.AbsSocialFactors#getActor <em>Actor</em>}' reference.
+	 * Sets the value of the '{@link factors.AbsSocialFactors#getConnection <em>Connection</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Actor</em>' reference.
-	 * @see #getActor()
+	 * @param value the new value of the '<em>Connection</em>' reference.
+	 * @see #getConnection()
 	 * @generated
 	 */
-	void setActor(AbsKindnessEntity value);
+	void setConnection(AbsConnection value);
 
 	/**
 	 * Returns the value of the '<em><b>Socialfactor</b></em>' containment reference list.
