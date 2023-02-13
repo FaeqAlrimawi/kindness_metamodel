@@ -50,10 +50,10 @@
     </genClasses>
     <genClasses ecoreClass="kindness_metamodel.ecore#//KindnessEntity">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute kindness_metamodel.ecore#//KindnessEntity/name"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference kindness_metamodel.ecore#//KindnessEntity/connections"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference kindness_metamodel.ecore#//KindnessEntity/containerEntity"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference kindness_metamodel.ecore#//KindnessEntity/containedEntities"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference kindness_metamodel.ecore#//KindnessEntity/properties"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference kindness_metamodel.ecore#//KindnessEntity/connection"/>
     </genClasses>
     <genClasses ecoreClass="kindness_metamodel.ecore#//Connection">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute kindness_metamodel.ecore#//Connection/name"/>
