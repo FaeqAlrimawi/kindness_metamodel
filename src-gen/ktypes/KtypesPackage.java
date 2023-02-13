@@ -205,6 +205,34 @@ public interface KtypesPackage extends EPackage {
 	int KDIGITAL_OPERATION_COUNT = KTYPE_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link ktypes.impl.KSocialImpl <em>KSocial</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ktypes.impl.KSocialImpl
+	 * @see ktypes.impl.KtypesPackageImpl#getKSocial()
+	 * @generated
+	 */
+	int KSOCIAL = 5;
+
+	/**
+	 * The number of structural features of the '<em>KSocial</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KSOCIAL_FEATURE_COUNT = KTYPE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>KSocial</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KSOCIAL_OPERATION_COUNT = KTYPE_OPERATION_COUNT + 0;
+
+	/**
 	 * Returns the meta object for class '{@link ktypes.KObject <em>KObject</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -264,6 +292,16 @@ public interface KtypesPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getKPhysical();
+
+	/**
+	 * Returns the meta object for class '{@link ktypes.KSocial <em>KSocial</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>KSocial</em>'.
+	 * @see ktypes.KSocial
+	 * @generated
+	 */
+	EClass getKSocial();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -345,6 +383,16 @@ public interface KtypesPackage extends EPackage {
 		 * @generated
 		 */
 		EClass KPHYSICAL = eINSTANCE.getKPhysical();
+
+		/**
+		 * The meta object literal for the '{@link ktypes.impl.KSocialImpl <em>KSocial</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see ktypes.impl.KSocialImpl
+		 * @see ktypes.impl.KtypesPackageImpl#getKSocial()
+		 * @generated
+		 */
+		EClass KSOCIAL = eINSTANCE.getKSocial();
 
 	}
 

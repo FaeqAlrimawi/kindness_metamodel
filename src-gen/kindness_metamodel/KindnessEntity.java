@@ -16,10 +16,10 @@ import org.eclipse.emf.common.util.EList;
  * </p>
  * <ul>
  *   <li>{@link kindness_metamodel.KindnessEntity#getName <em>Name</em>}</li>
- *   <li>{@link kindness_metamodel.KindnessEntity#getConnections <em>Connections</em>}</li>
  *   <li>{@link kindness_metamodel.KindnessEntity#getContainerEntity <em>Container Entity</em>}</li>
  *   <li>{@link kindness_metamodel.KindnessEntity#getContainedEntities <em>Contained Entities</em>}</li>
  *   <li>{@link kindness_metamodel.KindnessEntity#getProperties <em>Properties</em>}</li>
+ *   <li>{@link kindness_metamodel.KindnessEntity#getConnection <em>Connection</em>}</li>
  * </ul>
  *
  * @see kindness_metamodel.KindnessPackage#getKindnessEntity()
@@ -48,18 +48,6 @@ public interface KindnessEntity extends KObject {
 	 * @generated
 	 */
 	void setName(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Connections</b></em>' reference list.
-	 * The list contents are of type {@link kindness_metamodel.Connection}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Connections</em>' reference list.
-	 * @see kindness_metamodel.KindnessPackage#getKindnessEntity_Connections()
-	 * @model
-	 * @generated
-	 */
-	EList<Connection> getConnections();
 
 	/**
 	 * Returns the value of the '<em><b>Container Entity</b></em>' reference.
@@ -106,5 +94,17 @@ public interface KindnessEntity extends KObject {
 	 * @generated
 	 */
 	EList<Property> getProperties();
+
+	/**
+	 * Returns the value of the '<em><b>Connection</b></em>' containment reference list.
+	 * The list contents are of type {@link kindness_metamodel.Connection}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Connection</em>' containment reference list.
+	 * @see kindness_metamodel.KindnessPackage#getKindnessEntity_Connection()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<Connection> getConnection();
 
 } // KindnessEntity

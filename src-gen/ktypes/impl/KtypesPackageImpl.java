@@ -22,6 +22,7 @@ import ktypes.KDigital;
 import ktypes.KHuman;
 import ktypes.KObject;
 import ktypes.KPhysical;
+import ktypes.KSocial;
 import ktypes.KType;
 import ktypes.KtypesFactory;
 import ktypes.KtypesPackage;
@@ -73,6 +74,13 @@ public class KtypesPackageImpl extends EPackageImpl implements KtypesPackage {
 	 * @generated
 	 */
 	private EClass kPhysicalEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass kSocialEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -223,6 +231,15 @@ public class KtypesPackageImpl extends EPackageImpl implements KtypesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getKSocial() {
+		return kSocialEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public KtypesFactory getKtypesFactory() {
 		return (KtypesFactory) getEFactoryInstance();
 	}
@@ -257,6 +274,8 @@ public class KtypesPackageImpl extends EPackageImpl implements KtypesPackage {
 		kDigitalEClass = createEClass(KDIGITAL);
 
 		kPhysicalEClass = createEClass(KPHYSICAL);
+
+		kSocialEClass = createEClass(KSOCIAL);
 	}
 
 	/**
@@ -291,6 +310,7 @@ public class KtypesPackageImpl extends EPackageImpl implements KtypesPackage {
 		kHumanEClass.getESuperTypes().add(this.getKPhysical());
 		kDigitalEClass.getESuperTypes().add(this.getKType());
 		kPhysicalEClass.getESuperTypes().add(this.getKType());
+		kSocialEClass.getESuperTypes().add(this.getKType());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(kObjectEClass, KObject.class, "KObject", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -307,6 +327,8 @@ public class KtypesPackageImpl extends EPackageImpl implements KtypesPackage {
 
 		initEClass(kPhysicalEClass, KPhysical.class, "KPhysical", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(kSocialEClass, KSocial.class, "KSocial", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		// Create resource
 		createResource(eNS_URI);

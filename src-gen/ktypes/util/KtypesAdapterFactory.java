@@ -92,6 +92,11 @@ public class KtypesAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
+		public Adapter caseKSocial(KSocial object) {
+			return createKSocialAdapter();
+		}
+
+		@Override
 		public Adapter defaultCase(EObject object) {
 			return createEObjectAdapter();
 		}
@@ -177,6 +182,20 @@ public class KtypesAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createKPhysicalAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link ktypes.KSocial <em>KSocial</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ktypes.KSocial
+	 * @generated
+	 */
+	public Adapter createKSocialAdapter() {
 		return null;
 	}
 

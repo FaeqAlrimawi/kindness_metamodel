@@ -62,6 +62,8 @@ public class KtypesFactoryImpl extends EFactoryImpl implements KtypesFactory {
 			return createKDigital();
 		case KtypesPackage.KPHYSICAL:
 			return createKPhysical();
+		case KtypesPackage.KSOCIAL:
+			return createKSocial();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -95,6 +97,16 @@ public class KtypesFactoryImpl extends EFactoryImpl implements KtypesFactory {
 	public KPhysical createKPhysical() {
 		KPhysicalImpl kPhysical = new KPhysicalImpl();
 		return kPhysical;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public KSocial createKSocial() {
+		KSocialImpl kSocial = new KSocialImpl();
+		return kSocial;
 	}
 
 	/**

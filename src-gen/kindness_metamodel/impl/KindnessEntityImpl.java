@@ -34,10 +34,10 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * </p>
  * <ul>
  *   <li>{@link kindness_metamodel.impl.KindnessEntityImpl#getName <em>Name</em>}</li>
- *   <li>{@link kindness_metamodel.impl.KindnessEntityImpl#getConnections <em>Connections</em>}</li>
  *   <li>{@link kindness_metamodel.impl.KindnessEntityImpl#getContainerEntity <em>Container Entity</em>}</li>
  *   <li>{@link kindness_metamodel.impl.KindnessEntityImpl#getContainedEntities <em>Contained Entities</em>}</li>
  *   <li>{@link kindness_metamodel.impl.KindnessEntityImpl#getProperties <em>Properties</em>}</li>
+ *   <li>{@link kindness_metamodel.impl.KindnessEntityImpl#getConnection <em>Connection</em>}</li>
  * </ul>
  *
  * @generated
@@ -62,16 +62,6 @@ public class KindnessEntityImpl extends KObjectImpl implements KindnessEntity {
 	 * @ordered
 	 */
 	protected String name = NAME_EDEFAULT;
-
-	/**
-	 * The cached value of the '{@link #getConnections() <em>Connections</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getConnections()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Connection> connections;
 
 	/**
 	 * The cached value of the '{@link #getContainerEntity() <em>Container Entity</em>}' reference.
@@ -102,6 +92,16 @@ public class KindnessEntityImpl extends KObjectImpl implements KindnessEntity {
 	 * @ordered
 	 */
 	protected EList<Property> properties;
+
+	/**
+	 * The cached value of the '{@link #getConnection() <em>Connection</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getConnection()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Connection> connection;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -142,19 +142,6 @@ public class KindnessEntityImpl extends KObjectImpl implements KindnessEntity {
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, KindnessPackage.KINDNESS_ENTITY__NAME, oldName,
 					name));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<Connection> getConnections() {
-		if (connections == null) {
-			connections = new EObjectResolvingEList<Connection>(Connection.class, this,
-					KindnessPackage.KINDNESS_ENTITY__CONNECTIONS);
-		}
-		return connections;
 	}
 
 	/**
@@ -228,11 +215,26 @@ public class KindnessEntityImpl extends KObjectImpl implements KindnessEntity {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<Connection> getConnection() {
+		if (connection == null) {
+			connection = new EObjectContainmentEList<Connection>(Connection.class, this,
+					KindnessPackage.KINDNESS_ENTITY__CONNECTION);
+		}
+		return connection;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case KindnessPackage.KINDNESS_ENTITY__PROPERTIES:
 			return ((InternalEList<?>) getProperties()).basicRemove(otherEnd, msgs);
+		case KindnessPackage.KINDNESS_ENTITY__CONNECTION:
+			return ((InternalEList<?>) getConnection()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -247,8 +249,6 @@ public class KindnessEntityImpl extends KObjectImpl implements KindnessEntity {
 		switch (featureID) {
 		case KindnessPackage.KINDNESS_ENTITY__NAME:
 			return getName();
-		case KindnessPackage.KINDNESS_ENTITY__CONNECTIONS:
-			return getConnections();
 		case KindnessPackage.KINDNESS_ENTITY__CONTAINER_ENTITY:
 			if (resolve)
 				return getContainerEntity();
@@ -257,6 +257,8 @@ public class KindnessEntityImpl extends KObjectImpl implements KindnessEntity {
 			return getContainedEntities();
 		case KindnessPackage.KINDNESS_ENTITY__PROPERTIES:
 			return getProperties();
+		case KindnessPackage.KINDNESS_ENTITY__CONNECTION:
+			return getConnection();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -273,10 +275,6 @@ public class KindnessEntityImpl extends KObjectImpl implements KindnessEntity {
 		case KindnessPackage.KINDNESS_ENTITY__NAME:
 			setName((String) newValue);
 			return;
-		case KindnessPackage.KINDNESS_ENTITY__CONNECTIONS:
-			getConnections().clear();
-			getConnections().addAll((Collection<? extends Connection>) newValue);
-			return;
 		case KindnessPackage.KINDNESS_ENTITY__CONTAINER_ENTITY:
 			setContainerEntity((KindnessEntity) newValue);
 			return;
@@ -287,6 +285,10 @@ public class KindnessEntityImpl extends KObjectImpl implements KindnessEntity {
 		case KindnessPackage.KINDNESS_ENTITY__PROPERTIES:
 			getProperties().clear();
 			getProperties().addAll((Collection<? extends Property>) newValue);
+			return;
+		case KindnessPackage.KINDNESS_ENTITY__CONNECTION:
+			getConnection().clear();
+			getConnection().addAll((Collection<? extends Connection>) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -303,9 +305,6 @@ public class KindnessEntityImpl extends KObjectImpl implements KindnessEntity {
 		case KindnessPackage.KINDNESS_ENTITY__NAME:
 			setName(NAME_EDEFAULT);
 			return;
-		case KindnessPackage.KINDNESS_ENTITY__CONNECTIONS:
-			getConnections().clear();
-			return;
 		case KindnessPackage.KINDNESS_ENTITY__CONTAINER_ENTITY:
 			setContainerEntity((KindnessEntity) null);
 			return;
@@ -314,6 +313,9 @@ public class KindnessEntityImpl extends KObjectImpl implements KindnessEntity {
 			return;
 		case KindnessPackage.KINDNESS_ENTITY__PROPERTIES:
 			getProperties().clear();
+			return;
+		case KindnessPackage.KINDNESS_ENTITY__CONNECTION:
+			getConnection().clear();
 			return;
 		}
 		super.eUnset(featureID);
@@ -329,14 +331,14 @@ public class KindnessEntityImpl extends KObjectImpl implements KindnessEntity {
 		switch (featureID) {
 		case KindnessPackage.KINDNESS_ENTITY__NAME:
 			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-		case KindnessPackage.KINDNESS_ENTITY__CONNECTIONS:
-			return connections != null && !connections.isEmpty();
 		case KindnessPackage.KINDNESS_ENTITY__CONTAINER_ENTITY:
 			return containerEntity != null;
 		case KindnessPackage.KINDNESS_ENTITY__CONTAINED_ENTITIES:
 			return containedEntities != null && !containedEntities.isEmpty();
 		case KindnessPackage.KINDNESS_ENTITY__PROPERTIES:
 			return properties != null && !properties.isEmpty();
+		case KindnessPackage.KINDNESS_ENTITY__CONNECTION:
+			return connection != null && !connection.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

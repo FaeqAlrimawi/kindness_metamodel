@@ -507,7 +507,7 @@ public class KindnessPackageImpl extends EPackageImpl implements KindnessPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getCondition_Kindnessentity() {
+	public EReference getCondition_Refkindnessentity() {
 		return (EReference) conditionEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -534,7 +534,7 @@ public class KindnessPackageImpl extends EPackageImpl implements KindnessPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getKindnessEntity_Connections() {
+	public EReference getKindnessEntity_ContainerEntity() {
 		return (EReference) kindnessEntityEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -543,7 +543,7 @@ public class KindnessPackageImpl extends EPackageImpl implements KindnessPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getKindnessEntity_ContainerEntity() {
+	public EReference getKindnessEntity_ContainedEntities() {
 		return (EReference) kindnessEntityEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -552,7 +552,7 @@ public class KindnessPackageImpl extends EPackageImpl implements KindnessPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getKindnessEntity_ContainedEntities() {
+	public EReference getKindnessEntity_Properties() {
 		return (EReference) kindnessEntityEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -561,7 +561,7 @@ public class KindnessPackageImpl extends EPackageImpl implements KindnessPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getKindnessEntity_Properties() {
+	public EReference getKindnessEntity_Connection() {
 		return (EReference) kindnessEntityEClass.getEStructuralFeatures().get(4);
 	}
 
@@ -855,14 +855,14 @@ public class KindnessPackageImpl extends EPackageImpl implements KindnessPackage
 
 		conditionEClass = createEClass(CONDITION);
 		createEAttribute(conditionEClass, CONDITION__NAME);
-		createEReference(conditionEClass, CONDITION__KINDNESSENTITY);
+		createEReference(conditionEClass, CONDITION__REFKINDNESSENTITY);
 
 		kindnessEntityEClass = createEClass(KINDNESS_ENTITY);
 		createEAttribute(kindnessEntityEClass, KINDNESS_ENTITY__NAME);
-		createEReference(kindnessEntityEClass, KINDNESS_ENTITY__CONNECTIONS);
 		createEReference(kindnessEntityEClass, KINDNESS_ENTITY__CONTAINER_ENTITY);
 		createEReference(kindnessEntityEClass, KINDNESS_ENTITY__CONTAINED_ENTITIES);
 		createEReference(kindnessEntityEClass, KINDNESS_ENTITY__PROPERTIES);
+		createEReference(kindnessEntityEClass, KINDNESS_ENTITY__CONNECTION);
 
 		connectionEClass = createEClass(CONNECTION);
 		createEAttribute(connectionEClass, CONNECTION__NAME);
@@ -1019,17 +1019,14 @@ public class KindnessPackageImpl extends EPackageImpl implements KindnessPackage
 				IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getCondition_Name(), ecorePackage.getEString(), "name", null, 0, 1, Condition.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getCondition_Kindnessentity(), this.getKindnessEntity(), null, "kindnessentity", null, 1, -1,
-				Condition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+		initEReference(getCondition_Refkindnessentity(), this.getKindnessEntity(), null, "refkindnessentity", null, 1,
+				-1, Condition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(kindnessEntityEClass, KindnessEntity.class, "KindnessEntity", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getKindnessEntity_Name(), ecorePackage.getEString(), "name", null, 0, 1, KindnessEntity.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getKindnessEntity_Connections(), this.getConnection(), null, "connections", null, 0, -1,
-				KindnessEntity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getKindnessEntity_ContainerEntity(), this.getKindnessEntity(), null, "containerEntity", null, 0,
 				1, KindnessEntity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1037,6 +1034,9 @@ public class KindnessPackageImpl extends EPackageImpl implements KindnessPackage
 				0, -1, KindnessEntity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
 				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getKindnessEntity_Properties(), this.getProperty(), null, "properties", null, 0, -1,
+				KindnessEntity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getKindnessEntity_Connection(), this.getConnection(), null, "connection", null, 0, -1,
 				KindnessEntity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 

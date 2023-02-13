@@ -31,7 +31,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * </p>
  * <ul>
  *   <li>{@link kindness_metamodel.impl.ConditionImpl#getName <em>Name</em>}</li>
- *   <li>{@link kindness_metamodel.impl.ConditionImpl#getKindnessentity <em>Kindnessentity</em>}</li>
+ *   <li>{@link kindness_metamodel.impl.ConditionImpl#getRefkindnessentity <em>Refkindnessentity</em>}</li>
  * </ul>
  *
  * @generated
@@ -58,14 +58,14 @@ public class ConditionImpl extends MinimalEObjectImpl.Container implements Condi
 	protected String name = NAME_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getKindnessentity() <em>Kindnessentity</em>}' containment reference list.
+	 * The cached value of the '{@link #getRefkindnessentity() <em>Refkindnessentity</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getKindnessentity()
+	 * @see #getRefkindnessentity()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<KindnessEntity> kindnessentity;
+	protected EList<KindnessEntity> refkindnessentity;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -112,12 +112,12 @@ public class ConditionImpl extends MinimalEObjectImpl.Container implements Condi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<KindnessEntity> getKindnessentity() {
-		if (kindnessentity == null) {
-			kindnessentity = new EObjectContainmentEList<KindnessEntity>(KindnessEntity.class, this,
-					KindnessPackage.CONDITION__KINDNESSENTITY);
+	public EList<KindnessEntity> getRefkindnessentity() {
+		if (refkindnessentity == null) {
+			refkindnessentity = new EObjectContainmentEList<KindnessEntity>(KindnessEntity.class, this,
+					KindnessPackage.CONDITION__REFKINDNESSENTITY);
 		}
-		return kindnessentity;
+		return refkindnessentity;
 	}
 
 	/**
@@ -128,8 +128,8 @@ public class ConditionImpl extends MinimalEObjectImpl.Container implements Condi
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case KindnessPackage.CONDITION__KINDNESSENTITY:
-			return ((InternalEList<?>) getKindnessentity()).basicRemove(otherEnd, msgs);
+		case KindnessPackage.CONDITION__REFKINDNESSENTITY:
+			return ((InternalEList<?>) getRefkindnessentity()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -144,8 +144,8 @@ public class ConditionImpl extends MinimalEObjectImpl.Container implements Condi
 		switch (featureID) {
 		case KindnessPackage.CONDITION__NAME:
 			return getName();
-		case KindnessPackage.CONDITION__KINDNESSENTITY:
-			return getKindnessentity();
+		case KindnessPackage.CONDITION__REFKINDNESSENTITY:
+			return getRefkindnessentity();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -162,9 +162,9 @@ public class ConditionImpl extends MinimalEObjectImpl.Container implements Condi
 		case KindnessPackage.CONDITION__NAME:
 			setName((String) newValue);
 			return;
-		case KindnessPackage.CONDITION__KINDNESSENTITY:
-			getKindnessentity().clear();
-			getKindnessentity().addAll((Collection<? extends KindnessEntity>) newValue);
+		case KindnessPackage.CONDITION__REFKINDNESSENTITY:
+			getRefkindnessentity().clear();
+			getRefkindnessentity().addAll((Collection<? extends KindnessEntity>) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -181,8 +181,8 @@ public class ConditionImpl extends MinimalEObjectImpl.Container implements Condi
 		case KindnessPackage.CONDITION__NAME:
 			setName(NAME_EDEFAULT);
 			return;
-		case KindnessPackage.CONDITION__KINDNESSENTITY:
-			getKindnessentity().clear();
+		case KindnessPackage.CONDITION__REFKINDNESSENTITY:
+			getRefkindnessentity().clear();
 			return;
 		}
 		super.eUnset(featureID);
@@ -198,8 +198,8 @@ public class ConditionImpl extends MinimalEObjectImpl.Container implements Condi
 		switch (featureID) {
 		case KindnessPackage.CONDITION__NAME:
 			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-		case KindnessPackage.CONDITION__KINDNESSENTITY:
-			return kindnessentity != null && !kindnessentity.isEmpty();
+		case KindnessPackage.CONDITION__REFKINDNESSENTITY:
+			return refkindnessentity != null && !refkindnessentity.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

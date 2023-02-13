@@ -49,6 +49,15 @@ public interface KtypesFactory extends EFactory {
 	KPhysical createKPhysical();
 
 	/**
+	 * Returns a new object of class '<em>KSocial</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>KSocial</em>'.
+	 * @generated
+	 */
+	KSocial createKSocial();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
