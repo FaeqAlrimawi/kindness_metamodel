@@ -158,6 +158,11 @@ public class KindnessAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
+		public Adapter caseOtherActor(OtherActor object) {
+			return createOtherActorAdapter();
+		}
+
+		@Override
 		public Adapter caseKObject(KObject object) {
 			return createKObjectAdapter();
 		}
@@ -431,6 +436,20 @@ public class KindnessAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createItemAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link kindness_metamodel.OtherActor <em>Other Actor</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see kindness_metamodel.OtherActor
+	 * @generated
+	 */
+	public Adapter createOtherActorAdapter() {
 		return null;
 	}
 

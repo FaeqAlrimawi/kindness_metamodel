@@ -27,6 +27,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link kindness_metamodel.Act#getItems <em>Items</em>}</li>
  *   <li>{@link kindness_metamodel.Act#getLocations <em>Locations</em>}</li>
  *   <li>{@link kindness_metamodel.Act#getTimes <em>Times</em>}</li>
+ *   <li>{@link kindness_metamodel.Act#getOtherActor <em>Other Actor</em>}</li>
  * </ul>
  *
  * @see kindness_metamodel.KindnessPackage#getAct()
@@ -261,5 +262,17 @@ public interface Act extends EObject {
 	 * @generated
 	 */
 	EList<Time> getTimes();
+
+	/**
+	 * Returns the value of the '<em><b>Other Actor</b></em>' containment reference list.
+	 * The list contents are of type {@link kindness_metamodel.OtherActor}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Other Actor</em>' containment reference list.
+	 * @see kindness_metamodel.KindnessPackage#getAct_OtherActor()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<OtherActor> getOtherActor();
 
 } // Act

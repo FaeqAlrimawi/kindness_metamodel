@@ -10,14 +10,17 @@ import kindness_metamodel.KindnessPackage;
 
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -28,7 +31,7 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  * </p>
  * <ul>
  *   <li>{@link kindness_metamodel.impl.ConditionImpl#getName <em>Name</em>}</li>
- *   <li>{@link kindness_metamodel.impl.ConditionImpl#getRefKindnessEntities <em>Ref Kindness Entities</em>}</li>
+ *   <li>{@link kindness_metamodel.impl.ConditionImpl#getKindnessentity <em>Kindnessentity</em>}</li>
  * </ul>
  *
  * @generated
@@ -55,14 +58,14 @@ public class ConditionImpl extends MinimalEObjectImpl.Container implements Condi
 	protected String name = NAME_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getRefKindnessEntities() <em>Ref Kindness Entities</em>}' reference list.
+	 * The cached value of the '{@link #getKindnessentity() <em>Kindnessentity</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getRefKindnessEntities()
+	 * @see #getKindnessentity()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<KindnessEntity> refKindnessEntities;
+	protected EList<KindnessEntity> kindnessentity;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -109,12 +112,26 @@ public class ConditionImpl extends MinimalEObjectImpl.Container implements Condi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<KindnessEntity> getRefKindnessEntities() {
-		if (refKindnessEntities == null) {
-			refKindnessEntities = new EObjectResolvingEList<KindnessEntity>(KindnessEntity.class, this,
-					KindnessPackage.CONDITION__REF_KINDNESS_ENTITIES);
+	public EList<KindnessEntity> getKindnessentity() {
+		if (kindnessentity == null) {
+			kindnessentity = new EObjectContainmentEList<KindnessEntity>(KindnessEntity.class, this,
+					KindnessPackage.CONDITION__KINDNESSENTITY);
 		}
-		return refKindnessEntities;
+		return kindnessentity;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+		case KindnessPackage.CONDITION__KINDNESSENTITY:
+			return ((InternalEList<?>) getKindnessentity()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
@@ -127,8 +144,8 @@ public class ConditionImpl extends MinimalEObjectImpl.Container implements Condi
 		switch (featureID) {
 		case KindnessPackage.CONDITION__NAME:
 			return getName();
-		case KindnessPackage.CONDITION__REF_KINDNESS_ENTITIES:
-			return getRefKindnessEntities();
+		case KindnessPackage.CONDITION__KINDNESSENTITY:
+			return getKindnessentity();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -145,9 +162,9 @@ public class ConditionImpl extends MinimalEObjectImpl.Container implements Condi
 		case KindnessPackage.CONDITION__NAME:
 			setName((String) newValue);
 			return;
-		case KindnessPackage.CONDITION__REF_KINDNESS_ENTITIES:
-			getRefKindnessEntities().clear();
-			getRefKindnessEntities().addAll((Collection<? extends KindnessEntity>) newValue);
+		case KindnessPackage.CONDITION__KINDNESSENTITY:
+			getKindnessentity().clear();
+			getKindnessentity().addAll((Collection<? extends KindnessEntity>) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -164,8 +181,8 @@ public class ConditionImpl extends MinimalEObjectImpl.Container implements Condi
 		case KindnessPackage.CONDITION__NAME:
 			setName(NAME_EDEFAULT);
 			return;
-		case KindnessPackage.CONDITION__REF_KINDNESS_ENTITIES:
-			getRefKindnessEntities().clear();
+		case KindnessPackage.CONDITION__KINDNESSENTITY:
+			getKindnessentity().clear();
 			return;
 		}
 		super.eUnset(featureID);
@@ -181,8 +198,8 @@ public class ConditionImpl extends MinimalEObjectImpl.Container implements Condi
 		switch (featureID) {
 		case KindnessPackage.CONDITION__NAME:
 			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-		case KindnessPackage.CONDITION__REF_KINDNESS_ENTITIES:
-			return refKindnessEntities != null && !refKindnessEntities.isEmpty();
+		case KindnessPackage.CONDITION__KINDNESSENTITY:
+			return kindnessentity != null && !kindnessentity.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

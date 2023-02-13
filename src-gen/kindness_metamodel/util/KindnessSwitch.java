@@ -239,6 +239,19 @@ public class KindnessSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
+		case KindnessPackage.OTHER_ACTOR: {
+			OtherActor otherActor = (OtherActor) theEObject;
+			T result = caseOtherActor(otherActor);
+			if (result == null)
+				result = caseActor(otherActor);
+			if (result == null)
+				result = caseKindnessEntity(otherActor);
+			if (result == null)
+				result = caseKObject(otherActor);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
 		default:
 			return defaultCase(theEObject);
 		}
@@ -496,6 +509,21 @@ public class KindnessSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseItem(Item object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Other Actor</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Other Actor</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseOtherActor(OtherActor object) {
 		return null;
 	}
 

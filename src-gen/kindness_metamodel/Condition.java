@@ -16,7 +16,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link kindness_metamodel.Condition#getName <em>Name</em>}</li>
- *   <li>{@link kindness_metamodel.Condition#getRefKindnessEntities <em>Ref Kindness Entities</em>}</li>
+ *   <li>{@link kindness_metamodel.Condition#getKindnessentity <em>Kindnessentity</em>}</li>
  * </ul>
  *
  * @see kindness_metamodel.KindnessPackage#getCondition()
@@ -47,15 +47,15 @@ public interface Condition extends EObject {
 	void setName(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Ref Kindness Entities</b></em>' reference list.
+	 * Returns the value of the '<em><b>Kindnessentity</b></em>' containment reference list.
 	 * The list contents are of type {@link kindness_metamodel.KindnessEntity}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Ref Kindness Entities</em>' reference list.
-	 * @see kindness_metamodel.KindnessPackage#getCondition_RefKindnessEntities()
-	 * @model required="true"
+	 * @return the value of the '<em>Kindnessentity</em>' containment reference list.
+	 * @see kindness_metamodel.KindnessPackage#getCondition_Kindnessentity()
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	EList<KindnessEntity> getRefKindnessEntities();
+	EList<KindnessEntity> getKindnessentity();
 
 } // Condition

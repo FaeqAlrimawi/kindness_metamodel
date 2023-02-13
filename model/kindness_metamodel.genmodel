@@ -42,10 +42,11 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference kindness_metamodel.ecore#//Act/items"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference kindness_metamodel.ecore#//Act/locations"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference kindness_metamodel.ecore#//Act/times"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference kindness_metamodel.ecore#//Act/otherActor"/>
     </genClasses>
     <genClasses ecoreClass="kindness_metamodel.ecore#//Condition">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute kindness_metamodel.ecore#//Condition/name"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference kindness_metamodel.ecore#//Condition/refKindnessEntities"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference kindness_metamodel.ecore#//Condition/refkindnessentity"/>
     </genClasses>
     <genClasses ecoreClass="kindness_metamodel.ecore#//KindnessEntity">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute kindness_metamodel.ecore#//KindnessEntity/name"/>
@@ -81,6 +82,7 @@
     <genClasses ecoreClass="kindness_metamodel.ecore#//Social_Factors"/>
     <genClasses ecoreClass="kindness_metamodel.ecore#//Psychological_Factors"/>
     <genClasses ecoreClass="kindness_metamodel.ecore#//Item"/>
+    <genClasses ecoreClass="kindness_metamodel.ecore#//OtherActor"/>
   </genPackages>
   <genPackages prefix="Factors" ecorePackage="Factors.ecore#/">
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="Factors.ecore#//DegreeOfRelatedness">
@@ -200,5 +202,6 @@
     <genClasses ecoreClass="ktypes.ecore#//KHuman"/>
     <genClasses ecoreClass="ktypes.ecore#//KDigital"/>
     <genClasses ecoreClass="ktypes.ecore#//KPhysical"/>
+    <genClasses ecoreClass="ktypes.ecore#//KSocial"/>
   </genPackages>
 </genmodel:GenModel>

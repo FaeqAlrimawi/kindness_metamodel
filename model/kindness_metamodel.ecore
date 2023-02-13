@@ -37,6 +37,8 @@
         eType="#//Location" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="times" upperBound="-1"
         eType="#//Time" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="otherActor" upperBound="-1"
+        eType="#//OtherActor" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="ActType">
     <eLiterals name="MOTIVATION"/>
@@ -46,8 +48,8 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Condition">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="refKindnessEntities" lowerBound="1"
-        upperBound="-1" eType="#//KindnessEntity"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="refkindnessentity" lowerBound="1"
+        upperBound="-1" eType="#//KindnessEntity" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="KindnessEntity" eSuperTypes="ktypes.ecore#//KObject">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -96,4 +98,5 @@
   <eClassifiers xsi:type="ecore:EClass" name="Social_Factors" eSuperTypes="Factors.ecore#//AbsSocialFactors"/>
   <eClassifiers xsi:type="ecore:EClass" name="Psychological_Factors" eSuperTypes="Factors.ecore#//AbsPsychologicalFactors"/>
   <eClassifiers xsi:type="ecore:EClass" name="Item" eSuperTypes="#//KindnessEntity"/>
+  <eClassifiers xsi:type="ecore:EClass" name="OtherActor" eSuperTypes="#//Actor"/>
 </ecore:EPackage>

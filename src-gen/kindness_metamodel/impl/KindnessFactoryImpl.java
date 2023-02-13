@@ -91,6 +91,8 @@ public class KindnessFactoryImpl extends EFactoryImpl implements KindnessFactory
 			return createPsychological_Factors();
 		case KindnessPackage.ITEM:
 			return createItem();
+		case KindnessPackage.OTHER_ACTOR:
+			return createOtherActor();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -298,6 +300,16 @@ public class KindnessFactoryImpl extends EFactoryImpl implements KindnessFactory
 	public Item createItem() {
 		ItemImpl item = new ItemImpl();
 		return item;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public OtherActor createOtherActor() {
+		OtherActorImpl otherActor = new OtherActorImpl();
+		return otherActor;
 	}
 
 	/**

@@ -10,4 +10,5 @@
   <eClassifiers xsi:type="ecore:EClass" name="KHuman" eSuperTypes="#//KPhysical"/>
   <eClassifiers xsi:type="ecore:EClass" name="KDigital" eSuperTypes="#//KType"/>
   <eClassifiers xsi:type="ecore:EClass" name="KPhysical" eSuperTypes="#//KType"/>
+  <eClassifiers xsi:type="ecore:EClass" name="KSocial" eSuperTypes="#//KType"/>
 </ecore:EPackage>

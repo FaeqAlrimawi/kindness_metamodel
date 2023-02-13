@@ -290,13 +290,22 @@ public interface KindnessPackage extends EPackage {
 	int ACT__TIMES = 11;
 
 	/**
+	 * The feature id for the '<em><b>Other Actor</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACT__OTHER_ACTOR = 12;
+
+	/**
 	 * The number of structural features of the '<em>Act</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ACT_FEATURE_COUNT = 12;
+	int ACT_FEATURE_COUNT = 13;
 
 	/**
 	 * The number of operations of the '<em>Act</em>' class.
@@ -327,13 +336,13 @@ public interface KindnessPackage extends EPackage {
 	int CONDITION__NAME = 0;
 
 	/**
-	 * The feature id for the '<em><b>Ref Kindness Entities</b></em>' reference list.
+	 * The feature id for the '<em><b>Kindnessentity</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONDITION__REF_KINDNESS_ENTITIES = 1;
+	int CONDITION__KINDNESSENTITY = 1;
 
 	/**
 	 * The number of structural features of the '<em>Condition</em>' class.
@@ -1402,6 +1411,106 @@ public interface KindnessPackage extends EPackage {
 	int ITEM_OPERATION_COUNT = KINDNESS_ENTITY_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link kindness_metamodel.impl.OtherActorImpl <em>Other Actor</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see kindness_metamodel.impl.OtherActorImpl
+	 * @see kindness_metamodel.impl.KindnessPackageImpl#getOtherActor()
+	 * @generated
+	 */
+	int OTHER_ACTOR = 17;
+
+	/**
+	 * The feature id for the '<em><b>Ktype</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OTHER_ACTOR__KTYPE = ACTOR__KTYPE;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OTHER_ACTOR__NAME = ACTOR__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Connections</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OTHER_ACTOR__CONNECTIONS = ACTOR__CONNECTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Container Entity</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OTHER_ACTOR__CONTAINER_ENTITY = ACTOR__CONTAINER_ENTITY;
+
+	/**
+	 * The feature id for the '<em><b>Contained Entities</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OTHER_ACTOR__CONTAINED_ENTITIES = ACTOR__CONTAINED_ENTITIES;
+
+	/**
+	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OTHER_ACTOR__PROPERTIES = ACTOR__PROPERTIES;
+
+	/**
+	 * The feature id for the '<em><b>Social factors</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OTHER_ACTOR__SOCIAL_FACTORS = ACTOR__SOCIAL_FACTORS;
+
+	/**
+	 * The feature id for the '<em><b>Psychological factors</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OTHER_ACTOR__PSYCHOLOGICAL_FACTORS = ACTOR__PSYCHOLOGICAL_FACTORS;
+
+	/**
+	 * The number of structural features of the '<em>Other Actor</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OTHER_ACTOR_FEATURE_COUNT = ACTOR_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Other Actor</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OTHER_ACTOR_OPERATION_COUNT = ACTOR_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link kindness_metamodel.ActType <em>Act Type</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1409,7 +1518,7 @@ public interface KindnessPackage extends EPackage {
 	 * @see kindness_metamodel.impl.KindnessPackageImpl#getActType()
 	 * @generated
 	 */
-	int ACT_TYPE = 17;
+	int ACT_TYPE = 18;
 
 	/**
 	 * The meta object id for the '{@link kindness_metamodel.MotivationType <em>Motivation Type</em>}' enum.
@@ -1419,7 +1528,7 @@ public interface KindnessPackage extends EPackage {
 	 * @see kindness_metamodel.impl.KindnessPackageImpl#getMotivationType()
 	 * @generated
 	 */
-	int MOTIVATION_TYPE = 18;
+	int MOTIVATION_TYPE = 19;
 
 	/**
 	 * Returns the meta object for class '{@link kindness_metamodel.Property <em>Property</em>}'.
@@ -1650,6 +1759,17 @@ public interface KindnessPackage extends EPackage {
 	EReference getAct_Times();
 
 	/**
+	 * Returns the meta object for the containment reference list '{@link kindness_metamodel.Act#getOtherActor <em>Other Actor</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Other Actor</em>'.
+	 * @see kindness_metamodel.Act#getOtherActor()
+	 * @see #getAct()
+	 * @generated
+	 */
+	EReference getAct_OtherActor();
+
+	/**
 	 * Returns the meta object for class '{@link kindness_metamodel.Condition <em>Condition</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1671,15 +1791,15 @@ public interface KindnessPackage extends EPackage {
 	EAttribute getCondition_Name();
 
 	/**
-	 * Returns the meta object for the reference list '{@link kindness_metamodel.Condition#getRefKindnessEntities <em>Ref Kindness Entities</em>}'.
+	 * Returns the meta object for the containment reference list '{@link kindness_metamodel.Condition#getKindnessentity <em>Kindnessentity</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Ref Kindness Entities</em>'.
-	 * @see kindness_metamodel.Condition#getRefKindnessEntities()
+	 * @return the meta object for the containment reference list '<em>Kindnessentity</em>'.
+	 * @see kindness_metamodel.Condition#getKindnessentity()
 	 * @see #getCondition()
 	 * @generated
 	 */
-	EReference getCondition_RefKindnessEntities();
+	EReference getCondition_Kindnessentity();
 
 	/**
 	 * Returns the meta object for class '{@link kindness_metamodel.KindnessEntity <em>Entity</em>}'.
@@ -1988,6 +2108,16 @@ public interface KindnessPackage extends EPackage {
 	EClass getItem();
 
 	/**
+	 * Returns the meta object for class '{@link kindness_metamodel.OtherActor <em>Other Actor</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Other Actor</em>'.
+	 * @see kindness_metamodel.OtherActor
+	 * @generated
+	 */
+	EClass getOtherActor();
+
+	/**
 	 * Returns the meta object for enum '{@link kindness_metamodel.ActType <em>Act Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2205,6 +2335,14 @@ public interface KindnessPackage extends EPackage {
 		EReference ACT__TIMES = eINSTANCE.getAct_Times();
 
 		/**
+		 * The meta object literal for the '<em><b>Other Actor</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ACT__OTHER_ACTOR = eINSTANCE.getAct_OtherActor();
+
+		/**
 		 * The meta object literal for the '{@link kindness_metamodel.impl.ConditionImpl <em>Condition</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2223,12 +2361,12 @@ public interface KindnessPackage extends EPackage {
 		EAttribute CONDITION__NAME = eINSTANCE.getCondition_Name();
 
 		/**
-		 * The meta object literal for the '<em><b>Ref Kindness Entities</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Kindnessentity</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference CONDITION__REF_KINDNESS_ENTITIES = eINSTANCE.getCondition_RefKindnessEntities();
+		EReference CONDITION__KINDNESSENTITY = eINSTANCE.getCondition_Kindnessentity();
 
 		/**
 		 * The meta object literal for the '{@link kindness_metamodel.impl.KindnessEntityImpl <em>Entity</em>}' class.
@@ -2487,6 +2625,16 @@ public interface KindnessPackage extends EPackage {
 		 * @generated
 		 */
 		EClass ITEM = eINSTANCE.getItem();
+
+		/**
+		 * The meta object literal for the '{@link kindness_metamodel.impl.OtherActorImpl <em>Other Actor</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see kindness_metamodel.impl.OtherActorImpl
+		 * @see kindness_metamodel.impl.KindnessPackageImpl#getOtherActor()
+		 * @generated
+		 */
+		EClass OTHER_ACTOR = eINSTANCE.getOtherActor();
 
 		/**
 		 * The meta object literal for the '{@link kindness_metamodel.ActType <em>Act Type</em>}' enum.

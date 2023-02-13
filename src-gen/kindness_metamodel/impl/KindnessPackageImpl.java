@@ -30,6 +30,7 @@ import kindness_metamodel.Mediator;
 import kindness_metamodel.Motivation;
 import kindness_metamodel.MotivationType;
 import kindness_metamodel.Observant;
+import kindness_metamodel.OtherActor;
 import kindness_metamodel.Property;
 import kindness_metamodel.Psychological_Factors;
 import kindness_metamodel.Receiver;
@@ -173,6 +174,13 @@ public class KindnessPackageImpl extends EPackageImpl implements KindnessPackage
 	 * @generated
 	 */
 	private EClass itemEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass otherActorEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -472,6 +480,15 @@ public class KindnessPackageImpl extends EPackageImpl implements KindnessPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getAct_OtherActor() {
+		return (EReference) actEClass.getEStructuralFeatures().get(12);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getCondition() {
 		return conditionEClass;
 	}
@@ -490,7 +507,7 @@ public class KindnessPackageImpl extends EPackageImpl implements KindnessPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getCondition_RefKindnessEntities() {
+	public EReference getCondition_Kindnessentity() {
 		return (EReference) conditionEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -760,6 +777,15 @@ public class KindnessPackageImpl extends EPackageImpl implements KindnessPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getOtherActor() {
+		return otherActorEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getActType() {
 		return actTypeEEnum;
 	}
@@ -825,10 +851,11 @@ public class KindnessPackageImpl extends EPackageImpl implements KindnessPackage
 		createEReference(actEClass, ACT__ITEMS);
 		createEReference(actEClass, ACT__LOCATIONS);
 		createEReference(actEClass, ACT__TIMES);
+		createEReference(actEClass, ACT__OTHER_ACTOR);
 
 		conditionEClass = createEClass(CONDITION);
 		createEAttribute(conditionEClass, CONDITION__NAME);
-		createEReference(conditionEClass, CONDITION__REF_KINDNESS_ENTITIES);
+		createEReference(conditionEClass, CONDITION__KINDNESSENTITY);
 
 		kindnessEntityEClass = createEClass(KINDNESS_ENTITY);
 		createEAttribute(kindnessEntityEClass, KINDNESS_ENTITY__NAME);
@@ -871,6 +898,8 @@ public class KindnessPackageImpl extends EPackageImpl implements KindnessPackage
 		psychological_FactorsEClass = createEClass(PSYCHOLOGICAL_FACTORS);
 
 		itemEClass = createEClass(ITEM);
+
+		otherActorEClass = createEClass(OTHER_ACTOR);
 
 		// Create enums
 		actTypeEEnum = createEEnum(ACT_TYPE);
@@ -923,6 +952,7 @@ public class KindnessPackageImpl extends EPackageImpl implements KindnessPackage
 		social_FactorsEClass.getESuperTypes().add(theFactorsPackage.getAbsSocialFactors());
 		psychological_FactorsEClass.getESuperTypes().add(theFactorsPackage.getAbsPsychologicalFactors());
 		itemEClass.getESuperTypes().add(this.getKindnessEntity());
+		otherActorEClass.getESuperTypes().add(this.getActor());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(propertyEClass, Property.class, "Property", !IS_ABSTRACT, !IS_INTERFACE,
@@ -981,13 +1011,16 @@ public class KindnessPackageImpl extends EPackageImpl implements KindnessPackage
 		initEReference(getAct_Times(), this.getTime(), null, "times", null, 0, -1, Act.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
 				IS_ORDERED);
+		initEReference(getAct_OtherActor(), this.getOtherActor(), null, "otherActor", null, 0, -1, Act.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(conditionEClass, Condition.class, "Condition", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getCondition_Name(), ecorePackage.getEString(), "name", null, 0, 1, Condition.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getCondition_RefKindnessEntities(), this.getKindnessEntity(), null, "refKindnessEntities", null,
-				1, -1, Condition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+		initEReference(getCondition_Kindnessentity(), this.getKindnessEntity(), null, "kindnessentity", null, 1, -1,
+				Condition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(kindnessEntityEClass, KindnessEntity.class, "KindnessEntity", !IS_ABSTRACT, !IS_INTERFACE,
@@ -1067,6 +1100,9 @@ public class KindnessPackageImpl extends EPackageImpl implements KindnessPackage
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(itemEClass, Item.class, "Item", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(otherActorEClass, OtherActor.class, "OtherActor", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
 
 		// Initialize enums and add enum literals
 		initEEnum(actTypeEEnum, ActType.class, "ActType");

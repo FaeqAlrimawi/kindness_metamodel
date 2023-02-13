@@ -13,5 +13,6 @@
     <genClasses ecoreClass="ktypes.ecore#//KHuman"/>
     <genClasses ecoreClass="ktypes.ecore#//KDigital"/>
     <genClasses ecoreClass="ktypes.ecore#//KPhysical"/>
+    <genClasses ecoreClass="ktypes.ecore#//KSocial"/>
   </genPackages>
 </genmodel:GenModel>
