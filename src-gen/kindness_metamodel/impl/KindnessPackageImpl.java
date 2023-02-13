@@ -36,6 +36,10 @@ import kindness_metamodel.Receiver;
 import kindness_metamodel.Social_Factors;
 import kindness_metamodel.Time;
 
+import ktypes.KtypesPackage;
+
+import ktypes.impl.KtypesPackageImpl;
+
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
@@ -247,18 +251,24 @@ public class KindnessPackageImpl extends EPackageImpl implements KindnessPackage
 		NewPackage2PackageImpl theNewPackage2Package = (NewPackage2PackageImpl) (registeredPackage instanceof NewPackage2PackageImpl
 				? registeredPackage
 				: NewPackage2Package.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(KtypesPackage.eNS_URI);
+		KtypesPackageImpl theKtypesPackage = (KtypesPackageImpl) (registeredPackage instanceof KtypesPackageImpl
+				? registeredPackage
+				: KtypesPackage.eINSTANCE);
 
 		// Create package meta-data objects
 		theKindnessPackage.createPackageContents();
 		theFactorsPackage.createPackageContents();
 		theNewPackage1Package.createPackageContents();
 		theNewPackage2Package.createPackageContents();
+		theKtypesPackage.createPackageContents();
 
 		// Initialize created meta-data
 		theKindnessPackage.initializePackageContents();
 		theFactorsPackage.initializePackageContents();
 		theNewPackage1Package.initializePackageContents();
 		theNewPackage2Package.initializePackageContents();
+		theKtypesPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
 		theKindnessPackage.freeze();
@@ -329,6 +339,15 @@ public class KindnessPackageImpl extends EPackageImpl implements KindnessPackage
 	 */
 	public EReference getKindnessOpportunity_Act() {
 		return (EReference) kindnessOpportunityEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getKindnessOpportunity_Description() {
+		return (EAttribute) kindnessOpportunityEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -435,6 +454,24 @@ public class KindnessPackageImpl extends EPackageImpl implements KindnessPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getAct_Locations() {
+		return (EReference) actEClass.getEStructuralFeatures().get(10);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getAct_Times() {
+		return (EReference) actEClass.getEStructuralFeatures().get(11);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getCondition() {
 		return conditionEClass;
 	}
@@ -480,17 +517,8 @@ public class KindnessPackageImpl extends EPackageImpl implements KindnessPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getKindnessEntity_Type() {
-		return (EAttribute) kindnessEntityEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EReference getKindnessEntity_Connections() {
-		return (EReference) kindnessEntityEClass.getEStructuralFeatures().get(2);
+		return (EReference) kindnessEntityEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -499,7 +527,7 @@ public class KindnessPackageImpl extends EPackageImpl implements KindnessPackage
 	 * @generated
 	 */
 	public EReference getKindnessEntity_ContainerEntity() {
-		return (EReference) kindnessEntityEClass.getEStructuralFeatures().get(3);
+		return (EReference) kindnessEntityEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -508,7 +536,7 @@ public class KindnessPackageImpl extends EPackageImpl implements KindnessPackage
 	 * @generated
 	 */
 	public EReference getKindnessEntity_ContainedEntities() {
-		return (EReference) kindnessEntityEClass.getEStructuralFeatures().get(4);
+		return (EReference) kindnessEntityEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -517,7 +545,7 @@ public class KindnessPackageImpl extends EPackageImpl implements KindnessPackage
 	 * @generated
 	 */
 	public EReference getKindnessEntity_Properties() {
-		return (EReference) kindnessEntityEClass.getEStructuralFeatures().get(5);
+		return (EReference) kindnessEntityEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -782,6 +810,7 @@ public class KindnessPackageImpl extends EPackageImpl implements KindnessPackage
 		createEAttribute(kindnessOpportunityEClass, KINDNESS_OPPORTUNITY__NAME);
 		createEReference(kindnessOpportunityEClass, KINDNESS_OPPORTUNITY__PROPERTIES);
 		createEReference(kindnessOpportunityEClass, KINDNESS_OPPORTUNITY__ACT);
+		createEAttribute(kindnessOpportunityEClass, KINDNESS_OPPORTUNITY__DESCRIPTION);
 
 		actEClass = createEClass(ACT);
 		createEAttribute(actEClass, ACT__NAME);
@@ -794,6 +823,8 @@ public class KindnessPackageImpl extends EPackageImpl implements KindnessPackage
 		createEReference(actEClass, ACT__MEDIATOR);
 		createEReference(actEClass, ACT__NEXT);
 		createEReference(actEClass, ACT__ITEMS);
+		createEReference(actEClass, ACT__LOCATIONS);
+		createEReference(actEClass, ACT__TIMES);
 
 		conditionEClass = createEClass(CONDITION);
 		createEAttribute(conditionEClass, CONDITION__NAME);
@@ -801,7 +832,6 @@ public class KindnessPackageImpl extends EPackageImpl implements KindnessPackage
 
 		kindnessEntityEClass = createEClass(KINDNESS_ENTITY);
 		createEAttribute(kindnessEntityEClass, KINDNESS_ENTITY__NAME);
-		createEAttribute(kindnessEntityEClass, KINDNESS_ENTITY__TYPE);
 		createEReference(kindnessEntityEClass, KINDNESS_ENTITY__CONNECTIONS);
 		createEReference(kindnessEntityEClass, KINDNESS_ENTITY__CONTAINER_ENTITY);
 		createEReference(kindnessEntityEClass, KINDNESS_ENTITY__CONTAINED_ENTITIES);
@@ -872,6 +902,7 @@ public class KindnessPackageImpl extends EPackageImpl implements KindnessPackage
 		setNsURI(eNS_URI);
 
 		// Obtain other dependent packages
+		KtypesPackage theKtypesPackage = (KtypesPackage) EPackage.Registry.INSTANCE.getEPackage(KtypesPackage.eNS_URI);
 		FactorsPackage theFactorsPackage = (FactorsPackage) EPackage.Registry.INSTANCE
 				.getEPackage(FactorsPackage.eNS_URI);
 
@@ -880,6 +911,7 @@ public class KindnessPackageImpl extends EPackageImpl implements KindnessPackage
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
+		kindnessEntityEClass.getESuperTypes().add(theKtypesPackage.getKObject());
 		connectionEClass.getESuperTypes().add(theFactorsPackage.getAbsConnection());
 		locationEClass.getESuperTypes().add(this.getKindnessEntity());
 		timeEClass.getESuperTypes().add(this.getKindnessEntity());
@@ -911,6 +943,9 @@ public class KindnessPackageImpl extends EPackageImpl implements KindnessPackage
 		initEReference(getKindnessOpportunity_Act(), this.getAct(), null, "act", null, 1, -1, KindnessOpportunity.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getKindnessOpportunity_Description(), ecorePackage.getEString(), "description", null, 0, 1,
+				KindnessOpportunity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(actEClass, Act.class, "Act", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getAct_Name(), ecorePackage.getEString(), "name", null, 0, 1, Act.class, !IS_TRANSIENT,
@@ -940,6 +975,12 @@ public class KindnessPackageImpl extends EPackageImpl implements KindnessPackage
 		initEReference(getAct_Items(), this.getItem(), null, "items", null, 0, -1, Act.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
 				IS_ORDERED);
+		initEReference(getAct_Locations(), this.getLocation(), null, "locations", null, 0, -1, Act.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
+		initEReference(getAct_Times(), this.getTime(), null, "times", null, 0, -1, Act.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
 
 		initEClass(conditionEClass, Condition.class, "Condition", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -952,8 +993,6 @@ public class KindnessPackageImpl extends EPackageImpl implements KindnessPackage
 		initEClass(kindnessEntityEClass, KindnessEntity.class, "KindnessEntity", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getKindnessEntity_Name(), ecorePackage.getEString(), "name", null, 0, 1, KindnessEntity.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getKindnessEntity_Type(), ecorePackage.getEString(), "type", null, 0, 1, KindnessEntity.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getKindnessEntity_Connections(), this.getConnection(), null, "connections", null, 0, -1,
 				KindnessEntity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,

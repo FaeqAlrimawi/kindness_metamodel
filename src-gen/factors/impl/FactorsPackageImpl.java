@@ -31,6 +31,10 @@ import kindness_metamodel.KindnessPackage;
 
 import kindness_metamodel.impl.KindnessPackageImpl;
 
+import ktypes.KtypesPackage;
+
+import ktypes.impl.KtypesPackageImpl;
+
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
@@ -201,18 +205,24 @@ public class FactorsPackageImpl extends EPackageImpl implements FactorsPackage {
 		NewPackage2PackageImpl theNewPackage2Package = (NewPackage2PackageImpl) (registeredPackage instanceof NewPackage2PackageImpl
 				? registeredPackage
 				: NewPackage2Package.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(KtypesPackage.eNS_URI);
+		KtypesPackageImpl theKtypesPackage = (KtypesPackageImpl) (registeredPackage instanceof KtypesPackageImpl
+				? registeredPackage
+				: KtypesPackage.eINSTANCE);
 
 		// Create package meta-data objects
 		theFactorsPackage.createPackageContents();
 		theKindnessPackage.createPackageContents();
 		theNewPackage1Package.createPackageContents();
 		theNewPackage2Package.createPackageContents();
+		theKtypesPackage.createPackageContents();
 
 		// Initialize created meta-data
 		theFactorsPackage.initializePackageContents();
 		theKindnessPackage.initializePackageContents();
 		theNewPackage1Package.initializePackageContents();
 		theNewPackage2Package.initializePackageContents();
+		theKtypesPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
 		theFactorsPackage.freeze();

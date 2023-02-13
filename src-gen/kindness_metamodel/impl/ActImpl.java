@@ -10,9 +10,11 @@ import kindness_metamodel.Condition;
 import kindness_metamodel.Giver;
 import kindness_metamodel.Item;
 import kindness_metamodel.KindnessPackage;
+import kindness_metamodel.Location;
 import kindness_metamodel.Mediator;
 import kindness_metamodel.Observant;
 import kindness_metamodel.Receiver;
+import kindness_metamodel.Time;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -46,6 +48,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link kindness_metamodel.impl.ActImpl#getMediator <em>Mediator</em>}</li>
  *   <li>{@link kindness_metamodel.impl.ActImpl#getNext <em>Next</em>}</li>
  *   <li>{@link kindness_metamodel.impl.ActImpl#getItems <em>Items</em>}</li>
+ *   <li>{@link kindness_metamodel.impl.ActImpl#getLocations <em>Locations</em>}</li>
+ *   <li>{@link kindness_metamodel.impl.ActImpl#getTimes <em>Times</em>}</li>
  * </ul>
  *
  * @generated
@@ -170,6 +174,26 @@ public class ActImpl extends MinimalEObjectImpl.Container implements Act {
 	 * @ordered
 	 */
 	protected EList<Item> items;
+
+	/**
+	 * The cached value of the '{@link #getLocations() <em>Locations</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLocations()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Location> locations;
+
+	/**
+	 * The cached value of the '{@link #getTimes() <em>Times</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTimes()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Time> times;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -549,6 +573,30 @@ public class ActImpl extends MinimalEObjectImpl.Container implements Act {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<Location> getLocations() {
+		if (locations == null) {
+			locations = new EObjectContainmentEList<Location>(Location.class, this, KindnessPackage.ACT__LOCATIONS);
+		}
+		return locations;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<Time> getTimes() {
+		if (times == null) {
+			times = new EObjectContainmentEList<Time>(Time.class, this, KindnessPackage.ACT__TIMES);
+		}
+		return times;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -566,6 +614,10 @@ public class ActImpl extends MinimalEObjectImpl.Container implements Act {
 			return basicSetMediator(null, msgs);
 		case KindnessPackage.ACT__ITEMS:
 			return ((InternalEList<?>) getItems()).basicRemove(otherEnd, msgs);
+		case KindnessPackage.ACT__LOCATIONS:
+			return ((InternalEList<?>) getLocations()).basicRemove(otherEnd, msgs);
+		case KindnessPackage.ACT__TIMES:
+			return ((InternalEList<?>) getTimes()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -600,6 +652,10 @@ public class ActImpl extends MinimalEObjectImpl.Container implements Act {
 			return basicGetNext();
 		case KindnessPackage.ACT__ITEMS:
 			return getItems();
+		case KindnessPackage.ACT__LOCATIONS:
+			return getLocations();
+		case KindnessPackage.ACT__TIMES:
+			return getTimes();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -645,6 +701,14 @@ public class ActImpl extends MinimalEObjectImpl.Container implements Act {
 			getItems().clear();
 			getItems().addAll((Collection<? extends Item>) newValue);
 			return;
+		case KindnessPackage.ACT__LOCATIONS:
+			getLocations().clear();
+			getLocations().addAll((Collection<? extends Location>) newValue);
+			return;
+		case KindnessPackage.ACT__TIMES:
+			getTimes().clear();
+			getTimes().addAll((Collection<? extends Time>) newValue);
+			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -687,6 +751,12 @@ public class ActImpl extends MinimalEObjectImpl.Container implements Act {
 		case KindnessPackage.ACT__ITEMS:
 			getItems().clear();
 			return;
+		case KindnessPackage.ACT__LOCATIONS:
+			getLocations().clear();
+			return;
+		case KindnessPackage.ACT__TIMES:
+			getTimes().clear();
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -719,6 +789,10 @@ public class ActImpl extends MinimalEObjectImpl.Container implements Act {
 			return next != null;
 		case KindnessPackage.ACT__ITEMS:
 			return items != null && !items.isEmpty();
+		case KindnessPackage.ACT__LOCATIONS:
+			return locations != null && !locations.isEmpty();
+		case KindnessPackage.ACT__TIMES:
+			return times != null && !times.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

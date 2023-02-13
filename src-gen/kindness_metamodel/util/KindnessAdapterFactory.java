@@ -8,6 +8,8 @@ import factors.AbsSocialFactors;
 
 import kindness_metamodel.*;
 
+import ktypes.KObject;
+
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 
@@ -153,6 +155,11 @@ public class KindnessAdapterFactory extends AdapterFactoryImpl {
 		@Override
 		public Adapter caseItem(Item object) {
 			return createItemAdapter();
+		}
+
+		@Override
+		public Adapter caseKObject(KObject object) {
+			return createKObjectAdapter();
 		}
 
 		@Override
@@ -424,6 +431,20 @@ public class KindnessAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createItemAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link ktypes.KObject <em>KObject</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ktypes.KObject
+	 * @generated
+	 */
+	public Adapter createKObjectAdapter() {
 		return null;
 	}
 

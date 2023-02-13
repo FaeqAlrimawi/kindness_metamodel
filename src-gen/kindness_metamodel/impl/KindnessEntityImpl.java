@@ -9,6 +9,8 @@ import kindness_metamodel.KindnessEntity;
 import kindness_metamodel.KindnessPackage;
 import kindness_metamodel.Property;
 
+import ktypes.impl.KObjectImpl;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
@@ -18,7 +20,6 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
@@ -33,7 +34,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * </p>
  * <ul>
  *   <li>{@link kindness_metamodel.impl.KindnessEntityImpl#getName <em>Name</em>}</li>
- *   <li>{@link kindness_metamodel.impl.KindnessEntityImpl#getType <em>Type</em>}</li>
  *   <li>{@link kindness_metamodel.impl.KindnessEntityImpl#getConnections <em>Connections</em>}</li>
  *   <li>{@link kindness_metamodel.impl.KindnessEntityImpl#getContainerEntity <em>Container Entity</em>}</li>
  *   <li>{@link kindness_metamodel.impl.KindnessEntityImpl#getContainedEntities <em>Contained Entities</em>}</li>
@@ -42,7 +42,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class KindnessEntityImpl extends MinimalEObjectImpl.Container implements KindnessEntity {
+public class KindnessEntityImpl extends KObjectImpl implements KindnessEntity {
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -62,26 +62,6 @@ public class KindnessEntityImpl extends MinimalEObjectImpl.Container implements 
 	 * @ordered
 	 */
 	protected String name = NAME_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getType() <em>Type</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getType()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String TYPE_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getType() <em>Type</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getType()
-	 * @generated
-	 * @ordered
-	 */
-	protected String type = TYPE_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getConnections() <em>Connections</em>}' reference list.
@@ -162,28 +142,6 @@ public class KindnessEntityImpl extends MinimalEObjectImpl.Container implements 
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, KindnessPackage.KINDNESS_ENTITY__NAME, oldName,
 					name));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getType() {
-		return type;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setType(String newType) {
-		String oldType = type;
-		type = newType;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, KindnessPackage.KINDNESS_ENTITY__TYPE, oldType,
-					type));
 	}
 
 	/**
@@ -289,8 +247,6 @@ public class KindnessEntityImpl extends MinimalEObjectImpl.Container implements 
 		switch (featureID) {
 		case KindnessPackage.KINDNESS_ENTITY__NAME:
 			return getName();
-		case KindnessPackage.KINDNESS_ENTITY__TYPE:
-			return getType();
 		case KindnessPackage.KINDNESS_ENTITY__CONNECTIONS:
 			return getConnections();
 		case KindnessPackage.KINDNESS_ENTITY__CONTAINER_ENTITY:
@@ -316,9 +272,6 @@ public class KindnessEntityImpl extends MinimalEObjectImpl.Container implements 
 		switch (featureID) {
 		case KindnessPackage.KINDNESS_ENTITY__NAME:
 			setName((String) newValue);
-			return;
-		case KindnessPackage.KINDNESS_ENTITY__TYPE:
-			setType((String) newValue);
 			return;
 		case KindnessPackage.KINDNESS_ENTITY__CONNECTIONS:
 			getConnections().clear();
@@ -350,9 +303,6 @@ public class KindnessEntityImpl extends MinimalEObjectImpl.Container implements 
 		case KindnessPackage.KINDNESS_ENTITY__NAME:
 			setName(NAME_EDEFAULT);
 			return;
-		case KindnessPackage.KINDNESS_ENTITY__TYPE:
-			setType(TYPE_EDEFAULT);
-			return;
 		case KindnessPackage.KINDNESS_ENTITY__CONNECTIONS:
 			getConnections().clear();
 			return;
@@ -379,8 +329,6 @@ public class KindnessEntityImpl extends MinimalEObjectImpl.Container implements 
 		switch (featureID) {
 		case KindnessPackage.KINDNESS_ENTITY__NAME:
 			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-		case KindnessPackage.KINDNESS_ENTITY__TYPE:
-			return TYPE_EDEFAULT == null ? type != null : !TYPE_EDEFAULT.equals(type);
 		case KindnessPackage.KINDNESS_ENTITY__CONNECTIONS:
 			return connections != null && !connections.isEmpty();
 		case KindnessPackage.KINDNESS_ENTITY__CONTAINER_ENTITY:
@@ -406,8 +354,6 @@ public class KindnessEntityImpl extends MinimalEObjectImpl.Container implements 
 		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (name: ");
 		result.append(name);
-		result.append(", type: ");
-		result.append(type);
 		result.append(')');
 		return result.toString();
 	}

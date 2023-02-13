@@ -18,6 +18,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link kindness_metamodel.KindnessOpportunity#getName <em>Name</em>}</li>
  *   <li>{@link kindness_metamodel.KindnessOpportunity#getProperties <em>Properties</em>}</li>
  *   <li>{@link kindness_metamodel.KindnessOpportunity#getAct <em>Act</em>}</li>
+ *   <li>{@link kindness_metamodel.KindnessOpportunity#getDescription <em>Description</em>}</li>
  * </ul>
  *
  * @see kindness_metamodel.KindnessPackage#getKindnessOpportunity()
@@ -70,5 +71,27 @@ public interface KindnessOpportunity extends EObject {
 	 * @generated
 	 */
 	EList<Act> getAct();
+
+	/**
+	 * Returns the value of the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Description</em>' attribute.
+	 * @see #setDescription(String)
+	 * @see kindness_metamodel.KindnessPackage#getKindnessOpportunity_Description()
+	 * @model
+	 * @generated
+	 */
+	String getDescription();
+
+	/**
+	 * Sets the value of the '{@link kindness_metamodel.KindnessOpportunity#getDescription <em>Description</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Description</em>' attribute.
+	 * @see #getDescription()
+	 * @generated
+	 */
+	void setDescription(String value);
 
 } // KindnessOpportunity

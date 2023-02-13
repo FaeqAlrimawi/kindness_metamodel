@@ -4,6 +4,8 @@ package kindness_metamodel;
 
 import factors.FactorsPackage;
 
+import ktypes.KtypesPackage;
+
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
@@ -143,13 +145,22 @@ public interface KindnessPackage extends EPackage {
 	int KINDNESS_OPPORTUNITY__ACT = 2;
 
 	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KINDNESS_OPPORTUNITY__DESCRIPTION = 3;
+
+	/**
 	 * The number of structural features of the '<em>Opportunity</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int KINDNESS_OPPORTUNITY_FEATURE_COUNT = 3;
+	int KINDNESS_OPPORTUNITY_FEATURE_COUNT = 4;
 
 	/**
 	 * The number of operations of the '<em>Opportunity</em>' class.
@@ -261,13 +272,31 @@ public interface KindnessPackage extends EPackage {
 	int ACT__ITEMS = 9;
 
 	/**
+	 * The feature id for the '<em><b>Locations</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACT__LOCATIONS = 10;
+
+	/**
+	 * The feature id for the '<em><b>Times</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACT__TIMES = 11;
+
+	/**
 	 * The number of structural features of the '<em>Act</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ACT_FEATURE_COUNT = 10;
+	int ACT_FEATURE_COUNT = 12;
 
 	/**
 	 * The number of operations of the '<em>Act</em>' class.
@@ -335,22 +364,22 @@ public interface KindnessPackage extends EPackage {
 	int KINDNESS_ENTITY = 4;
 
 	/**
+	 * The feature id for the '<em><b>Ktype</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KINDNESS_ENTITY__KTYPE = KtypesPackage.KOBJECT__KTYPE;
+
+	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int KINDNESS_ENTITY__NAME = 0;
-
-	/**
-	 * The feature id for the '<em><b>Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int KINDNESS_ENTITY__TYPE = 1;
+	int KINDNESS_ENTITY__NAME = KtypesPackage.KOBJECT_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Connections</b></em>' reference list.
@@ -359,7 +388,7 @@ public interface KindnessPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int KINDNESS_ENTITY__CONNECTIONS = 2;
+	int KINDNESS_ENTITY__CONNECTIONS = KtypesPackage.KOBJECT_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Container Entity</b></em>' reference.
@@ -368,7 +397,7 @@ public interface KindnessPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int KINDNESS_ENTITY__CONTAINER_ENTITY = 3;
+	int KINDNESS_ENTITY__CONTAINER_ENTITY = KtypesPackage.KOBJECT_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Contained Entities</b></em>' reference list.
@@ -377,7 +406,7 @@ public interface KindnessPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int KINDNESS_ENTITY__CONTAINED_ENTITIES = 4;
+	int KINDNESS_ENTITY__CONTAINED_ENTITIES = KtypesPackage.KOBJECT_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
@@ -386,7 +415,7 @@ public interface KindnessPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int KINDNESS_ENTITY__PROPERTIES = 5;
+	int KINDNESS_ENTITY__PROPERTIES = KtypesPackage.KOBJECT_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of structural features of the '<em>Entity</em>' class.
@@ -395,7 +424,7 @@ public interface KindnessPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int KINDNESS_ENTITY_FEATURE_COUNT = 6;
+	int KINDNESS_ENTITY_FEATURE_COUNT = KtypesPackage.KOBJECT_FEATURE_COUNT + 5;
 
 	/**
 	 * The number of operations of the '<em>Entity</em>' class.
@@ -404,7 +433,7 @@ public interface KindnessPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int KINDNESS_ENTITY_OPERATION_COUNT = 0;
+	int KINDNESS_ENTITY_OPERATION_COUNT = KtypesPackage.KOBJECT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link kindness_metamodel.impl.ConnectionImpl <em>Connection</em>}' class.
@@ -490,6 +519,15 @@ public interface KindnessPackage extends EPackage {
 	int LOCATION = 6;
 
 	/**
+	 * The feature id for the '<em><b>Ktype</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOCATION__KTYPE = KINDNESS_ENTITY__KTYPE;
+
+	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -497,15 +535,6 @@ public interface KindnessPackage extends EPackage {
 	 * @ordered
 	 */
 	int LOCATION__NAME = KINDNESS_ENTITY__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LOCATION__TYPE = KINDNESS_ENTITY__TYPE;
 
 	/**
 	 * The feature id for the '<em><b>Connections</b></em>' reference list.
@@ -572,6 +601,15 @@ public interface KindnessPackage extends EPackage {
 	int TIME = 7;
 
 	/**
+	 * The feature id for the '<em><b>Ktype</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TIME__KTYPE = KINDNESS_ENTITY__KTYPE;
+
+	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -579,15 +617,6 @@ public interface KindnessPackage extends EPackage {
 	 * @ordered
 	 */
 	int TIME__NAME = KINDNESS_ENTITY__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TIME__TYPE = KINDNESS_ENTITY__TYPE;
 
 	/**
 	 * The feature id for the '<em><b>Connections</b></em>' reference list.
@@ -654,6 +683,15 @@ public interface KindnessPackage extends EPackage {
 	int ACTOR = 8;
 
 	/**
+	 * The feature id for the '<em><b>Ktype</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTOR__KTYPE = KINDNESS_ENTITY__KTYPE;
+
+	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -661,15 +699,6 @@ public interface KindnessPackage extends EPackage {
 	 * @ordered
 	 */
 	int ACTOR__NAME = KINDNESS_ENTITY__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACTOR__TYPE = KINDNESS_ENTITY__TYPE;
 
 	/**
 	 * The feature id for the '<em><b>Connections</b></em>' reference list.
@@ -754,6 +783,15 @@ public interface KindnessPackage extends EPackage {
 	int GIVER = 9;
 
 	/**
+	 * The feature id for the '<em><b>Ktype</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GIVER__KTYPE = ACTOR__KTYPE;
+
+	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -761,15 +799,6 @@ public interface KindnessPackage extends EPackage {
 	 * @ordered
 	 */
 	int GIVER__NAME = ACTOR__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GIVER__TYPE = ACTOR__TYPE;
 
 	/**
 	 * The feature id for the '<em><b>Connections</b></em>' reference list.
@@ -863,6 +892,15 @@ public interface KindnessPackage extends EPackage {
 	int RECEIVER = 10;
 
 	/**
+	 * The feature id for the '<em><b>Ktype</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RECEIVER__KTYPE = ACTOR__KTYPE;
+
+	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -870,15 +908,6 @@ public interface KindnessPackage extends EPackage {
 	 * @ordered
 	 */
 	int RECEIVER__NAME = ACTOR__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RECEIVER__TYPE = ACTOR__TYPE;
 
 	/**
 	 * The feature id for the '<em><b>Connections</b></em>' reference list.
@@ -963,6 +992,15 @@ public interface KindnessPackage extends EPackage {
 	int OBSERVANT = 11;
 
 	/**
+	 * The feature id for the '<em><b>Ktype</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OBSERVANT__KTYPE = ACTOR__KTYPE;
+
+	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -970,15 +1008,6 @@ public interface KindnessPackage extends EPackage {
 	 * @ordered
 	 */
 	int OBSERVANT__NAME = ACTOR__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OBSERVANT__TYPE = ACTOR__TYPE;
 
 	/**
 	 * The feature id for the '<em><b>Connections</b></em>' reference list.
@@ -1063,6 +1092,15 @@ public interface KindnessPackage extends EPackage {
 	int MEDIATOR = 12;
 
 	/**
+	 * The feature id for the '<em><b>Ktype</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MEDIATOR__KTYPE = ACTOR__KTYPE;
+
+	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1070,15 +1108,6 @@ public interface KindnessPackage extends EPackage {
 	 * @ordered
 	 */
 	int MEDIATOR__NAME = ACTOR__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MEDIATOR__TYPE = ACTOR__TYPE;
 
 	/**
 	 * The feature id for the '<em><b>Connections</b></em>' reference list.
@@ -1301,6 +1330,15 @@ public interface KindnessPackage extends EPackage {
 	int ITEM = 16;
 
 	/**
+	 * The feature id for the '<em><b>Ktype</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ITEM__KTYPE = KINDNESS_ENTITY__KTYPE;
+
+	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1308,15 +1346,6 @@ public interface KindnessPackage extends EPackage {
 	 * @ordered
 	 */
 	int ITEM__NAME = KINDNESS_ENTITY__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ITEM__TYPE = KINDNESS_ENTITY__TYPE;
 
 	/**
 	 * The feature id for the '<em><b>Connections</b></em>' reference list.
@@ -1468,6 +1497,17 @@ public interface KindnessPackage extends EPackage {
 	EReference getKindnessOpportunity_Act();
 
 	/**
+	 * Returns the meta object for the attribute '{@link kindness_metamodel.KindnessOpportunity#getDescription <em>Description</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Description</em>'.
+	 * @see kindness_metamodel.KindnessOpportunity#getDescription()
+	 * @see #getKindnessOpportunity()
+	 * @generated
+	 */
+	EAttribute getKindnessOpportunity_Description();
+
+	/**
 	 * Returns the meta object for class '{@link kindness_metamodel.Act <em>Act</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1588,6 +1628,28 @@ public interface KindnessPackage extends EPackage {
 	EReference getAct_Items();
 
 	/**
+	 * Returns the meta object for the containment reference list '{@link kindness_metamodel.Act#getLocations <em>Locations</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Locations</em>'.
+	 * @see kindness_metamodel.Act#getLocations()
+	 * @see #getAct()
+	 * @generated
+	 */
+	EReference getAct_Locations();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link kindness_metamodel.Act#getTimes <em>Times</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Times</em>'.
+	 * @see kindness_metamodel.Act#getTimes()
+	 * @see #getAct()
+	 * @generated
+	 */
+	EReference getAct_Times();
+
+	/**
 	 * Returns the meta object for class '{@link kindness_metamodel.Condition <em>Condition</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1639,17 +1701,6 @@ public interface KindnessPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getKindnessEntity_Name();
-
-	/**
-	 * Returns the meta object for the attribute '{@link kindness_metamodel.KindnessEntity#getType <em>Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Type</em>'.
-	 * @see kindness_metamodel.KindnessEntity#getType()
-	 * @see #getKindnessEntity()
-	 * @generated
-	 */
-	EAttribute getKindnessEntity_Type();
 
 	/**
 	 * Returns the meta object for the reference list '{@link kindness_metamodel.KindnessEntity#getConnections <em>Connections</em>}'.
@@ -2040,6 +2091,14 @@ public interface KindnessPackage extends EPackage {
 		EReference KINDNESS_OPPORTUNITY__ACT = eINSTANCE.getKindnessOpportunity_Act();
 
 		/**
+		 * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute KINDNESS_OPPORTUNITY__DESCRIPTION = eINSTANCE.getKindnessOpportunity_Description();
+
+		/**
 		 * The meta object literal for the '{@link kindness_metamodel.impl.ActImpl <em>Act</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2130,6 +2189,22 @@ public interface KindnessPackage extends EPackage {
 		EReference ACT__ITEMS = eINSTANCE.getAct_Items();
 
 		/**
+		 * The meta object literal for the '<em><b>Locations</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ACT__LOCATIONS = eINSTANCE.getAct_Locations();
+
+		/**
+		 * The meta object literal for the '<em><b>Times</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ACT__TIMES = eINSTANCE.getAct_Times();
+
+		/**
 		 * The meta object literal for the '{@link kindness_metamodel.impl.ConditionImpl <em>Condition</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2172,14 +2247,6 @@ public interface KindnessPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute KINDNESS_ENTITY__NAME = eINSTANCE.getKindnessEntity_Name();
-
-		/**
-		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute KINDNESS_ENTITY__TYPE = eINSTANCE.getKindnessEntity_Type();
 
 		/**
 		 * The meta object literal for the '<em><b>Connections</b></em>' reference list feature.

@@ -19,7 +19,10 @@ Export-Package: factors,
  factors.util,
  kindness_metamodel,
  kindness_metamodel.impl,
- kindness_metamodel.util
+ kindness_metamodel.util,
+ ktypes,
+ ktypes.impl,
+ ktypes.util
 Require-Bundle: org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.core.runtime
 Bundle-ActivationPolicy: lazy

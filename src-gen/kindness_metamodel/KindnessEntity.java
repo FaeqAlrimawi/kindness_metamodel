@@ -2,9 +2,9 @@
  */
 package kindness_metamodel;
 
-import org.eclipse.emf.common.util.EList;
+import ktypes.KObject;
 
-import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->
@@ -16,7 +16,6 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link kindness_metamodel.KindnessEntity#getName <em>Name</em>}</li>
- *   <li>{@link kindness_metamodel.KindnessEntity#getType <em>Type</em>}</li>
  *   <li>{@link kindness_metamodel.KindnessEntity#getConnections <em>Connections</em>}</li>
  *   <li>{@link kindness_metamodel.KindnessEntity#getContainerEntity <em>Container Entity</em>}</li>
  *   <li>{@link kindness_metamodel.KindnessEntity#getContainedEntities <em>Contained Entities</em>}</li>
@@ -27,7 +26,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface KindnessEntity extends EObject {
+public interface KindnessEntity extends KObject {
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -49,28 +48,6 @@ public interface KindnessEntity extends EObject {
 	 * @generated
 	 */
 	void setName(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Type</em>' attribute.
-	 * @see #setType(String)
-	 * @see kindness_metamodel.KindnessPackage#getKindnessEntity_Type()
-	 * @model
-	 * @generated
-	 */
-	String getType();
-
-	/**
-	 * Sets the value of the '{@link kindness_metamodel.KindnessEntity#getType <em>Type</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Type</em>' attribute.
-	 * @see #getType()
-	 * @generated
-	 */
-	void setType(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Connections</b></em>' reference list.
