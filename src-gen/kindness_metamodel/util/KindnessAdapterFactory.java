@@ -2,9 +2,12 @@
  */
 package kindness_metamodel.util;
 
-import factors.AbsConnection;
-import factors.AbsPsychologicalFactors;
-import factors.AbsSocialFactors;
+import Psycho_Social_Factor.AbsConnection;
+import Psycho_Social_Factor.AbsPsychologicalFactors;
+import Psycho_Social_Factor.AbsSocialFactors;
+
+import diagram.AbsKindnessEntity;
+import diagram.AbsKindnessOpportunity;
 
 import kindness_metamodel.*;
 
@@ -163,8 +166,18 @@ public class KindnessAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
+		public Adapter caseAbsKindnessOpportunity(AbsKindnessOpportunity object) {
+			return createAbsKindnessOpportunityAdapter();
+		}
+
+		@Override
 		public Adapter caseKObject(KObject object) {
 			return createKObjectAdapter();
+		}
+
+		@Override
+		public Adapter caseAbsKindnessEntity(AbsKindnessEntity object) {
+			return createAbsKindnessEntityAdapter();
 		}
 
 		@Override
@@ -454,6 +467,20 @@ public class KindnessAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link diagram.AbsKindnessOpportunity <em>Abs Kindness Opportunity</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see diagram.AbsKindnessOpportunity
+	 * @generated
+	 */
+	public Adapter createAbsKindnessOpportunityAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link ktypes.KObject <em>KObject</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -468,13 +495,27 @@ public class KindnessAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link factors.AbsConnection <em>Abs Connection</em>}'.
+	 * Creates a new adapter for an object of class '{@link diagram.AbsKindnessEntity <em>Abs Kindness Entity</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see factors.AbsConnection
+	 * @see diagram.AbsKindnessEntity
+	 * @generated
+	 */
+	public Adapter createAbsKindnessEntityAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link Psycho_Social_Factor.AbsConnection <em>Abs Connection</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see Psycho_Social_Factor.AbsConnection
 	 * @generated
 	 */
 	public Adapter createAbsConnectionAdapter() {
@@ -482,13 +523,13 @@ public class KindnessAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link factors.AbsSocialFactors <em>Abs Social Factors</em>}'.
+	 * Creates a new adapter for an object of class '{@link Psycho_Social_Factor.AbsSocialFactors <em>Abs Social Factors</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see factors.AbsSocialFactors
+	 * @see Psycho_Social_Factor.AbsSocialFactors
 	 * @generated
 	 */
 	public Adapter createAbsSocialFactorsAdapter() {
@@ -496,13 +537,13 @@ public class KindnessAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link factors.AbsPsychologicalFactors <em>Abs Psychological Factors</em>}'.
+	 * Creates a new adapter for an object of class '{@link Psycho_Social_Factor.AbsPsychologicalFactors <em>Abs Psychological Factors</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see factors.AbsPsychologicalFactors
+	 * @see Psycho_Social_Factor.AbsPsychologicalFactors
 	 * @generated
 	 */
 	public Adapter createAbsPsychologicalFactorsAdapter() {

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="diagram" nsURI="http://www.example.org/kindness_metamodel_diagram"
+    nsPrefix="diagram">
+  <eClassifiers xsi:type="ecore:EClass" name="KDiagram">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="abskindnessopportunity"
+        upperBound="-1" eType="#//AbsKindnessOpportunity" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="abskindnessentity" upperBound="-1"
+        eType="#//AbsKindnessEntity" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AbsKindnessOpportunity" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="AbsKindnessEntity" abstract="true"/>
+</ecore:EPackage>

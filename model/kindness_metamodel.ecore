@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="kindness_metamodel" nsURI="http://www.example.org/kindness_metamodel"
-    nsPrefix="kindness_metamodel">
+    nsPrefix="diagram">
   <eClassifiers xsi:type="ecore:EClass" name="Property">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="KindnessOpportunity">
+  <eClassifiers xsi:type="ecore:EClass" name="KindnessOpportunity" eSuperTypes="kindnessDiagram.ecore#//AbsKindnessOpportunity">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="properties" upperBound="-1"
         eType="#//Property" containment="true"/>
@@ -51,7 +51,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="refkindnessentity" lowerBound="1"
         upperBound="-1" eType="#//KindnessEntity" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="KindnessEntity" eSuperTypes="ktypes.ecore#//KObject">
+  <eClassifiers xsi:type="ecore:EClass" name="KindnessEntity" eSuperTypes="ktypes.ecore#//KObject kindnessDiagram.ecore#//AbsKindnessEntity">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="containerEntity" eType="#//KindnessEntity"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="containedEntities" upperBound="-1"

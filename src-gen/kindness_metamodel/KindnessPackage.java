@@ -2,7 +2,9 @@
  */
 package kindness_metamodel;
 
-import factors.FactorsPackage;
+import Psycho_Social_Factor.Psycho_Social_FactorPackage;
+
+import diagram.KindnessDiagramPackage;
 
 import ktypes.KtypesPackage;
 
@@ -51,7 +53,7 @@ public interface KindnessPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_PREFIX = "kindness_metamodel";
+	String eNS_PREFIX = "diagram";
 
 	/**
 	 * The singleton instance of the package.
@@ -124,7 +126,7 @@ public interface KindnessPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int KINDNESS_OPPORTUNITY__NAME = 0;
+	int KINDNESS_OPPORTUNITY__NAME = KindnessDiagramPackage.ABS_KINDNESS_OPPORTUNITY_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
@@ -133,7 +135,7 @@ public interface KindnessPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int KINDNESS_OPPORTUNITY__PROPERTIES = 1;
+	int KINDNESS_OPPORTUNITY__PROPERTIES = KindnessDiagramPackage.ABS_KINDNESS_OPPORTUNITY_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Act</b></em>' containment reference list.
@@ -142,7 +144,7 @@ public interface KindnessPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int KINDNESS_OPPORTUNITY__ACT = 2;
+	int KINDNESS_OPPORTUNITY__ACT = KindnessDiagramPackage.ABS_KINDNESS_OPPORTUNITY_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -151,7 +153,7 @@ public interface KindnessPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int KINDNESS_OPPORTUNITY__DESCRIPTION = 3;
+	int KINDNESS_OPPORTUNITY__DESCRIPTION = KindnessDiagramPackage.ABS_KINDNESS_OPPORTUNITY_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>Opportunity</em>' class.
@@ -160,7 +162,7 @@ public interface KindnessPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int KINDNESS_OPPORTUNITY_FEATURE_COUNT = 4;
+	int KINDNESS_OPPORTUNITY_FEATURE_COUNT = KindnessDiagramPackage.ABS_KINDNESS_OPPORTUNITY_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of operations of the '<em>Opportunity</em>' class.
@@ -169,7 +171,7 @@ public interface KindnessPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int KINDNESS_OPPORTUNITY_OPERATION_COUNT = 0;
+	int KINDNESS_OPPORTUNITY_OPERATION_COUNT = KindnessDiagramPackage.ABS_KINDNESS_OPPORTUNITY_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link kindness_metamodel.impl.ActImpl <em>Act</em>}' class.
@@ -461,7 +463,7 @@ public interface KindnessPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTION__NAME = FactorsPackage.ABS_CONNECTION_FEATURE_COUNT + 0;
+	int CONNECTION__NAME = Psycho_Social_FactorPackage.ABS_CONNECTION_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -470,7 +472,7 @@ public interface KindnessPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTION__TYPE = FactorsPackage.ABS_CONNECTION_FEATURE_COUNT + 1;
+	int CONNECTION__TYPE = Psycho_Social_FactorPackage.ABS_CONNECTION_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Bidirectional</b></em>' attribute.
@@ -479,7 +481,7 @@ public interface KindnessPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTION__BIDIRECTIONAL = FactorsPackage.ABS_CONNECTION_FEATURE_COUNT + 2;
+	int CONNECTION__BIDIRECTIONAL = Psycho_Social_FactorPackage.ABS_CONNECTION_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Entity1</b></em>' reference.
@@ -488,7 +490,7 @@ public interface KindnessPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTION__ENTITY1 = FactorsPackage.ABS_CONNECTION_FEATURE_COUNT + 3;
+	int CONNECTION__ENTITY1 = Psycho_Social_FactorPackage.ABS_CONNECTION_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Entity2</b></em>' reference.
@@ -497,7 +499,7 @@ public interface KindnessPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTION__ENTITY2 = FactorsPackage.ABS_CONNECTION_FEATURE_COUNT + 4;
+	int CONNECTION__ENTITY2 = Psycho_Social_FactorPackage.ABS_CONNECTION_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of structural features of the '<em>Connection</em>' class.
@@ -506,7 +508,7 @@ public interface KindnessPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTION_FEATURE_COUNT = FactorsPackage.ABS_CONNECTION_FEATURE_COUNT + 5;
+	int CONNECTION_FEATURE_COUNT = Psycho_Social_FactorPackage.ABS_CONNECTION_FEATURE_COUNT + 5;
 
 	/**
 	 * The number of operations of the '<em>Connection</em>' class.
@@ -515,7 +517,7 @@ public interface KindnessPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTION_OPERATION_COUNT = FactorsPackage.ABS_CONNECTION_OPERATION_COUNT + 0;
+	int CONNECTION_OPERATION_COUNT = Psycho_Social_FactorPackage.ABS_CONNECTION_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link kindness_metamodel.impl.LocationImpl <em>Location</em>}' class.
@@ -1262,7 +1264,7 @@ public interface KindnessPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SOCIAL_FACTORS__CONNECTION = FactorsPackage.ABS_SOCIAL_FACTORS__CONNECTION;
+	int SOCIAL_FACTORS__CONNECTION = Psycho_Social_FactorPackage.ABS_SOCIAL_FACTORS__CONNECTION;
 
 	/**
 	 * The feature id for the '<em><b>Socialfactor</b></em>' containment reference list.
@@ -1271,7 +1273,7 @@ public interface KindnessPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SOCIAL_FACTORS__SOCIALFACTOR = FactorsPackage.ABS_SOCIAL_FACTORS__SOCIALFACTOR;
+	int SOCIAL_FACTORS__SOCIALFACTOR = Psycho_Social_FactorPackage.ABS_SOCIAL_FACTORS__SOCIALFACTOR;
 
 	/**
 	 * The number of structural features of the '<em>Social Factors</em>' class.
@@ -1280,7 +1282,7 @@ public interface KindnessPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SOCIAL_FACTORS_FEATURE_COUNT = FactorsPackage.ABS_SOCIAL_FACTORS_FEATURE_COUNT + 0;
+	int SOCIAL_FACTORS_FEATURE_COUNT = Psycho_Social_FactorPackage.ABS_SOCIAL_FACTORS_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Social Factors</em>' class.
@@ -1289,7 +1291,7 @@ public interface KindnessPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SOCIAL_FACTORS_OPERATION_COUNT = FactorsPackage.ABS_SOCIAL_FACTORS_OPERATION_COUNT + 0;
+	int SOCIAL_FACTORS_OPERATION_COUNT = Psycho_Social_FactorPackage.ABS_SOCIAL_FACTORS_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link kindness_metamodel.impl.Psychological_FactorsImpl <em>Psychological Factors</em>}' class.
@@ -1308,7 +1310,7 @@ public interface KindnessPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PSYCHOLOGICAL_FACTORS__PSYCHOLOGICALFACTOR = FactorsPackage.ABS_PSYCHOLOGICAL_FACTORS__PSYCHOLOGICALFACTOR;
+	int PSYCHOLOGICAL_FACTORS__PSYCHOLOGICALFACTOR = Psycho_Social_FactorPackage.ABS_PSYCHOLOGICAL_FACTORS__PSYCHOLOGICALFACTOR;
 
 	/**
 	 * The number of structural features of the '<em>Psychological Factors</em>' class.
@@ -1317,7 +1319,7 @@ public interface KindnessPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PSYCHOLOGICAL_FACTORS_FEATURE_COUNT = FactorsPackage.ABS_PSYCHOLOGICAL_FACTORS_FEATURE_COUNT + 0;
+	int PSYCHOLOGICAL_FACTORS_FEATURE_COUNT = Psycho_Social_FactorPackage.ABS_PSYCHOLOGICAL_FACTORS_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Psychological Factors</em>' class.
@@ -1326,7 +1328,8 @@ public interface KindnessPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PSYCHOLOGICAL_FACTORS_OPERATION_COUNT = FactorsPackage.ABS_PSYCHOLOGICAL_FACTORS_OPERATION_COUNT + 0;
+	int PSYCHOLOGICAL_FACTORS_OPERATION_COUNT = Psycho_Social_FactorPackage.ABS_PSYCHOLOGICAL_FACTORS_OPERATION_COUNT
+			+ 0;
 
 	/**
 	 * The meta object id for the '{@link kindness_metamodel.impl.ItemImpl <em>Item</em>}' class.

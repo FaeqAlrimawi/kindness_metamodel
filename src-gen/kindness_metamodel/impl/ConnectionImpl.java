@@ -2,7 +2,7 @@
  */
 package kindness_metamodel.impl;
 
-import factors.impl.AbsConnectionImpl;
+import Psycho_Social_Factor.impl.AbsConnectionImpl;
 
 import kindness_metamodel.Connection;
 import kindness_metamodel.KindnessEntity;

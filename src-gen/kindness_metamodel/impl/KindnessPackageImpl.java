@@ -2,17 +2,21 @@
  */
 package kindness_metamodel.impl;
 
-import factors.FactorsPackage;
+import Psycho_Social_Factor.Psycho_Social_FactorPackage;
 
-import factors.Psychological.NewPackage2Package;
+import Psycho_Social_Factor.Psychological.impl.psychoFactor_pkgPackageImpl;
 
-import factors.Psychological.impl.NewPackage2PackageImpl;
+import Psycho_Social_Factor.Psychological.psychoFactor_pkgPackage;
 
-import factors.Social.NewPackage1Package;
+import Psycho_Social_Factor.Social.SocialFactor_pkgPackage;
 
-import factors.Social.impl.NewPackage1PackageImpl;
+import Psycho_Social_Factor.Social.impl.SocialFactor_pkgPackageImpl;
 
-import factors.impl.FactorsPackageImpl;
+import Psycho_Social_Factor.impl.Psycho_Social_FactorPackageImpl;
+
+import diagram.KindnessDiagramPackage;
+
+import diagram.impl.KindnessDiagramPackageImpl;
 
 import kindness_metamodel.Act;
 import kindness_metamodel.ActType;
@@ -247,36 +251,42 @@ public class KindnessPackageImpl extends EPackageImpl implements KindnessPackage
 		isInited = true;
 
 		// Obtain or create and register interdependencies
-		Object registeredPackage = EPackage.Registry.INSTANCE.getEPackage(FactorsPackage.eNS_URI);
-		FactorsPackageImpl theFactorsPackage = (FactorsPackageImpl) (registeredPackage instanceof FactorsPackageImpl
+		Object registeredPackage = EPackage.Registry.INSTANCE.getEPackage(Psycho_Social_FactorPackage.eNS_URI);
+		Psycho_Social_FactorPackageImpl thePsycho_Social_FactorPackage = (Psycho_Social_FactorPackageImpl) (registeredPackage instanceof Psycho_Social_FactorPackageImpl
 				? registeredPackage
-				: FactorsPackage.eINSTANCE);
-		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(NewPackage1Package.eNS_URI);
-		NewPackage1PackageImpl theNewPackage1Package = (NewPackage1PackageImpl) (registeredPackage instanceof NewPackage1PackageImpl
+				: Psycho_Social_FactorPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(SocialFactor_pkgPackage.eNS_URI);
+		SocialFactor_pkgPackageImpl theSocialFactor_pkgPackage = (SocialFactor_pkgPackageImpl) (registeredPackage instanceof SocialFactor_pkgPackageImpl
 				? registeredPackage
-				: NewPackage1Package.eINSTANCE);
-		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(NewPackage2Package.eNS_URI);
-		NewPackage2PackageImpl theNewPackage2Package = (NewPackage2PackageImpl) (registeredPackage instanceof NewPackage2PackageImpl
+				: SocialFactor_pkgPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(psychoFactor_pkgPackage.eNS_URI);
+		psychoFactor_pkgPackageImpl thepsychoFactor_pkgPackage = (psychoFactor_pkgPackageImpl) (registeredPackage instanceof psychoFactor_pkgPackageImpl
 				? registeredPackage
-				: NewPackage2Package.eINSTANCE);
+				: psychoFactor_pkgPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(KtypesPackage.eNS_URI);
 		KtypesPackageImpl theKtypesPackage = (KtypesPackageImpl) (registeredPackage instanceof KtypesPackageImpl
 				? registeredPackage
 				: KtypesPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(KindnessDiagramPackage.eNS_URI);
+		KindnessDiagramPackageImpl theKindnessDiagramPackage = (KindnessDiagramPackageImpl) (registeredPackage instanceof KindnessDiagramPackageImpl
+				? registeredPackage
+				: KindnessDiagramPackage.eINSTANCE);
 
 		// Create package meta-data objects
 		theKindnessPackage.createPackageContents();
-		theFactorsPackage.createPackageContents();
-		theNewPackage1Package.createPackageContents();
-		theNewPackage2Package.createPackageContents();
+		thePsycho_Social_FactorPackage.createPackageContents();
+		theSocialFactor_pkgPackage.createPackageContents();
+		thepsychoFactor_pkgPackage.createPackageContents();
 		theKtypesPackage.createPackageContents();
+		theKindnessDiagramPackage.createPackageContents();
 
 		// Initialize created meta-data
 		theKindnessPackage.initializePackageContents();
-		theFactorsPackage.initializePackageContents();
-		theNewPackage1Package.initializePackageContents();
-		theNewPackage2Package.initializePackageContents();
+		thePsycho_Social_FactorPackage.initializePackageContents();
+		theSocialFactor_pkgPackage.initializePackageContents();
+		thepsychoFactor_pkgPackage.initializePackageContents();
 		theKtypesPackage.initializePackageContents();
+		theKindnessDiagramPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
 		theKindnessPackage.freeze();
@@ -931,17 +941,21 @@ public class KindnessPackageImpl extends EPackageImpl implements KindnessPackage
 		setNsURI(eNS_URI);
 
 		// Obtain other dependent packages
+		KindnessDiagramPackage theKindnessDiagramPackage = (KindnessDiagramPackage) EPackage.Registry.INSTANCE
+				.getEPackage(KindnessDiagramPackage.eNS_URI);
 		KtypesPackage theKtypesPackage = (KtypesPackage) EPackage.Registry.INSTANCE.getEPackage(KtypesPackage.eNS_URI);
-		FactorsPackage theFactorsPackage = (FactorsPackage) EPackage.Registry.INSTANCE
-				.getEPackage(FactorsPackage.eNS_URI);
+		Psycho_Social_FactorPackage thePsycho_Social_FactorPackage = (Psycho_Social_FactorPackage) EPackage.Registry.INSTANCE
+				.getEPackage(Psycho_Social_FactorPackage.eNS_URI);
 
 		// Create type parameters
 
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
+		kindnessOpportunityEClass.getESuperTypes().add(theKindnessDiagramPackage.getAbsKindnessOpportunity());
 		kindnessEntityEClass.getESuperTypes().add(theKtypesPackage.getKObject());
-		connectionEClass.getESuperTypes().add(theFactorsPackage.getAbsConnection());
+		kindnessEntityEClass.getESuperTypes().add(theKindnessDiagramPackage.getAbsKindnessEntity());
+		connectionEClass.getESuperTypes().add(thePsycho_Social_FactorPackage.getAbsConnection());
 		locationEClass.getESuperTypes().add(this.getKindnessEntity());
 		timeEClass.getESuperTypes().add(this.getKindnessEntity());
 		actorEClass.getESuperTypes().add(this.getKindnessEntity());
@@ -949,8 +963,8 @@ public class KindnessPackageImpl extends EPackageImpl implements KindnessPackage
 		receiverEClass.getESuperTypes().add(this.getActor());
 		observantEClass.getESuperTypes().add(this.getActor());
 		mediatorEClass.getESuperTypes().add(this.getActor());
-		social_FactorsEClass.getESuperTypes().add(theFactorsPackage.getAbsSocialFactors());
-		psychological_FactorsEClass.getESuperTypes().add(theFactorsPackage.getAbsPsychologicalFactors());
+		social_FactorsEClass.getESuperTypes().add(thePsycho_Social_FactorPackage.getAbsSocialFactors());
+		psychological_FactorsEClass.getESuperTypes().add(thePsycho_Social_FactorPackage.getAbsPsychologicalFactors());
 		itemEClass.getESuperTypes().add(this.getKindnessEntity());
 		otherActorEClass.getESuperTypes().add(this.getActor());
 

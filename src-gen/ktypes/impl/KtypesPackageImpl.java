@@ -2,17 +2,21 @@
  */
 package ktypes.impl;
 
-import factors.FactorsPackage;
+import Psycho_Social_Factor.Psycho_Social_FactorPackage;
 
-import factors.Psychological.NewPackage2Package;
+import Psycho_Social_Factor.Psychological.impl.psychoFactor_pkgPackageImpl;
 
-import factors.Psychological.impl.NewPackage2PackageImpl;
+import Psycho_Social_Factor.Psychological.psychoFactor_pkgPackage;
 
-import factors.Social.NewPackage1Package;
+import Psycho_Social_Factor.Social.SocialFactor_pkgPackage;
 
-import factors.Social.impl.NewPackage1PackageImpl;
+import Psycho_Social_Factor.Social.impl.SocialFactor_pkgPackageImpl;
 
-import factors.impl.FactorsPackageImpl;
+import Psycho_Social_Factor.impl.Psycho_Social_FactorPackageImpl;
+
+import diagram.KindnessDiagramPackage;
+
+import diagram.impl.KindnessDiagramPackageImpl;
 
 import kindness_metamodel.KindnessPackage;
 
@@ -137,32 +141,38 @@ public class KtypesPackageImpl extends EPackageImpl implements KtypesPackage {
 		KindnessPackageImpl theKindnessPackage = (KindnessPackageImpl) (registeredPackage instanceof KindnessPackageImpl
 				? registeredPackage
 				: KindnessPackage.eINSTANCE);
-		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(FactorsPackage.eNS_URI);
-		FactorsPackageImpl theFactorsPackage = (FactorsPackageImpl) (registeredPackage instanceof FactorsPackageImpl
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(Psycho_Social_FactorPackage.eNS_URI);
+		Psycho_Social_FactorPackageImpl thePsycho_Social_FactorPackage = (Psycho_Social_FactorPackageImpl) (registeredPackage instanceof Psycho_Social_FactorPackageImpl
 				? registeredPackage
-				: FactorsPackage.eINSTANCE);
-		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(NewPackage1Package.eNS_URI);
-		NewPackage1PackageImpl theNewPackage1Package = (NewPackage1PackageImpl) (registeredPackage instanceof NewPackage1PackageImpl
+				: Psycho_Social_FactorPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(SocialFactor_pkgPackage.eNS_URI);
+		SocialFactor_pkgPackageImpl theSocialFactor_pkgPackage = (SocialFactor_pkgPackageImpl) (registeredPackage instanceof SocialFactor_pkgPackageImpl
 				? registeredPackage
-				: NewPackage1Package.eINSTANCE);
-		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(NewPackage2Package.eNS_URI);
-		NewPackage2PackageImpl theNewPackage2Package = (NewPackage2PackageImpl) (registeredPackage instanceof NewPackage2PackageImpl
+				: SocialFactor_pkgPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(psychoFactor_pkgPackage.eNS_URI);
+		psychoFactor_pkgPackageImpl thepsychoFactor_pkgPackage = (psychoFactor_pkgPackageImpl) (registeredPackage instanceof psychoFactor_pkgPackageImpl
 				? registeredPackage
-				: NewPackage2Package.eINSTANCE);
+				: psychoFactor_pkgPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(KindnessDiagramPackage.eNS_URI);
+		KindnessDiagramPackageImpl theKindnessDiagramPackage = (KindnessDiagramPackageImpl) (registeredPackage instanceof KindnessDiagramPackageImpl
+				? registeredPackage
+				: KindnessDiagramPackage.eINSTANCE);
 
 		// Create package meta-data objects
 		theKtypesPackage.createPackageContents();
 		theKindnessPackage.createPackageContents();
-		theFactorsPackage.createPackageContents();
-		theNewPackage1Package.createPackageContents();
-		theNewPackage2Package.createPackageContents();
+		thePsycho_Social_FactorPackage.createPackageContents();
+		theSocialFactor_pkgPackage.createPackageContents();
+		thepsychoFactor_pkgPackage.createPackageContents();
+		theKindnessDiagramPackage.createPackageContents();
 
 		// Initialize created meta-data
 		theKtypesPackage.initializePackageContents();
 		theKindnessPackage.initializePackageContents();
-		theFactorsPackage.initializePackageContents();
-		theNewPackage1Package.initializePackageContents();
-		theNewPackage2Package.initializePackageContents();
+		thePsycho_Social_FactorPackage.initializePackageContents();
+		theSocialFactor_pkgPackage.initializePackageContents();
+		thepsychoFactor_pkgPackage.initializePackageContents();
+		theKindnessDiagramPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
 		theKtypesPackage.freeze();

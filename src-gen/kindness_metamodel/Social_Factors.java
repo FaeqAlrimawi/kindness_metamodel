@@ -2,7 +2,7 @@
  */
 package kindness_metamodel;
 
-import factors.AbsSocialFactors;
+import Psycho_Social_Factor.AbsSocialFactors;
 
 /**
  * <!-- begin-user-doc -->

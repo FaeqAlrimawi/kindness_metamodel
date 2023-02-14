@@ -45,7 +45,7 @@ public interface KtypesPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_PREFIX = "kindness_meta_model";
+	String eNS_PREFIX = "diagram";
 
 	/**
 	 * The singleton instance of the package.

@@ -8,7 +8,8 @@
     copyrightFields="false" operationReflection="true" importOrganizing="true">
   <foreignModel>kindness_metamodel.ecore</foreignModel>
   <testsDirectory xsi:nil="true"/>
-  <genPackages prefix="Kindness" disposableProviderFactory="true" ecorePackage="kindness_metamodel.ecore#/">
+  <genPackages prefix="Kindness" disposableProviderFactory="true" multipleEditorPages="false"
+      generateModelWizard="false" fileExtensions="aok" ecorePackage="kindness_metamodel.ecore#/">
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="kindness_metamodel.ecore#//ActType">
       <genEnumLiterals ecoreEnumLiteral="kindness_metamodel.ecore#//ActType/MOTIVATION"/>
       <genEnumLiterals ecoreEnumLiteral="kindness_metamodel.ecore#//ActType/ABILITY"/>
@@ -84,7 +85,7 @@
     <genClasses ecoreClass="kindness_metamodel.ecore#//Item"/>
     <genClasses ecoreClass="kindness_metamodel.ecore#//OtherActor"/>
   </genPackages>
-  <genPackages prefix="Factors" ecorePackage="Factors.ecore#/">
+  <genPackages prefix="Psycho_Social_Factor" fileExtensions="psf" ecorePackage="Factors.ecore#/">
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="Factors.ecore#//DegreeOfRelatedness">
       <genEnumLiterals ecoreEnumLiteral="Factors.ecore#//DegreeOfRelatedness/FAMILY"/>
       <genEnumLiterals ecoreEnumLiteral="Factors.ecore#//DegreeOfRelatedness/FRIEND"/>
@@ -159,7 +160,8 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Factors.ecore#//AffectedFactors/factor"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Factors.ecore#//AffectedFactors/impact"/>
     </genClasses>
-    <nestedGenPackages prefix="NewPackage1" disposableProviderFactory="true" ecorePackage="Factors.ecore#//Social">
+    <nestedGenPackages prefix="SocialFactor_pkg" disposableProviderFactory="true"
+        generateModelWizard="false" ecorePackage="Factors.ecore#//Social">
       <genClasses ecoreClass="Factors.ecore#//Social/LevelOfNeed">
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Factors.ecore#//Social/LevelOfNeed/need"/>
       </genClasses>
@@ -179,7 +181,8 @@
       <genClasses ecoreClass="Factors.ecore#//Social/Trust"/>
       <genClasses ecoreClass="Factors.ecore#//Social/OtherSocialFactor"/>
     </nestedGenPackages>
-    <nestedGenPackages prefix="NewPackage2" disposableProviderFactory="true" ecorePackage="Factors.ecore#//Psychological">
+    <nestedGenPackages prefix="psychoFactor_pkg" disposableProviderFactory="true"
+        generateModelWizard="false" ecorePackage="Factors.ecore#//Psychological">
       <genClasses ecoreClass="Factors.ecore#//Psychological/Emotion">
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Factors.ecore#//Psychological/Emotion/type"/>
       </genClasses>
@@ -203,5 +206,13 @@
     <genClasses ecoreClass="ktypes.ecore#//KDigital"/>
     <genClasses ecoreClass="ktypes.ecore#//KPhysical"/>
     <genClasses ecoreClass="ktypes.ecore#//KSocial"/>
+  </genPackages>
+  <genPackages prefix="KindnessDiagram" fileExtensions="kdiagram" ecorePackage="kindnessDiagram.ecore#/">
+    <genClasses ecoreClass="kindnessDiagram.ecore#//KDiagram">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference kindnessDiagram.ecore#//KDiagram/abskindnessopportunity"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference kindnessDiagram.ecore#//KDiagram/abskindnessentity"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="kindnessDiagram.ecore#//AbsKindnessOpportunity"/>
+    <genClasses image="false" ecoreClass="kindnessDiagram.ecore#//AbsKindnessEntity"/>
   </genPackages>
 </genmodel:GenModel>

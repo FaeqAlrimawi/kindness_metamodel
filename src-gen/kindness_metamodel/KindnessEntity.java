@@ -2,6 +2,8 @@
  */
 package kindness_metamodel;
 
+import diagram.AbsKindnessEntity;
+
 import ktypes.KObject;
 
 import org.eclipse.emf.common.util.EList;
@@ -26,7 +28,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface KindnessEntity extends KObject {
+public interface KindnessEntity extends KObject, AbsKindnessEntity {
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->

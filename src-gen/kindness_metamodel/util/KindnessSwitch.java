@@ -2,9 +2,12 @@
  */
 package kindness_metamodel.util;
 
-import factors.AbsConnection;
-import factors.AbsPsychologicalFactors;
-import factors.AbsSocialFactors;
+import Psycho_Social_Factor.AbsConnection;
+import Psycho_Social_Factor.AbsPsychologicalFactors;
+import Psycho_Social_Factor.AbsSocialFactors;
+
+import diagram.AbsKindnessEntity;
+import diagram.AbsKindnessOpportunity;
 
 import kindness_metamodel.*;
 
@@ -83,6 +86,8 @@ public class KindnessSwitch<T> extends Switch<T> {
 			KindnessOpportunity kindnessOpportunity = (KindnessOpportunity) theEObject;
 			T result = caseKindnessOpportunity(kindnessOpportunity);
 			if (result == null)
+				result = caseAbsKindnessOpportunity(kindnessOpportunity);
+			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
@@ -106,6 +111,8 @@ public class KindnessSwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseKObject(kindnessEntity);
 			if (result == null)
+				result = caseAbsKindnessEntity(kindnessEntity);
+			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
@@ -126,6 +133,8 @@ public class KindnessSwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseKObject(location);
 			if (result == null)
+				result = caseAbsKindnessEntity(location);
+			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
@@ -137,6 +146,8 @@ public class KindnessSwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseKObject(time);
 			if (result == null)
+				result = caseAbsKindnessEntity(time);
+			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
@@ -147,6 +158,8 @@ public class KindnessSwitch<T> extends Switch<T> {
 				result = caseKindnessEntity(actor);
 			if (result == null)
 				result = caseKObject(actor);
+			if (result == null)
+				result = caseAbsKindnessEntity(actor);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -161,6 +174,8 @@ public class KindnessSwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseKObject(giver);
 			if (result == null)
+				result = caseAbsKindnessEntity(giver);
+			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
@@ -173,6 +188,8 @@ public class KindnessSwitch<T> extends Switch<T> {
 				result = caseKindnessEntity(receiver);
 			if (result == null)
 				result = caseKObject(receiver);
+			if (result == null)
+				result = caseAbsKindnessEntity(receiver);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -187,6 +204,8 @@ public class KindnessSwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseKObject(observant);
 			if (result == null)
+				result = caseAbsKindnessEntity(observant);
+			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
@@ -199,6 +218,8 @@ public class KindnessSwitch<T> extends Switch<T> {
 				result = caseKindnessEntity(mediator);
 			if (result == null)
 				result = caseKObject(mediator);
+			if (result == null)
+				result = caseAbsKindnessEntity(mediator);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -236,6 +257,8 @@ public class KindnessSwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseKObject(item);
 			if (result == null)
+				result = caseAbsKindnessEntity(item);
+			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
@@ -248,6 +271,8 @@ public class KindnessSwitch<T> extends Switch<T> {
 				result = caseKindnessEntity(otherActor);
 			if (result == null)
 				result = caseKObject(otherActor);
+			if (result == null)
+				result = caseAbsKindnessEntity(otherActor);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -528,6 +553,21 @@ public class KindnessSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Abs Kindness Opportunity</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Abs Kindness Opportunity</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAbsKindnessOpportunity(AbsKindnessOpportunity object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>KObject</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -539,6 +579,21 @@ public class KindnessSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseKObject(KObject object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Abs Kindness Entity</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Abs Kindness Entity</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAbsKindnessEntity(AbsKindnessEntity object) {
 		return null;
 	}
 

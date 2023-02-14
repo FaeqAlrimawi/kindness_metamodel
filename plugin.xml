@@ -18,7 +18,7 @@
       <!-- @generated kindness_metamodel -->
       <package
             uri="http://www.example.org/kindness_metamodel_factors"
-            class="factors.FactorsPackage"
+            class="Psycho_Social_Factor.Psycho_Social_FactorPackage"
             genModel="model/kindness_metamodel.genmodel"/>
    </extension>
 
@@ -26,7 +26,7 @@
       <!-- @generated kindness_metamodel -->
       <package
             uri="http://www.example.org/kindness_metamodel_factors_social"
-            class="factors.Social.NewPackage1Package"
+            class="Psycho_Social_Factor.Social.SocialFactor_pkgPackage"
             genModel="model/kindness_metamodel.genmodel"/>
    </extension>
 
@@ -34,9 +34,10 @@
       <!-- @generated kindness_metamodel -->
       <package
             uri="http://www.example.org/kindness_metamodel_factors_psychological"
-            class="factors.Psychological.NewPackage2Package"
+            class="Psycho_Social_Factor.Psychological.psychoFactor_pkgPackage"
             genModel="model/kindness_metamodel.genmodel"/>
    </extension>
+
 
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated kindness_metamodel -->
@@ -44,6 +45,22 @@
             uri="http://www.example.org/kindness_metamodel_ktypes"
             class="ktypes.KtypesPackage"
             genModel="model/kindness_metamodel.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated kindness_metamodel -->
+      <package
+            uri="http://www.example.org/kindness_metamodel_diagram"
+            class="diagram.KindnessDiagramPackage"
+            genModel="model/kindness_metamodel.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated kindnessDiagram -->
+      <package
+            uri="http://www.example.org/kindness_metamodel_diagram"
+            class="diagram.DiagramPackage"
+            genModel="model/kindnessDiagram.genmodel"/>
    </extension>
 
 </plugin>

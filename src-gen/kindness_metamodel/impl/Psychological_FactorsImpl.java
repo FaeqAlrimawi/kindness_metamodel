@@ -2,7 +2,7 @@
  */
 package kindness_metamodel.impl;
 
-import factors.Psychological.PsychologicalFactor;
+import Psycho_Social_Factor.Psychological.PsychologicalFactor;
 
 import java.util.Collection;
 
